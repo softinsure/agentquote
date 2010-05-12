@@ -1,0 +1,29 @@
+= AgentQuote Framework: Easy insurance Solution with ACORD using Adobe Flex and Ruby on Rails
+
+== Description
+
+AgentQuote is a framework that brings you to design a platform independent, secured, configurable RIA (Rich Internet Application) for P&C Insurance carriers to accomplish key business transactions quickly and easily. This framework is being developed considering future web revolution and loosely coupled solutions using some state of the art technologies.
+
+Considering the popularity of Adobe Flash, the UI framework is developed in Flex 4. The UI is integrated with RSETful web services developed in Ruby on Rails considering its ability to support REST (Representational State Transfer), agile development, MVC and many more. Currently this web service is rendered as XML but JSON and others are also under consideration for HTML 5 version.
+
+MySql is used considering its pluggable Storage Engine Architecture (MyISAM, InnoDB, Merge, Memory, Archive, Cluster)  and availability in to-dozen platforms (32 and 64 bit) including Windows: (RedHat, SuSE, Fedora, Solaris, HPUS, AIX, SCO, FreeBSD, Mac OS, Windows). MongoDB is also under consideration for future development
+
+== Getting Started
+
+For details on how to get started with the AgentQuote framework refer to:
+    
+    http://www.softinsure.com/agentquote
+    
+== Getting Involved
+
+Report bugs or track framework development progress:
+
+    http://github.com/softinsure/agentquote/issues
+  
+Get involved with the community:
+      
+    http://groups.google.com/group/agentquote
+    
+== License
+
+Copyright (c) 2010 SoftInsure and Contributors, released under MIT License
