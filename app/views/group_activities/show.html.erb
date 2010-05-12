@@ -1,0 +1,18 @@
+<p>
+  <b>Activity code:</b>
+  <%=h @group_activity.activity_code %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @group_activity.description %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @group_activity.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_group_activity_path(@group_activity) %> |
+<%= link_to 'Back', group_activities_path %>

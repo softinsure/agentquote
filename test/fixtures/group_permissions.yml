@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  group_code: MyString
+  activity_code: MyString
+  lob_code: MyString
+  status: MyString
+  editable: MyString
+
+two:
+  group_code: MyString
+  activity_code: MyString
+  lob_code: MyString
+  status: MyString
+  editable: MyString

@@ -1,0 +1,11 @@
+<TextFlow id="startmain" paddingBottom="5" paddingLeft="20" paddingRight="5" paddingTop="20" paragraphSpaceBefore="5" whiteSpaceCollapse="preserve" xmlns="http://ns.adobe.com/textLayout/2008">
+<p styleName="title">Why AgentQuote?</p>
+<p styleName="para">AgentQuote is an easy web-based, platform independent, secured, configurable solution for P&amp;C Insurance carriers to accomplish key business transactions quickly and easily. Currently this is under development and a demo version is available to review. This application is being developed considering future web revolution and loosely coupled solutions using some state of the art technologies.</p>
+<p styleName="title">Technologies Used</p>
+<p styleName="parahead">User Interface:</p>
+<p styleName="para">Considering the popularity of Adobe Flash and RIA this is being developed in Flex 4. Also there is a future plan to develop this application in AIR and HTML 5.</p>
+<p styleName="parahead">Web Service:</p>
+<p styleName="para">Ruby on Rails is used as service considering its ability to support REST (Representational State Transfer), agile development, MVC. Currently this secured service is rendered as XML but JSON and others are also under consideration for HTML 5 version.</p>
+<p styleName="parahead">Database:</p>
+<p styleName="para">MySql is used considering its pluggable Storage Engine Architecture (MyISAM, InnoDB, Merge, Memory, Archive, Cluster)and availability in to-dozen platforms (32 and 64 bit) including Windows: (RedHat, SuSE, Fedora, Solaris, HPUS, AIX, SCO, FreeBSD, Mac OS, Windows).</p>
+</TextFlow>

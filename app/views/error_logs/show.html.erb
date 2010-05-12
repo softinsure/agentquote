@@ -1,0 +1,28 @@
+<p>
+  <b>Quote:</b>
+  <%=h @error_log.quote_id %>
+</p>
+
+<p>
+  <b>Error desc:</b>
+  <%=h @error_log.error_desc %>
+</p>
+
+<p>
+  <b>Error name:</b>
+  <%=h @error_log.error_name %>
+</p>
+
+<p>
+  <b>Error source:</b>
+  <%=h @error_log.error_source %>
+</p>
+
+<p>
+  <b>Error type:</b>
+  <%=h @error_log.error_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_error_log_path(@error_log) %> |
+<%= link_to 'Back', error_logs_path %>

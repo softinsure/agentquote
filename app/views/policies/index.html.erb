@@ -1,0 +1,40 @@
+<h1>Listing policies</h1>
+
+<table>
+  <tr>
+    <th>Policy prefix</th>
+    <th>Policy suffix</th>
+    <th>Policy number</th>
+    <th>Prior policy number</th>
+    <th>Org effective date</th>
+    <th>Current status</th>
+    <th>Num endorsed</th>
+    <th>Num renewed</th>
+    <th>Num reinstated</th>
+    <th>Quote</th>
+    <th>Ref number</th>
+  </tr>
+
+<% @policies.each do |policy| %>
+  <tr>
+    <td><%=h policy.policy_prefix %></td>
+    <td><%=h policy.policy_suffix %></td>
+    <td><%=h policy.policy_number %></td>
+    <td><%=h policy.prior_policy_number %></td>
+    <td><%=h policy.org_effective_date %></td>
+    <td><%=h policy.current_status %></td>
+    <td><%=h policy.num_endorsed %></td>
+    <td><%=h policy.num_renewed %></td>
+    <td><%=h policy.num_reinstated %></td>
+    <td><%=h policy.quote_id %></td>
+    <td><%=h policy.ref_number %></td>
+    <td><%= link_to 'Show', policy %></td>
+    <td><%= link_to 'Edit', edit_policy_path(policy) %></td>
+    <td><%= link_to 'Destroy', policy, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New policy', new_policy_path %>

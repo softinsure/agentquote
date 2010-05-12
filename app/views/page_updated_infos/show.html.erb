@@ -1,0 +1,18 @@
+<p>
+  <b>Quote:</b>
+  <%=h @page_updated_info.quote_id %>
+</p>
+
+<p>
+  <b>Pageid:</b>
+  <%=h @page_updated_info.pageid %>
+</p>
+
+<p>
+  <b>Required fields entered:</b>
+  <%=h @page_updated_info.required_fields_entered %>
+</p>
+
+
+<%= link_to 'Edit', edit_page_updated_info_path(@page_updated_info) %> |
+<%= link_to 'Back', page_updated_infos_path %>

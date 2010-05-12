@@ -1,0 +1,40 @@
+<h1>Listing policy_headers</h1>
+
+<table>
+  <tr>
+    <th>Policy prefix</th>
+    <th>Policy suffix</th>
+    <th>Policy number</th>
+    <th>Prior polocy number</th>
+    <th>Org effective date</th>
+    <th>Current status</th>
+    <th>Current activity</th>
+    <th>Num endorsed</th>
+    <th>Num renewed</th>
+    <th>Num reinstated</th>
+    <th>Policy</th>
+  </tr>
+
+<% @policy_headers.each do |policy_header| %>
+  <tr>
+    <td><%=h policy_header.policy_prefix %></td>
+    <td><%=h policy_header.policy_suffix %></td>
+    <td><%=h policy_header.policy_number %></td>
+    <td><%=h policy_header.prior_polocy_number %></td>
+    <td><%=h policy_header.org_effective_date %></td>
+    <td><%=h policy_header.current_status %></td>
+    <td><%=h policy_header.current_activity %></td>
+    <td><%=h policy_header.num_endorsed %></td>
+    <td><%=h policy_header.num_renewed %></td>
+    <td><%=h policy_header.num_reinstated %></td>
+    <td><%=h policy_header.policy_id %></td>
+    <td><%= link_to 'Show', policy_header %></td>
+    <td><%= link_to 'Edit', edit_policy_header_path(policy_header) %></td>
+    <td><%= link_to 'Destroy', policy_header, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New policy_header', new_policy_header_path %>

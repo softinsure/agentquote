@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<collection>
+  <page id="agent" initfunc="org.linda.controllers.AdminController.agentAddInit" title="Create Agent" tip="To get help, please click on the help icon.">
+    <panel id="agenntinfo" type="fieldset" title="Agent Information">
+        <fieldElement type="TextInput" requiredflag="true" properties="editable=false" validation="string|property=text;required=true^servererror|field=agency_code" id="agency_code" datamap="agentToUpdate.agency_code" finder="agencyname::adminsearch::agency_code::agency_code" label="Agency ID" />
+   		<fieldElement type="TextInput" requiredflag="true" validation="string|property=text;required=true^servererror|field=agent_code" id="agent_code" datamap="agentToUpdate.agent_code" label="Agent Code" />
+    	<fieldElement type="NameInput" id="aname"
+				datamap="agentToUpdate.first_name,agentToUpdate.last_name,agentToUpdate.middle_name"
+				requiredflag="true"
+				validation="string|property=text;required=true" label="Agent Name"/>
+ 		<fieldElement type="AddressInput" requiredflag="true" id="address"
+				datamap="agentToUpdate.address,agentToUpdate.address2,agentToUpdate.city,agentToUpdate.state,agentToUpdate.zip"
+				validation="string|property=text;required=true" label="Address"/>
+      	<fieldElement type="PhoneInput" id="wphone" label="Work Phone" phonetype="false" requiredflag="true"
+                    datamap=",agentToUpdate.work_phone" validation="string|property=text;required=true"/>
+	  	<fieldElement type="PhoneInput" id="cphone" label="Cell Phone" phonetype="false"
+                    datamap=",agentToUpdate.cell_phone" validation="string|property=text"/>
+	  	<fieldElement type="TextInput" requiredflag="true" id="license" datamap="agentToUpdate.license_number" label="Llicense Number" properties="maxChars=15" validation="string|property=text;required=true"/>
+	  	<fieldElement type="TextInput" requiredflag="true" id="licensetype" datamap="agentToUpdate.license_type" label="License Type" properties="maxChars=30" validation="string|property=text;required=true"/>
+	  	<fieldElement type="TextInput" requiredflag="true" id="ssn" datamap="agentToUpdate.ssn" label="SSN (xxx-xx-xxxx)" properties="maxChars=12" validation="ssn|property=text;required=true"/>
+      	<fieldElement type="TextInput" requiredflag="true" id="email" datamap="agentToUpdate.email" label="Email Address" validation="email|property=text;required=true"/>
+     </panel>
+  </page>
+  <page id="agency" initfunc="org.linda.controllers.AdminController.agencyAddInit" title="Add/Update Agency" tip="To get help, please click on the help icon.">
+    <panel id="agencyinfo" type="fieldset" title="Agency Information">
+    	<!--
+        <fieldElement type="TextInput" id="agency_code" datamap="agencyToUpdate.agency_code" properties="editable=false" action="read" label="Agency Code" />
+        -->
+        <fieldElement type="TextInput" requiredflag="true" validation="string|property=text;required=true^servererror|field=name" id="name" datamap="agencyToUpdate.name" label="Agency Name" />
+        <fieldElement type="TextInput" requiredflag="true" validation="string|property=text;required=true^servererror|field=contact_title" id="contact_title" datamap="agencyToUpdate.contact_title" label="Contact Title" />
+    	<fieldElement type="NameInput" id="cname"
+				datamap="agencyToUpdate.contact_first_name,agencyToUpdate.contact_last_name,agencyToUpdate.contact_middle_name"
+				requiredflag="true"
+				validation="string|property=text;required=true" label="Contact Name"/>
+ 		<fieldElement type="AddressInput" requiredflag="true" id="address"
+				datamap="agencyToUpdate.address,agencyToUpdate.address2,agencyToUpdate.city,agencyToUpdate.state,agencyToUpdate.zip"
+				validation="string|property=text;required=true" label="Contact Address"/>
+      	<fieldElement type="PhoneInput" id="phone1" label="Phone 1" phonetype="false" requiredflag="true"
+                    datamap=",agencyToUpdate.contact_phone1" validation="string|property=text;required=true"/>
+	  	<fieldElement type="PhoneInput" id="phone2" label="Phone 2" phonetype="false"
+                    datamap=",agencyToUpdate.contact_phone2" validation="string|property=text"/>
+	  	<fieldElement type="TextInput" requiredflag="true" id="license" datamap="agencyToUpdate.license_number" label="Llicense Number" properties="maxChars=15" validation="string|property=text;required=true"/>
+	  	<fieldElement type="TextInput" requiredflag="true" id="licensetype" datamap="agencyToUpdate.license_type" label="License Type" properties="maxChars=30" validation="string|property=text;required=true"/>
+    	<fieldElement type="TextInput" requiredflag="true" id="email" datamap="agencyToUpdate.contact_email" label="Email Address" validation="email|property=text;required=true"/>
+    </panel>
+  </page>
+  <page id="paymentplan" title="Add/Update Payment Plan" tip="To get help, please click on the help icon.">
+    <panel id="paymentplan" type="fieldset" title="Payment Plan">
+    	<fieldElement type="TextInput" requiredflag="true" validation="integer|property=text;required=true^servererror|field=display_order" id="display_order" datamap="paymentplanToUpdate.display_order" label="Display Order" />
+    	<fieldElement type="TextInput" requiredflag="true" validation="string|property=text;required=true^servererror|field=lob" id="lob" datamap="paymentplanToUpdate.lob" label="LOB" />
+        <fieldElement type="TextInput" requiredflag="true" validation="string|property=text;required=true^servererror|field=plan_code" id="plan_code" datamap="paymentplanToUpdate.plan_code" label="Plan Code" />
+    	<fieldElement type="TextInput" requiredflag="true" validation="string|property=text;required=true^servererror|field=plan_desc" id="plan_desc" datamap="paymentplanToUpdate.plan_desc" label="Plan Descriptrion" />
+    	<fieldElement type="TextInput" requiredflag="true" validation="integer|property=text;required=true^servererror|field=plan_term" id="plan_term" datamap="paymentplanToUpdate.plan_term" label="Plan Term" />
+    	<fieldElement type="TextInput" requiredflag="true" validation="integer|property=text;required=true^servererror|field=installment_number" id="installment_number" datamap="paymentplanToUpdate.installment_number" label="Installment Number" />
+    	<fieldElement type="TextInput" requiredflag="true" validation="number|property=text;required=true^servererror|field=installment_fee" id="installment_fee" datamap="paymentplanToUpdate.installment_fee" label="Installment Fee" />
+    	<fieldElement type="TextInput" requiredflag="true" validation="number|property=text;required=true^servererror|field=policy_fee" id="policy_fee" datamap="paymentplanToUpdate.policy_fee" label="Policy Fee" />
+    	<fieldElement type="TextInput" requiredflag="true" validation="number|property=text;required=true^servererror|field=down_payment" id="down_payment" datamap="paymentplanToUpdate.down_payment" label="Down Payment" />
+    	<fieldElement type="TextInput" requiredflag="true" validation="integer|property=text;required=true^servererror|field=down_payment_days" id="down_payment_days" datamap="paymentplanToUpdate.down_payment_days" label="Down Payment Days" />
+    	<fieldElement type="TextInput" validation="number|property=text^servererror|field=first_percent" id="first_percent" datamap="paymentplanToUpdate.first_percent" label="First Percent" />
+    	<fieldElement type="TextInput" validation="integer|property=text^servererror|field=first_days" id="first_days" datamap="paymentplanToUpdate.first_days" label="First Days" />
+    	<fieldElement type="TextInput" validation="number|property=text^servererror|field=second_percent" id="second_percent" datamap="paymentplanToUpdate.second_percent" label="Second Percent" />
+    	<fieldElement type="TextInput" validation="integer|property=text^servererror|field=second_days" id="second_days" datamap="paymentplanToUpdate.second_days" label="Second Days" />
+    	<fieldElement type="TextInput" validation="number|property=text^servererror|field=third_percent" id="third_percent" datamap="paymentplanToUpdate.third_percent" label="Third Percent" />
+    	<fieldElement type="TextInput" validation="integer|property=text^servererror|field=third_days" id="third_days" datamap="paymentplanToUpdate.third_days" label="Third Days" />
+    	<fieldElement type="TextInput" validation="number|property=text^servererror|field=fourth_percent" id="fourth_percent" datamap="paymentplanToUpdate.fourth_percent" label="Fourth Percent" />
+    	<fieldElement type="TextInput" validation="integer|property=text^servererror|field=fourth_days" id="fourth_days" datamap="paymentplanToUpdate.fourth_days" label="Fourth Days" />
+    	<fieldElement type="TextInput" validation="number|property=text^servererror|field=fifth_percent" id="fifth_percent" datamap="paymentplanToUpdate.fifth_percent" label="Fifth Percent" />
+    	<fieldElement type="TextInput" validation="integer|property=text^servererror|field=fifth_days" id="fifth_days" datamap="paymentplanToUpdate.fifth_days" label="Fifth Days" />
+    	<fieldElement type="TextInput" validation="number|property=text^servererror|field=sixth_percent" id="sixth_percent" datamap="paymentplanToUpdate.sixth_percent" label="Sixth Percent" />
+    	<fieldElement type="TextInput" validation="integer|property=text^servererror|field=sixth_days" id="sixth_days" datamap="paymentplanToUpdate.sixth_days" label="Sixth Days" />
+    	<fieldElement type="TextInput" validation="number|property=text^servererror|field=seventh_percent" id="seventh_percent" datamap="paymentplanToUpdate.seventh_percent" label="Seventh Percent" />
+    	<fieldElement type="TextInput" validation="integer|property=text^servererror|field=seventh_days" id="seventh_days" datamap="paymentplanToUpdate.seventh_days" label="Seventh Days" />
+    	<fieldElement type="TextInput" validation="number|property=text^servererror|field=eighth_percent" id="eighth_percent" datamap="paymentplanToUpdate.eighth_percent" label="Eigth Percent" />
+    	<fieldElement type="TextInput" validation="integer|property=text^servererror|field=eighth_days" id="eighth_days" datamap="paymentplanToUpdate.eighth_days" label="Eigth Days" />
+    	<fieldElement type="TextInput" validation="number|property=text^servererror|field=ninth_percent" id="ninth_percent" datamap="paymentplanToUpdate.ninth_percent" label="Ninth Percent" />
+    	<fieldElement type="TextInput" validation="integer|property=text^servererror|field=ninth_days" id="ninth_days" datamap="paymentplanToUpdate.ninth_days" label="Ninth Days" />
+    	<fieldElement type="TextInput" validation="number|property=text^servererror|field=tenth_percent" id="tenth_percent" datamap="paymentplanToUpdate.tenth_percent" label="Tenth Percent" />
+    	<fieldElement type="TextInput" validation="integer|property=text^servererror|field=tenth_days" id="tenth_days" datamap="paymentplanToUpdate.tenth_days" label="Tenth Days" />
+    	<fieldElement type="TextInput" validation="number|property=text^servererror|field=eleventh_percent" id="eleventh_percent" datamap="paymentplanToUpdate.eleventh_percent" label="Eleventh Percent" />
+    	<fieldElement type="TextInput" validation="integer|property=text^servererror|field=eleventh_days" id="eleventh_days" datamap="paymentplanToUpdate.eleventh_days" label="Eleventh Days" />
+    	<fieldElement type="TextInput" validation="number|property=text^servererror|field=twelfth_percent" id="twelfth_percent" datamap="paymentplanToUpdate.twelfth_percent" label="twelfth Percent" />
+    	<fieldElement type="TextInput" validation="integer|property=text^servererror|field=twelfth_days" id="twelfth_days" datamap="paymentplanToUpdate.twelfth_days" label="twelfth Days" />
+		</panel>
+  </page>
+  <page id="group" title="Add/Update Group" tip="To get help, please click on the help icon.">
+    <panel id="group" type="fieldset" title="Group Setup">
+    	<fieldElement type="TextInput" requiredflag="true" validation="string|property=text;required=true^servererror|field=group_code" id="group_code" datamap="groupToUpdate.group_code" label="Group Code" />
+    	<fieldElement type="TextInput" requiredflag="true" validation="string|property=text;required=true^servererror|field=description" id="description" datamap="groupToUpdate.description" label="Descriptrion" />
+		<fieldElement type="radiolist" requiredflag="true" validation="string|property=text;required=true" id="status" label="Status" datamap="groupToUpdate.status" deafult="A" lookupsource="xml::admincombolist::active-inactive"/>
+		<fieldElement type="radiolist" requiredflag="true" validation="string|property=text;required=true" id="editable" label="Editable" datamap="groupToUpdate.editable" deafult="Y" lookupsource="xml::basecombolist::radioyesno"/>
+	</panel>
+  </page>
+  <page id="lob" title="Add/Update LOB" tip="To get help, please click on the help icon.">
+    <panel id="group" type="fieldset" title="LOB Setup">
+    	<fieldElement type="TextInput" requiredflag="true" validation="string|property=text;required=true^servererror|field=lob_code" id="lob_code" datamap="lineofbusinessToUpdate.lob_code" label="LOB Code" />
+    	<fieldElement type="TextInput" requiredflag="true" validation="string|property=text;required=true^servererror|field=description" id="description" datamap="lineofbusinessToUpdate.description" label="Descriptrion" />
+		<fieldElement type="radiolist" requiredflag="true" validation="string|property=text;required=true" id="status" label="Status" datamap="lineofbusinessToUpdate.status" deafult="A" lookupsource="xml::admincombolist::active-inactive"/>
+		<fieldElement type="radiolist" requiredflag="true" validation="string|property=text;required=true" id="editable" label="Editable" datamap="lineofbusinessToUpdate.editable" deafult="Y" lookupsource="xml::basecombolist::radioyesno"/>
+	</panel>
+  </page>
+  <page id="groupactivity" initfunc="org.linda.controllers.AdminController.groupActivityAddInit" title="Add/Update Group Activity" tip="To get help, please click on the help icon.">
+    <panel id="groupactivity" type="fieldset" title="Group Activity">
+    	<fieldElement type="TextInput" requiredflag="true" validation="string|property=text;required=true^servererror|field=activity_code" id="activity_code" datamap="groupactivityToUpdate.activity_code" label="Activity Code" />
+    	<fieldElement type="TextInput" requiredflag="true" validation="string|property=text;required=true^servererror|field=description" id="description" datamap="groupactivityToUpdate.description" label="Descriptrion" />
+		<fieldElement type="radiolist" requiredflag="true" validation="string|property=text;required=true" id="status" label="Status" datamap="groupactivityToUpdate.status" deafult="A" lookupsource="xml::admincombolist::active-inactive"/>
+		<fieldElement type="radiolist" requiredflag="true" validation="string|property=text;required=true" id="editable" label="Editable" datamap="groupactivityToUpdate.editable" deafult="Y" lookupsource="xml::basecombolist::radioyesno"/>
+	</panel>
+  </page>
+  <page id="user" initfunc="org.linda.controllers.AdminController.userAddInit" title="Add/Update User" tip="To get help, please click on the help icon.">
+    <panel id="userinfo" type="fieldset" title="User Information">
+        <fieldElement type="TextInput" validation="string|property=text;required=true^servererror|field=login" id="login" datamap="userToUpdate.login" label="User ID" />
+		<!--
+		<fieldElement type="TextInput" requiredflag="true" properties="editable=false" validation="string|property=text;required=true^servererror|field=agent_code" id="agent_code" datamap="userToUpdate.agent_code"
+		finder="agentid::adminsearch::agent_code||first_name||last_name||middle_name::agent_code||uname_firstName||uname_lastName||uname_middleName" label="Attach Agent Profile" />
+		-->
+   		<fieldElement type="TextInput" requiredflag="true" properties="editable=false" validation="string|property=text;required=true^servererror|field=agent_code" id="agent_code" datamap="userToUpdate.agent_code"
+		finder="agentid::adminsearch::agent_code::agent_code" label="Assign Agent Profile" />
+   		<fieldElement type="Password" id="password" validation="string|required=true^servererror|field=password" properties="maxChars=20|displayAsPassword=true" datamap="userToUpdate.password" label="Password" />
+    	<fieldElement type="Password" id="passwordConf" validation="string|required=true^Passwordconfirmation|passwordID=password" datamap="userToUpdate.password_confirmation" properties="maxChars=20|displayAsPassword=true" label="Password Confirmation" />
+    	<fieldElement type="NameInput" id="uname" datamap="userToUpdate.first_name,userToUpdate.last_name,userToUpdate.middle_name" requiredflag="true" validation="string|property=text;required=true" />
+    	<fieldElement type="TextInput" id="email" requiredflag="true" validation="email|property=text;required=true" properties="maxChars=80" datamap="userToUpdate.email" label="Email" />
+    	<fieldElement type="radiolist" requiredflag="true" validation="string|property=text;required=true" id="status" label="Status" datamap="userToUpdate.status" deafult="A" lookupsource="xml::admincombolist::userstatus"/>
+		<fieldElement type="radiolist" requiredflag="true" validation="string|property=value;required=true" id="reset_pwd" label="Reset Password" datamap="userToUpdate.reset_password" deafult="N" lookupsource="xml::basecombolist::radioyesno"/>
+    	<fieldElement type="ComboBox"  requiredflag="true" validation="string|property=value;required=true" id="grp" label="User Group" datamap="userToUpdate.group" lookupsource="database::admincombolist::group"/>
+      	<!--<fieldElement type="TextInput" requiredflag="true" validation="string|property=text;required=true" id="email" properties="maxChars=20" datamap="userToUpdate.agent_code" label="Agent ID" />-->
+		<fieldElement type="datefield" requiredflag="true" id="efdt" label="Effective Date" datamap="userToUpdate.effective_at"/>
+    </panel>
+  </page>
+  <page id="commonbottom">
+    <panel id="actions" type="pageactionbar">
+      <fieldElement type="actionbuttonbar">
+        <action viewmode="E" label="Save" action="save" width="50" />
+        <action label="Cancel" action="cancel" width="50" />
+      </fieldElement>
+    </panel>
+  </page>
+</collection>

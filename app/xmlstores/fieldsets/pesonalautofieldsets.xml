@@ -1,0 +1,49 @@
+<fieldsets>
+	<fieldset id="GaragingLocation" type="standard">
+		<field type="field">Addr/Addr1</field>
+		<field type="space"> </field>
+		<field type="field">Addr/Addr2</field>
+		<field type="space"> </field>
+		<field type="field">Addr/City</field>
+		<field type="string">, </field>
+		<field type="field">Addr/StateProvCd</field>
+		<field type="space"> </field>
+		<field type="field">Addr/PostalCode</field>
+	</fieldset>
+	<fieldset id="Driver" type="standard">
+		<field type="field">GeneralPartyInfo/NameInfo/PersonName/GivenName</field>
+		<field type="space"> </field>
+		<field type="field">GeneralPartyInfo/NameInfo/PersonName/OtherGivenName</field>
+		<field type="space"> </field>
+		<field type="field">GeneralPartyInfo/NameInfo/PersonName/Surname</field>
+	</fieldset>
+	<fieldset id="insured" type="standard">
+		<field type="field">GivenName</field>
+		<field type="space"></field>
+		<field type="field">OtherGivenName</field>
+		<field type="space"></field>
+		<field type="field">Surname</field>
+	</fieldset>
+	<fieldset id="address" type="standard">
+		<field type="field">Addr1</field>
+		<field type="space"> </field>
+		<field type="field">Addr2</field>
+		<field type="space"> </field>
+		<field type="field">City</field>
+		<field type="string">,</field>
+		<field type="space"> </field>
+		<field type="field">StateProvCd</field>
+		<field type="space"> </field>
+		<field type="field">PostalCode</field>
+	</fieldset>
+	<fieldset id="Vehicle" type="standard">
+		<field type="field">ModelYear</field>
+		<field type="space"></field>
+		<field type="field" lookupsource="xml::pa_combolist::vehiclemake">Manufacturer</field>
+		<field type="space"></field>
+		<field type="field">Model</field>
+		<field type="space"></field>
+		<field type="string">#</field>
+		<field type="field">VehIdentificationNumber</field>
+	</fieldset>
+</fieldsets>

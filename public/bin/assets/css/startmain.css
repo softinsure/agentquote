@@ -1,0 +1,81 @@
+.title {
+	alignmentBaseline: useDominantBaseline;  
+	backgroundAlpha: 1;  
+	backgroundColor: transparent;  
+	baselineShift: 0;  
+	cffHinting: horizontalStem;  
+	color: #CC3300; /*#0099CC;*/  
+	digitCase: default;  
+	digitWidth: default;  
+	dominantBaseline: auto;  
+	fontFamily: arial;  
+	fontLookup: device;  
+	fontSize: 16;  
+	fontStyle: normal;  
+	fontWeight: bold;  
+	kerning: auto;  
+	ligatureLevel: common;  
+	lineThrough: false;  
+	locale: en;  
+	renderingMode: cff;  
+	textAlpha: 1;  
+	textDecoration: none;  
+	textRotation: auto;  
+	trackingLeft: 0;  
+	trackingRight: 0;  
+	typographicCase: default;
+}
+.parahead {
+	alignmentBaseline: useDominantBaseline;  
+	backgroundAlpha: 1;  
+	backgroundColor: transparent;  
+	baselineShift: 0;  
+	cffHinting: horizontalStem;  
+	color: 0x0;  
+	digitCase: default;  
+	digitWidth: default;  
+	dominantBaseline: auto;  
+	fontFamily: arial;  
+	fontLookup: device;  
+	fontSize: 14;  
+	fontWeight: bold;  
+	fontStyle: normal;  
+	kerning: auto;  
+	ligatureLevel: common;  
+	lineThrough: false;  
+	locale: en;  
+	renderingMode: cff;  
+	textAlpha: 1;  
+	textDecoration: none;  
+	textRotation: auto;  
+	trackingLeft: 0;  
+	trackingRight: 0;  
+	typographicCase: default;
+}
+.para {
+	alignmentBaseline: useDominantBaseline;  
+	backgroundAlpha: 1;  
+	backgroundColor: transparent;  
+	baselineShift: 0;  
+	cffHinting: horizontalStem;  
+	color: 0x0;  
+	digitCase: default;  
+	digitWidth: default;  
+	dominantBaseline: auto;  
+	fontFamily: verdana;  
+	fontLookup: device;  
+	fontSize: 13;
+	fontStyle: normal;  
+	kerning: auto;  
+	ligatureLevel: common;  
+	lineThrough: false;  
+	locale: en;  
+	renderingMode: cff;  
+	textAlpha: 1;  
+	textDecoration: none;  
+	textRotation: auto;  
+	trackingLeft: 0;  
+	trackingRight: 0;  
+	typographicCase: default;
+	textAlign: justify;
+}

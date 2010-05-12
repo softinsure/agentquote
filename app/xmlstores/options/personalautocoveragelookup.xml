@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<Coverages>
+	<Coverage code="BI">
+		<description>Liability Bodily Injury</description>
+		<limit lookupsource="xml::coveragelimits::BILimits"/>
+    </Coverage>
+	<Coverage code="PD">
+		<description>Liability Property Damage</description>
+		<limit lookupsource="xml::coveragelimits::PDLimits"/>
+	</Coverage>
+	<Coverage code="MED">
+		<description>Medical Payments</description>
+		<limit lookupsource="xml::coveragelimits::medPayLimits"/>
+	</Coverage>
+	<Coverage code="UMBI">
+		<description>Uninsured Motorist Bodily Injury</description>
+		<limit lookupsource="xml::coveragelimits::UMBILimits"/>
+	</Coverage>
+	<Coverage code="UMPD">
+		<description>Uninsured Motorist Property Damage</description>
+		<limit lookupsource="xml::coveragelimits::UMPDLimits"/>
+	</Coverage>
+	<Coverage code="COMP">
+		<description>Other Than Collision Deductible</description>
+		<level>unit</level>
+		<deductible lookupsource="xml::coveragelimits::COMPDed"/>
+	</Coverage>
+	<Coverage code="COLL">
+		<description>Collision Deductible</description>
+		<level>unit</level>
+		<deductible lookupsource="xml::coveragelimits::COLLDed"/>
+	</Coverage>
+	<Coverage code="TOW">
+		<description>Towing and Labor</description>
+		<level>unit</level>
+		<limit lookupsource="xml::coveragelimits::TOWLabor"/>
+	</Coverage>
+	<Coverage code="RNT">
+		<description>Towing and Labor</description>
+		<level>unit</level>
+		<limit lookupsource="xml::coveragelimits::TRANExpenses"/>
+	</Coverage>
+</Coverages>

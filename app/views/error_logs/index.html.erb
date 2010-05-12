@@ -1,0 +1,28 @@
+<h1>Listing error_logs</h1>
+
+<table>
+  <tr>
+    <th>Quote</th>
+    <th>Error desc</th>
+    <th>Error name</th>
+    <th>Error source</th>
+    <th>Error type</th>
+  </tr>
+
+<% for error_log in @error_logs %>
+  <tr>
+    <td><%=h error_log.quote_id %></td>
+    <td><%=h error_log.error_desc %></td>
+    <td><%=h error_log.error_name %></td>
+    <td><%=h error_log.error_source %></td>
+    <td><%=h error_log.error_type %></td>
+    <td><%= link_to 'Show', error_log %></td>
+    <td><%= link_to 'Edit', edit_error_log_path(error_log) %></td>
+    <td><%= link_to 'Destroy', error_log, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New error_log', new_error_log_path %>

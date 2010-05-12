@@ -1,0 +1,40 @@
+<h1>Listing search_entities</h1>
+
+<table>
+  <tr>
+    <th>Insured name</th>
+    <th>Entity1</th>
+    <th>Entity2</th>
+    <th>Entity3</th>
+    <th>Entity4</th>
+    <th>Entity5</th>
+    <th>Entity6</th>
+    <th>Entity7</th>
+    <th>Entity8</th>
+    <th>Entity9</th>
+    <th>Entity10</th>
+  </tr>
+
+<% for search_entities in @search_entities %>
+  <tr>
+    <td><%=h search_entities.insured_name %></td>
+    <td><%=h search_entities.entity1 %></td>
+    <td><%=h search_entities.entity2 %></td>
+    <td><%=h search_entities.entity3 %></td>
+    <td><%=h search_entities.entity4 %></td>
+    <td><%=h search_entities.entity5 %></td>
+    <td><%=h search_entities.entity6 %></td>
+    <td><%=h search_entities.entity7 %></td>
+    <td><%=h search_entities.entity8 %></td>
+    <td><%=h search_entities.entity9 %></td>
+    <td><%=h search_entities.entity10 %></td>
+    <td><%= link_to 'Show', search_entities %></td>
+    <td><%= link_to 'Edit', edit_search_entities_path(search_entities) %></td>
+    <td><%= link_to 'Destroy', search_entities, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New search_entities', new_search_entities_path %>

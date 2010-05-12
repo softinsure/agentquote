@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<slides>
+	<!-- Show navigation to (true / false) -->
+	<navigation>false</navigation>
+	
+	<!-- Path to navigation-icons, x & y positions -->
+	<navPrevPath>assets/images/slides/navprev.png</navPrevPath>
+	<navNextPath>assets/images/slides/navnext.png</navNextPath>
+	<navPrevXpos>30</navPrevXpos>
+	<navPrevYpos>180</navPrevYpos>
+	<navNextXpos>930</navNextXpos>
+	<navNextYpos>180</navNextYpos>
+	
+	<!-- Color and Height of Preloader Bar -->
+	<preloaderColor>0x0099FF</preloaderColor>
+	<preloaderHeight>6</preloaderHeight>
+	
+	<!-- Show labeles (true / false) -->
+	<labels>true</labels>
+	
+	<!-- Label background color, alpha, width, topPadding, bottomPadding, leftPadding -->
+	<labelBoxColor>0xffffff</labelBoxColor>
+	<labelBoxAlpha>0.8</labelBoxAlpha>
+	<labelBoxWidth>960</labelBoxWidth>
+	<labelBoxTopPadding>10</labelBoxTopPadding>
+	<labelBoxBottomPadding>10</labelBoxBottomPadding>
+	<labelBoxLeftPadding>10</labelBoxLeftPadding>
+	
+	<!-- Set the delaytime (ms) -->
+	<delayTime>3000</delayTime>
+	
+	<!-- Set tweentime (sec) -->
+	<tweenTime>0.6</tweenTime>
+	
+	<!-- Set transition-type (fade, blur, rightWipe, leftWipe, topWipe, bottomWipe -->
+	<transitionType>bottomWipe</transitionType>
+	
+	<!-- This is only used if transitionType = blur -->
+	<blurAmount>10</blurAmount>
+	
+	<!-- Set transition easing type -->
+	<!-- Back.easeOut, 		Back.easeIn, 		Back.easeInOut -->
+	<!-- Bounce.easeOut, 	Bounce.easeIn, 		Bounce.easeInOut -->
+	<!-- Circ.easeOut, 		Circ.easeIn, 		Circ.easeInOut -->
+	<!-- Cubic.easeOut, 	Cubic.easeIn, 		Cubic.easeInOut -->
+	<!-- Elastic.easeOut,	Elastic.easeIn, 	Elastic.easeInOut -->
+	<!-- Expo.easeOut, 		Expo.easeIn, 		Expo.easeInOut -->
+	<!-- Quad.easeOut, 		Quad.easeIn, 		Quad.easeInOut -->
+	<!-- Quart.easeOut, 	Quart.easeIn, 		Quart.easeInOut -->  
+	<!-- Quint.easeOut, 	Quint.easeIn, 		Quint.easeInOut -->
+	<!-- Sine.easeOut, 		Sine.easeIn, 		Sine.easeInOut -->
+	<!-- Strong.easeOut, 	Strong.easeIn, 		Strong.easeInOut -->
+	<!-- Linear.easeNone -->
+	
+	<transitionEasing>Expo.easeInOut</transitionEasing>
+	
+	<!-- Path to stylesheet -->
+	<stylesheet>assets/css/styles.css</stylesheet>
+	
+	<!-- Path to font-swf -->
+	<fontswf>assets/images/slides/rockwell.swf</fontswf>
+	
+	<!-- Images and Labels -->
+	<slide>
+		<image>assets/images/slides/1.jpg</image>
+		<label><![CDATA[<h1>Dummy Header</h1><p class="bodytext">We can right some more text and style it through our cssfile.</p><span class="italic">You pretty much do what you want.  </span><a href='http://flash.tutsplus.com'>Visit FlashTuts</a>]]></label>
+	</slide>
+	<slide>
+		<image>assets/images/slides/2.jpg</image>
+		<label><![CDATA[<h1>Advanced Slideshow</h1><p class="bodytext">We can add quite some text here to describe the picture.</p>]]></label>
+	</slide>
+	<slide>
+		<image>assets/images/slides/4.jpg</image>
+		<label><![CDATA[<h1>A Great Way</h1><p class="bodytext">It´s very handy to be able to style the text with an external css-file.</p>]]></label>
+	</slide>
+	<slide>
+		<image>assets/images/slides/5.jpg</image>
+		<label><![CDATA[<h1>Pretty Awesome</h1><p class="bodytext">We have covered a lot of areas in todays tutorial.<br />I hope you have followed along otherwise you might need to go over it again.</p>]]></label>
+	</slide>
+	<slide>
+		<image>assets/images/slides/6.jpg</image>
+		<label><![CDATA[<h1>Take it Easy</h1><p class="bodytext">I would mind a bit of that, wouldn´t you agree?.<br />Well, at least we´ve built a slideshow so we can enjoy the picture.</p>]]></label>
+	</slide>
+</slides>

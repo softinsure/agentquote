@@ -1,0 +1,23 @@
+<p>
+  <b>Group code:</b>
+  <%=h @group.group_code %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @group.description %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @group.status %>
+</p>
+
+<p>
+  <b>Editable:</b>
+  <%=h @group.editable %>
+</p>
+
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>

@@ -1,0 +1,18 @@
+<p>
+  <b>Quote:</b>
+  <%=h @xmlstore.quote_id %>
+</p>
+
+<p>
+  <b>Xmlstring:</b>
+  <%=h @xmlstore.xmlstring %>
+</p>
+
+<p>
+  <b>Original xml:</b>
+  <%=h @xmlstore.original_xml %>
+</p>
+
+
+<%= link_to 'Edit', edit_xmlstore_path(@xmlstore) %> |
+<%= link_to 'Back', xmlstores_path %>

@@ -1,0 +1,146 @@
+<AllContainers>
+	<container name="default">
+		<righttopcontainer>agentinfobox</righttopcontainer>
+		<topnavigation>topmenu</topnavigation>
+		<leftnavigation refresh="true">homeleft</leftnavigation>
+		<activitydetail>homebox</activitydetail>
+		<footer></footer>
+		<header></header>
+	</container>
+	<container name="work">
+		<topnavigation>topmenu</topnavigation>
+		<leftnavigation>NoLeftNavBar</leftnavigation>
+		<activitydetail searchconfig="basesearch" searchid="quotesearch" newload="true">searchbox</activitydetail>
+		<footer></footer>
+		<header></header>
+	</container>
+	<container name="policy">
+		<topnavigation>topmenu</topnavigation>
+		<leftnavigation>NoLeftNavBar</leftnavigation>
+		<activitydetail searchconfig="basesearch" searchid="policysearch" newload="true">searchbox</activitydetail>
+		<footer></footer>
+		<header></header>
+	</container>
+	<container name="quote">
+		<topnavigation>topmenu</topnavigation>
+		<leftnavigation refresh="true" transmenu="true">left_pa</leftnavigation>
+		<activitydetail refresh="true">quotebox</activitydetail>
+		<footer></footer>
+		<header></header>
+	</container>
+	<container name="error">
+		<topnavigation>topmenu</topnavigation>
+		<leftnavigation>NoLeftNavBar</leftnavigation>
+		<activitydetail searchconfig="basesearch" searchid="errorsearch" newload="true">searchbox</activitydetail>
+		<footer></footer>
+		<header></header>
+	</container>
+<!--
+	<container name="error">
+		<topnavigation>topmenu</topnavigation>
+		<leftnavigation>NoLeftNavBar</leftnavigation>
+		<activitydetail>errorbox</activitydetail>
+		<footer></footer>
+		<header></header>
+	</container>
+-->
+	<container name="debug">
+		<topnavigation>topmenu</topnavigation>
+		<leftnavigation>NoLeftNavBar</leftnavigation>
+		<activitydetail>debugbox</activitydetail>
+		<footer></footer>
+		<header></header>
+	</container>
+	<container name="admin">
+		<xmlstoloadconfig>xmlstores/config/adminxmlstoload.xml</xmlstoloadconfig>
+		<topnavigation>topmenu</topnavigation>
+		<leftnavigation>adminleft</leftnavigation>
+		<activitydetail>adminbox</activitydetail>
+		<footer></footer>
+		<header></header>
+	</container>
+	<container name="user">
+		<topnavigation>topmenu</topnavigation>
+		<leftnavigation>NoLeftNavBar</leftnavigation>
+		<!--
+		<transactiontouse>useradmin</transactiontouse>
+		-->
+		<activitydetail searchconfig="adminsearch" searchid="usersearch">searchbox</activitydetail>
+		<footer></footer>
+		<header></header>
+	</container>
+	<container name="agency">
+		<topnavigation>topmenu</topnavigation>
+		<leftnavigation>NoLeftNavBar</leftnavigation>
+		<!--
+		<transactiontouse>useradmin</transactiontouse>
+		-->
+		<activitydetail searchconfig="adminsearch" searchid="agencysearch">searchbox</activitydetail>
+		<footer></footer>
+		<header></header>
+	</container>
+	<container name="agent">
+		<topnavigation>topmenu</topnavigation>
+		<leftnavigation>NoLeftNavBar</leftnavigation>
+		<!--
+		<transactiontouse>useradmin</transactiontouse>
+		-->
+		<activitydetail searchconfig="adminsearch" searchid="agentsearch">searchbox</activitydetail>
+		<footer></footer>
+		<header></header>
+	</container>
+	<container name="group">
+		<topnavigation>topmenu</topnavigation>
+		<leftnavigation>NoLeftNavBar</leftnavigation>
+		<!--
+		<transactiontouse>useradmin</transactiontouse>
+		-->
+		<activitydetail searchconfig="adminsearch" searchid="groupsearch">searchbox</activitydetail>
+		<footer></footer>
+		<header></header>
+	</container>
+	<container name="lob">
+		<topnavigation>topmenu</topnavigation>
+		<leftnavigation>NoLeftNavBar</leftnavigation>
+		<!--
+		<transactiontouse>useradmin</transactiontouse>
+		-->
+		<activitydetail searchconfig="adminsearch" searchid="lobsearch">searchbox</activitydetail>
+		<footer></footer>
+		<header></header>
+	</container>
+	<container name="groupactivity">
+		<topnavigation>topmenu</topnavigation>
+		<leftnavigation>NoLeftNavBar</leftnavigation>
+		<!--
+		<transactiontouse>useradmin</transactiontouse>
+		-->
+		<activitydetail searchconfig="adminsearch" searchid="groupactivitysearch">searchbox</activitydetail>
+		<footer></footer>
+		<header></header>
+	</container>
+	<container name="paymentplan">
+		<topnavigation>topmenu</topnavigation>
+		<leftnavigation>NoLeftNavBar</leftnavigation>
+		<!--
+		<transactiontouse>useradmin</transactiontouse>
+		-->
+		<activitydetail searchconfig="adminsearch" searchid="paymentplansearch">searchbox</activitydetail>
+		<footer></footer>
+		<header></header>
+	</container>
+	<container name="permission">
+		<topnavigation>topmenu</topnavigation>
+		<leftnavigation>NoLeftNavBar</leftnavigation>
+		<activitydetail refresh="true">permissionbox</activitydetail>
+		<footer></footer>
+		<header></header>
+	</container>
+	<container name="pageholder">
+		<topnavigation>topmenu</topnavigation>
+		<leftnavigation>NoLeftNavBar</leftnavigation>
+		<activitydetail menu="activitymenu" refresh="true">pageholder</activitydetail>
+		<footer></footer>
+		<header></header>
+	</container>
+</AllContainers>

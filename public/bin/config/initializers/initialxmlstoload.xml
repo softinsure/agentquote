@@ -1,0 +1,7 @@
+<xmlstoload>
+	<xml id="navigation" filepath="config/initializers/basenavigation.xml"/>
+	<xml id="configuration" filepath="config/initializers/configuration.xml"/>
+	<!--
+	<xml id="textlayouts" filepath="xmlstores/textlayouts/startmain.xml"/>
+	-->
+</xmlstoload>

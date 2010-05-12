@@ -1,0 +1,25 @@
+<acordtags>
+	<acordtag name="coverage" insertaftertag="">
+		<Coverage id="">
+		  <CoverageCd></CoverageCd>
+		  <Limit>
+		    <FormatInteger>0</FormatInteger>
+		    <ValuationCd>PerOcc</ValuationCd>
+		    <LimitAppliesToCd>PerOcc</LimitAppliesToCd>
+		  </Limit>
+		  <Limit>
+		    <FormatInteger>0</FormatInteger>
+		    <ValuationCd>PerPerson</ValuationCd>
+		    <LimitAppliesToCd>PerPerson</LimitAppliesToCd>
+		  </Limit>
+		  <Deductible>
+		    <FormatInteger>0</FormatInteger>
+		  </Deductible>
+		  <CurrentTermAmt>
+		    <Amt></Amt>
+		  </CurrentTermAmt>
+		  <EffectiveDt>0</EffectiveDt>
+		  <ExpirationDt></ExpirationDt>
+		</Coverage>
+	</acordtag>
+</acordtags>

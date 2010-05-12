@@ -1,0 +1,32 @@
+<h1>Editing group_permission</h1>
+
+<% form_for(@group_permission) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :group_code %><br />
+    <%= f.text_field :group_code %>
+  </p>
+  <p>
+    <%= f.label :activity_code %><br />
+    <%= f.text_field :activity_code %>
+  </p>
+  <p>
+    <%= f.label :lob_code %><br />
+    <%= f.text_field :lob_code %>
+  </p>
+  <p>
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </p>
+  <p>
+    <%= f.label :editable %><br />
+    <%= f.text_field :editable %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @group_permission %> |
+<%= link_to 'Back', group_permissions_path %>

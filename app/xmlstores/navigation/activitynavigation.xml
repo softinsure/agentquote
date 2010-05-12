@@ -1,0 +1,9 @@
+<collection>
+	<panel id="activityuser">		
+		<menu id="acticity" direction="horizontal" stylename="topAppLinkBar" itemclick="topBarClicked(event)">		
+			<menuitem id="1" label="Create User" activity="pageholder" confirmchange="true"/>
+			<menuitem id="2" label="Find User" activity="usersearchbox"/>
+			<menuitem id="3" label="Admin Main" container="admin"/>
+		</menu>
+	</panel>
+</collection>

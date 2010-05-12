@@ -1,0 +1,6 @@
+<xmlstoload>
+	<xml id="adminscreen" filepath="xmlstores/pagelib/admin/screen.xml"/>
+	<xml id="adminsearch" filepath="xmlstores/pagelib/admin/search.xml"/>
+	<xml id="admincombolist" filepath="xmlstores/options/admincombolist.xml"/>
+	<xml id="adminfieldsets" filepath="xmlstores/fieldsets/adminfieldsets.xml"/>
+</xmlstoload>

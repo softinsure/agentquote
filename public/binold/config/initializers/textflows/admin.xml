@@ -1,0 +1,18 @@
+<TextFlow id="home" paddingBottom="5" paddingLeft="20" paddingRight="5" paddingTop="20" paragraphSpaceBefore="5" whiteSpaceCollapse="preserve" xmlns="http://ns.adobe.com/textLayout/2008">
+<p styleName="title">User Administration</p>
+<p styleName="para">Search, create, view and edit users.</p>
+<p styleName="title">Agency Administration</p>
+<p styleName="para">Search, create, view and edit agencies.</p>
+<p styleName="title">Agent Administration</p>
+<p styleName="para">Search, create, view and edit agents.</p>
+<p styleName="title">Payment Plan Administration</p>
+<p styleName="para">Search, create, view and edit Palyment Plans for any LOB (Line of Business).</p>
+<p styleName="title">Group Administration</p>
+<p styleName="para">Search, create, view and edit groups.</p>
+<p styleName="title">Group Activity Setup</p>
+<p styleName="para">Search, create, view and edit activities.</p>
+<p styleName="title">LOB Setup</p>
+<p styleName="para">Search, create, view and edit LOBs.</p>
+<p styleName="title">Group Permission Setup</p>
+<p styleName="para">Assign, revoke premissions (activities) from a group.</p>
+</TextFlow>

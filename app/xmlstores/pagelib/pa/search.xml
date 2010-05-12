@@ -1,0 +1,18 @@
+<collection>
+   <search id="payplan" type="finder" title="Select Palyment Plan">
+  	<datagrid>
+	  <colElement datafield="plan_code" width="100" header="Plan Code"/>
+      <colElement datafield="plan_desc" width="250" header="Description"/>
+      <colElement datafield="installment_number" width="80" header="Installment #"/>
+      <colElement datafield="installment_fee" width="80" header="Installment Fee"/>
+      <colElement datafield="policy_fee" width="80" header="Policy Fee"/>
+      </datagrid>
+	  <query>
+	  	<limit>10</limit>
+	  	<select>plan_code,plan_desc,installment_number,installment_fee,policy_fee</select>
+	  	<from>payment_plans</from>
+	  	<where>lob='PA'</where>
+		<orderby>id desc</orderby>		
+	  </query>
+ </search>
+ </collection>

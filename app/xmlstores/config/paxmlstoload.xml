@@ -1,0 +1,15 @@
+<xmlstoload>
+	<xml id="screen" filepath="xmlstores/pagelib/pa/screen.xml"/>
+	<xml id="rightscreen" filepath="xmlstores/pagelib/pa/rightscreen.xml"/>
+	<xml id="coveragelimits" filepath="xmlstores/options/personalautocoveragelimits.xml"/>
+	<xml id="coveragelookup" filepath="xmlstores/options/personalautocoveragelookup.xml"/>
+	<xml id="pa_combolist" filepath="xmlstores/options/personalautocombolist.xml"/>
+	<xml id="pageandproperties" filepath="xmlstores/pageandproperties/pa_properties.xml"/>
+	<xml id="labelviews" filepath="xmlstores/views/basepalabelviews.xml"/>
+	<xml id="fieldsets" filepath="xmlstores/fieldsets/pesonalautofieldsets.xml"/>
+	<xml id="gridsets" filepath="xmlstores/gridsets/pesonalautogridsets.xml"/>
+	<xml id="listtemplate" filepath="xmlstores/options/personalAutoAcordTemplate.xml"/>
+	<xml id="pasearch" filepath="xmlstores/pagelib/pa/search.xml"/>
+	<xml id="acordtags" filepath="xmlstores/acord/acordtags_pa.xml"/>
+	<xml id="firsttimedefaultsets" filepath="xmlstores/firsttimedefaultvalue/personalAutoFirstTimeDefalut.xml"/>
+</xmlstoload>

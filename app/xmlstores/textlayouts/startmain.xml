@@ -1,0 +1,23 @@
+<TextLayouts>
+	<TextLayout id="startmain">
+		<text>
+		<TextFlow xmlns="http://ns.adobe.com/textLayout/2008">
+			<div>
+				<p>This is a test showing <span baselineShift="superscript">2</span> typographical<span baselineShift="subscript">3</span> controls.</p>
+			</div>
+		</TextFlow>
+		</text>
+		<css>
+			<![CDATA[
+			span{fontSize:"18";}
+			TextFlow{columnCount:"2";textIndent:'15';marginBottom:"15";paddingTop:"4";paddingLeft:"4";}
+			h1{font-size: 24;}
+			p{font-size: 10;}
+			a{text-decoration: underline;}
+			a:hover{color: #FF0000;}
+			.italic{fontStyle:"italic";color:"0xff";fontFamily:"Helvetica";}
+			#bold{fontWeight:"bold";}
+			]]>	
+		</css>
+	</TextLayout>
+</TextLayouts>

@@ -1,0 +1,293 @@
+<collection>
+  <search id="usersearch" title="User Administration">
+  	<datagrid>
+	  <colElement datafield="login" header="User ID"/>
+      <colElement datafield="first_name" header="First Name"/>
+	  <colElement datafield="last_name" header="Last Name"/>
+	  <colElement datafield="email" header="Email"/>
+	  <colElement datafield="status" header="User Status"/>
+	  <colElement datafield="id" type="buttonbar" buttontype="link" width="180" header="Action" modelclasspath="org.ludo.models.User">
+        <object label="View" action="view" text="view" width="60"/>
+        <object label="Edit" permissionfor="ADM" action="edit" text="Edit" width="60"/>
+      </colElement>
+	  </datagrid>
+	  <query>
+	  	<limit>10</limit>
+	  	<select>u.id,u.first_name,u.last_name,u.status,u.login,u.email</select>
+	  	<from>users u</from>
+	  </query>
+	<searchby>
+		<fieldElement type="TextInput" properties="maxChars=20;width=100;" datafield="login" operator="like" label="User ID" />      	
+		<fieldElement type="TextInput" properties="maxChars=50;width=100;" datafield="last_name" operator="like" label="Last Name" />      	
+		<fieldElement type="TextInput" properties="maxChars=50;width=100;" datafield="first_name" operator="like" label="First Name" />      	
+  	</searchby>
+	<orderby>
+		<fieldElement datafield="login" label="User ID" />      	
+		<fieldElement datafield="last_name" label="Last Name" />      	
+		<fieldElement datafield="first_name" label="First Name" />      	
+  	</orderby>
+	<controlbuttons titleboxstyle="controlBox" buttonbarstyle="panelHeaderButton">
+		<object label="Create New User" permissionfor="ADM" action="new" width="60" modelclasspath="org.ludo.models.User"/>
+		<object label="Administration Home" action="loadcontainer" container="admin" width="60"/>
+	</controlbuttons>
+  </search>
+  <search id="agencysearch" title="Agency Administration">
+  	<datagrid>
+  	  <colElement datafield="name" header="Agency Name"/>
+      <colElement datafield="agency_code" header="Agency Code"/>
+      <colElement datafield="contact_title" header="Contact Title"/>
+	  <colElement datafield="id" type="fieldset" header="Contact Name" fieldset="contactname"/>
+      <colElement datafield="contact_phone1" header="Contact Phone"/>
+      <colElement datafield="id" type="fieldset" header="Address" fieldset="agencyaddress"/>
+	  <colElement datafield="id" type="buttonbar" buttontype="link" width="180" header="Action" modelclasspath="org.ludo.models.Agency">
+        <object label="View" action="view" text="view" width="60"/>
+        <object label="Edit" permissionfor="ADM" action="edit" text="Edit" width="60"/>
+      </colElement>
+	  </datagrid>
+	  <query>
+	  	<limit>10</limit>
+	  	<select>a.id,a.name,a.agency_code,a.contact_title,a.contact_phone1,a.contact_first_name,a.contact_middle_name,a.contact_last_name,a.address,a.address2,a.city,a.state,a.zip</select>
+	  	<from>agencies a</from>
+	  </query>
+	<searchby>
+		<fieldElement type="TextInput" properties="maxChars=20;width=100;" datafield="name" label="Agency Name" />      	
+		<fieldElement type="TextInput" properties="maxChars=50;width=100;" datafield="contact_last_name" label="Contact Last Name" />      	
+		<fieldElement type="TextInput" properties="maxChars=50;width=100;" datafield="contact_first_name" label="Contact First Name" />      	
+  	</searchby>
+	<orderby>
+		<fieldElement datafield="name" label="Agency Name" />      	
+		<fieldElement datafield="contact_last_name" label="Contact Last Name" />      	
+		<fieldElement datafield="contact_first_name" label="Contact First Name" />      	
+  	</orderby>
+	<controlbuttons titleboxstyle="controlBox" buttonbarstyle="panelHeaderButton">
+		<object label="Create New Agency" permissionfor="ADM" action="new" width="60" modelclasspath="org.ludo.models.Agency"/>
+		<object label="Administration Home" action="loadcontainer" container="admin" width="60"/>
+	</controlbuttons>
+ </search>
+  <search id="agentsearch" title="Agent Administration">
+  	<datagrid>
+	  <colElement datafield="agency_code" header="Agency ID"/>
+      <colElement datafield="agent_code" header="Agent Code"/>
+      <colElement datafield="id" type="fieldset" header="Name" fieldset="agentname"/>
+      <colElement datafield="id" type="fieldset" header="Address" fieldset="agentaddress"/>
+	  <colElement datafield="id" type="buttonbar" buttontype="link" width="180" header="Action" modelclasspath="org.ludo.models.Agent">
+        <object label="View" action="view" text="view" width="60"/>
+        <object label="Edit" permissionfor="ADM" action="edit" text="Edit" width="60"/>
+      </colElement>
+	  </datagrid>
+	  <query>
+	  	<limit>10</limit>
+	  	<select>a.id,a.agency_code,agent_code,a.first_name,a.middle_name,a.last_name,a.address,a.address2,a.city,a.state,a.zip</select>
+	  	<from>agents a</from>
+	  </query>
+	<searchby>
+		<fieldElement type="TextInput" properties="maxChars=20;width=100;" datafield="agent_code" label="Agent Code" />      	
+		<fieldElement type="TextInput" properties="maxChars=50;width=100;" datafield="last_name" label="Last Name" />      	
+		<fieldElement type="TextInput" properties="maxChars=50;width=100;" datafield="first_name" label="First Name" />      	
+  	</searchby>
+	<orderby>
+		<fieldElement datafield="agent_code" label="Agent Code" />      	
+		<fieldElement datafield="last_name" label="Last Name" />      	
+		<fieldElement datafield="first_name" label="First Name" />      	
+  	</orderby>
+	<controlbuttons titleboxstyle="controlBox" buttonbarstyle="panelHeaderButton">
+		<object label="Create New Agent" permissionfor="ADM" action="new" width="60" modelclasspath="org.ludo.models.Agent"/>
+		<object label="Administration Home" action="loadcontainer" container="admin" width="60"/>
+	</controlbuttons>
+  </search>
+   <search id="groupsearch" title="Group Setup">
+  	<datagrid>
+  	  <colElement datafield="description" header="Decription"/>
+      <colElement datafield="group_code" header="Group Code"/>
+      <colElement datafield="status" header="Status"/>
+      <colElement datafield="editable" header="Editable"/>
+      <colElement datafield="id" type="buttonbar" buttontype="link" width="180" header="Action" modelclasspath="org.ludo.models.Group">
+        <object label="View" action="view" text="view" width="60"/>
+        <object label="Edit" permissionfor="ADM" action="edit" text="Edit" width="60"/>
+      </colElement>
+	  </datagrid>
+	  <query>
+	  	<limit>10</limit>
+	  	<select>a.id,a.description,a.group_code,a.status,a.editable</select>
+	  	<from>groups a</from>
+	  </query>
+	<searchby>
+		<fieldElement type="TextInput" properties="maxChars=20;width=100;" operator="like" datafield="description" label="Description" />      	
+	</searchby>
+	<orderby>
+		<fieldElement datafield="description" label="Description" />      	
+	</orderby>
+	<controlbuttons titleboxstyle="controlBox" buttonbarstyle="panelHeaderButton">
+		<object label="Create New Group" permissionfor="ADM" action="new" width="60" modelclasspath="org.ludo.models.Group"/>
+		<object label="Administration Home" action="loadcontainer" container="admin" width="60"/>
+	</controlbuttons>
+ </search>
+  <search id="groupactivitysearch" title="Group Activity Setup">
+  	<datagrid>
+  	  <colElement datafield="description" header="Decription"/>
+      <colElement datafield="activity_code" header="Activity Code"/>
+      <colElement datafield="status" header="Status"/>
+      <colElement datafield="editable" header="Editable"/>
+      <colElement datafield="id" type="buttonbar" buttontype="link" width="180" header="Action" modelclasspath="org.ludo.models.GroupActivity">
+        <object label="View" action="view" text="view" width="60"/>
+        <object label="Edit" permissionfor="ADM" action="edit" text="Edit" width="60"/>
+      </colElement>
+	  </datagrid>
+	  <query>
+	  	<limit>10</limit>
+	  	<select>a.id,a.description,a.activity_code,a.status,a.editable</select>
+	  	<from>group_activities a</from>
+	  </query>
+	<searchby>
+		<fieldElement type="TextInput" properties="maxChars=20;width=100;" operator="like" datafield="description" label="Description" />      	
+	</searchby>
+	<orderby>
+		<fieldElement datafield="description" label="Description" />      	
+	</orderby>
+	<controlbuttons titleboxstyle="controlBox" buttonbarstyle="panelHeaderButton">
+		<object label="Create New Group Activity" permissionfor="ADM" action="new" width="60" modelclasspath="org.ludo.models.GroupActivity"/>
+		<object label="Administration Home" action="loadcontainer" container="admin" width="60"/>
+	</controlbuttons>
+ </search>
+  <search id="lobsearch" title="LOB Setup">
+  	<datagrid>
+  	  <colElement datafield="description" header="Decription"/>
+      <colElement datafield="lob_code" header="LOB Code"/>
+      <colElement datafield="status" header="Status"/>
+      <colElement datafield="editable" header="Editable"/>
+      <colElement datafield="id" type="buttonbar" buttontype="link" width="180" header="Action" modelclasspath="org.ludo.models.LineOfBusiness">
+        <object label="View" action="view" text="view" width="60"/>
+        <object label="Edit" action="edit" permissionfor="ADM" text="Edit" width="60"/>
+      </colElement>
+	  </datagrid>
+	  <query>
+	  	<limit>10</limit>
+	  	<select>a.id,a.description,a.lob_code,a.status,a.editable</select>
+	  	<from>line_of_businesses a</from>
+	  </query>
+	<searchby>
+		<fieldElement type="TextInput" properties="maxChars=20;width=100;" operator="like" datafield="description" label="Description" />      	
+	</searchby>
+	<orderby>
+		<fieldElement datafield="description" label="Description" />      	
+	</orderby>
+	<controlbuttons titleboxstyle="controlBox" buttonbarstyle="panelHeaderButton">
+		<object label="Create New LOB" permissionfor="ADM" action="new" width="60" modelclasspath="org.ludo.models.LineOfBusiness"/>
+		<object label="Administration Home" action="loadcontainer" container="admin" width="60"/>
+	</controlbuttons>
+ </search>
+ <search id="paymentplansearch" title="Payment Plan Setup">
+  	<datagrid>
+  	  <colElement datafield="lob" header="LOB"/>
+      <colElement datafield="plan_desc" header="Plan Description"/>
+      <colElement datafield="plan_code" header="Pan Code"/>
+      <colElement datafield="installment_number" header="Install Number"/>
+	  <colElement datafield="down_payment" header="Down Payment"/>
+      <colElement datafield="down_payment_days" header="Down Payment Days"/>
+      <colElement datafield="id" type="buttonbar" buttontype="link" width="180" header="Action" modelclasspath="org.ludo.models.PaymentPlan">
+        <object label="View" action="view" text="view" width="60"/>
+        <object label="Edit" permissionfor="ADM" action="edit" text="Edit" width="60"/>
+      </colElement>
+	  </datagrid>
+	  <query>
+	  	<limit>10</limit>
+	  	<select>a.id,a.lob,a.plan_desc,a.installment_number,a.down_payment,a.down_payment_days</select>
+	  	<from>payment_plans a</from>
+	  </query>
+	<searchby>
+		<fieldElement type="TextInput" properties="maxChars=20;width=100;" datafield="lob" label="LOB" />      	
+		<fieldElement type="TextInput" properties="maxChars=50;width=100;" datafield="plan_code" label="Plan Code" />      	
+	</searchby>
+	<orderby>
+		<fieldElement datafield="lob" label="LOB" />      	
+		<fieldElement datafield="down_payment" label="Down Payment" />      	
+	</orderby>
+	<controlbuttons titleboxstyle="controlBox" buttonbarstyle="panelHeaderButton">
+		<object label="Create New Payment Plan" permissionfor="ADM" action="new" width="60" modelclasspath="org.ludo.models.PaymentPlan"/>
+		<object label="Administration Home" action="loadcontainer" container="admin" width="60"/>
+	</controlbuttons>
+ </search>
+ <search id="agencyname" type="finder" title="Find Agency Name">
+  	<datagrid>
+	  <colElement datafield="id" width="100" header="Agency ID"/>
+      <colElement datafield="agency_code" width="100" header="Agency Code"/>
+      <colElement datafield="name" header="Agency Name"/>
+	  <!--
+      <colElement datafield="id" type="buttonbar" buttontype="link" header="Action" method="org.linda.controllers.AdminController.agentSearchButtonbarClicked">
+        <object label="select" text="Select"/>
+      </colElement>
+	  -->
+	  </datagrid>
+	  <query>
+	  	<limit>10</limit>
+	  	<select>a.id,a.agency_code,a.name</select>
+	  	<from>agencies a</from>
+	  </query>
+	<searchby>
+		<fieldElement type="TextInput" properties="maxChars=20;width=100;" datafield="name" operator="like" label="Agency Name" />      	
+	</searchby>
+ </search>
+  <search id="group_activities" navigation="false" width="200" title="Set Group Permissions">
+  	<datagrid>
+  		<!--
+      <colElement datafield="activity_code" type="fieldset" header="Activity" fieldset="activity"/>
+	  -->
+	  <colElement width="200" datafield="status" labelfield="activity_desc" selectifvalueis="A" type="checkbox" method="org.ludo.controllers.ActionController.setGroupActivity" header="Check to Add"/>
+ 	  <colElement datafield="status" header="Status"/>
+ 	 <!--
+      <colElement datafield="id" type="buttonbar" buttontype="link" header="Action" method="org.linda.controllers.AdminController.agentSearchButtonbarClicked">
+        <object label="select" text="Select"/>
+      </colElement>
+	  -->
+	  </datagrid>
+	  <query>
+	  	<limit>100</limit>
+	  	<select>IFNULL(p.id,0) id,a.activity_code, a.description activity_desc, IFNULL(p.status,'I') status, IFNULL(p.status,'I') old_status</select>
+	  	<from>group_activities a left join group_permissions p on a.activity_code=p.activity_code</from>
+	  	<where>a.status='A'</where>
+		<orderby>a.description</orderby>	
+	</query>
+	<controlbuttons titleboxstyle="controlBox" buttonbarstyle="panelHeaderButton">
+		<object label="Administration Home" action="loadcontainer" container="admin" width="60"/>
+	</controlbuttons>
+ </search>
+   <search id="group_lobs" title="Group LOBs">
+  	<datagrid>
+      <colElement datafield="lob_code" type="fieldset" header="LOB" fieldset="lob"/>
+ 	  <colElement datafield="status" header="Status"/>
+ 	 <!--
+      <colElement datafield="id" type="buttonbar" buttontype="link" header="Action" method="org.linda.controllers.AdminController.agentSearchButtonbarClicked">
+        <object label="select" text="Select"/>
+      </colElement>
+	  -->
+	  </datagrid>
+	  <query>
+	  	<limit>100</limit>
+	  	<select>a.lob_code, a.description lob_desc, IFNULL(p.status,'N') status</select>
+	  	<from>line_of_businesses a left join group_permissions p on a.lob_code=p.lob_code</from>
+	  	<where>a.status='A'</where>
+		<orderby>a.description</orderby>	
+	</query>
+ </search>
+  <search id="agentid" type="finder" title="Find Agent Name">
+  	<datagrid>
+	  <colElement datafield="agent_code" width="100" header="Agent ID"/>
+      <colElement datafield="id" type="fieldset" header="Name" fieldset="agentname"/>
+      <colElement datafield="id" type="fieldset" header="Address" fieldset="agentaddress"/>
+	  <!--
+      <colElement datafield="id" type="buttonbar" buttontype="link" header="Action" method="org.linda.controllers.AdminController.agentSearchButtonbarClicked">
+        <object label="select" text="Select"/>
+      </colElement>
+	  -->
+	  </datagrid>
+	  <query>
+	  	<limit>10</limit>
+	  	<select>a.id,a.agent_code,a.first_name,a.middle_name,a.last_name,a.address,a.address2,a.city,a.state,a.zip</select>
+	  	<from>agents a</from>
+	  </query>
+	<searchby>
+		<fieldElement type="TextInput" properties="maxChars=20;width=100;" datafield="last_name" operator="like" label="Agent Last Name" />      	
+		<fieldElement type="TextInput" properties="maxChars=20;width=100;" datafield="first_name" operator="like" label="Agent First Name" />      	
+	</searchby>
+ </search>
+ </collection>

@@ -1,0 +1,55 @@
+<h1>New policy</h1>
+
+<% form_for(@policy) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :policy_prefix %><br />
+    <%= f.text_field :policy_prefix %>
+  </p>
+  <p>
+    <%= f.label :policy_suffix %><br />
+    <%= f.text_field :policy_suffix %>
+  </p>
+  <p>
+    <%= f.label :policy_number %><br />
+    <%= f.text_field :policy_number %>
+  </p>
+  <p>
+    <%= f.label :prior_policy_number %><br />
+    <%= f.text_field :prior_policy_number %>
+  </p>
+  <p>
+    <%= f.label :org_effective_date %><br />
+    <%= f.datetime_select :org_effective_date %>
+  </p>
+  <p>
+    <%= f.label :current_status %><br />
+    <%= f.text_field :current_status %>
+  </p>
+  <p>
+    <%= f.label :num_endorsed %><br />
+    <%= f.text_field :num_endorsed %>
+  </p>
+  <p>
+    <%= f.label :num_renewed %><br />
+    <%= f.text_field :num_renewed %>
+  </p>
+  <p>
+    <%= f.label :num_reinstated %><br />
+    <%= f.text_field :num_reinstated %>
+  </p>
+  <p>
+    <%= f.label :quote_id %><br />
+    <%= f.text_field :quote_id %>
+  </p>
+  <p>
+    <%= f.label :ref_number %><br />
+    <%= f.text_field :ref_number %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', policies_path %>

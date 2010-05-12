@@ -1,0 +1,15 @@
+<views>
+	<view id="Display.Roster.Location" type="standard">
+		<rowSet>
+			<field type="id">Location.Addr.Addr1</field>
+			<field type="formatInfo"> </field>
+			<field type="id">Location.Addr.Addr2</field>
+			<field type="formatInfo"> </field>
+			<field type="id">Location.Addr.City</field>
+			<field type="formatInfo">, </field>
+			<field type="id">Location.Addr.StateProvCd</field>
+			<field type="formatInfo"> </field>
+			<field type="id">Location.Addr.PostalCode</field>
+		</rowSet>
+	</view>
+</views>

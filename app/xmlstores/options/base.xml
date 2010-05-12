@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<root>
+	<options id="state">
+      <option data="">Select</option> 
+	  <option data="AL">Alabama</option> 
+	  <option data="AK">Alaska</option> 
+	  <option data="AZ">Arizona</option> 
+	  <option data="AR">Arkansas</option> 
+	  <option data="CA">California</option> 
+	  <option data="CO">Colorado</option> 
+	  <option data="CT">Connecticut</option> 
+	  <option data="DC">District of Columbia</option> 
+	  <option data="DE">Delaware</option> 
+	  <option data="FL">Florida</option> 
+	  <option data="GA">Georgia</option> 
+	  <option data="HI">Hawaii</option> 
+	  <option data="ID">Idaho</option> 
+	  <option data="IL">Illinois</option> 
+	  <option data="IN">Indiana</option> 
+	  <option data="IA">Iowa</option> 
+	  <option data="KS">Kansas</option> 
+	  <option data="KY">Kentucky</option> 
+	  <option data="LA">Louisiana</option> 
+	  <option data="ME">Maine</option> 
+	  <option data="MD">Maryland</option> 
+	  <option data="MA">Massachusetts</option> 
+	  <option data="MI">Michigan</option> 
+	  <option data="MN">Minnesota</option> 
+	  <option data="MS">Mississippi</option> 
+	  <option data="MO">Missouri</option> 
+	  <option data="MT">Montana</option> 
+	  <option data="NE">Nebraska</option> 
+	  <option data="NV">Nevada</option> 
+	  <option data="NH">New Hampshire</option> 
+	  <option data="NJ">New Jersey</option> 
+	  <option data="NM">New Mexico</option> 
+	  <option data="NY">New York</option> 
+	  <option data="NC">North Carolina</option> 
+	  <option data="ND">North Dakota</option> 
+	  <option data="OH">Ohio</option> 
+	  <option data="OK">Oklahoma</option> 
+	  <option data="OR">Oregon</option> 
+	  <option data="PA">Pennsylvania</option> 
+	  <option data="RI">Rhode Island</option> 
+	  <option data="SC">South Carolina</option>  
+	  <option data="SD">South Dakota</option>  
+	  <option data="TN">Tennessee</option> 
+	  <option data="TX">Texas</option> 
+	  <option data="UT">Utah</option> 
+	  <option data="VT">Vermont</option> 
+	  <option data="VA">Virginia</option> 
+	  <option data="WA">Washington</option> 
+	  <option data="WV">West Virginia</option> 
+	  <option data="WI">Wisconsin</option> 
+	  <option data="WY">Wyoming</option> 
+	</options>
+	<options id="phonetype">
+      <option data=""></option> 
+	  <option data="Home">Home</option> 
+	  <option data="Cell">Cell</option> 
+	  <option data="Work">Work</option> 
+	</options>
+    <options id="billingPlan">
+        <option data="">Select</option> 
+	  	<option data="AB">Agent Bill</option>
+        <option data="CAB">Client Bill</option>
+        <option data="CPBI">Direct Bill by Mail</option> 
+        <option data="CPBF">Direct Bill by EFT</option>
+    </options>
+ 	<options id="gender">
+		<option data="">Select</option> 
+	  	<option data="M">Male</option>
+		<option data="F">Female</option>
+	</options>
+	
+	<options id="maritalStatus">
+		<option data="">Select</option> 
+		<option data="C">Domestic partner</option>
+		<option data="D">Divorced</option>
+		<option data="M">Married</option>
+		<option data="P">Separated</option>
+		<option data="S">Single</option>
+		<option data="U">Unknown</option>		
+		<option data="W">Widowed</option>			
+	</options>	
+
+	<options id="relationToApplicant">
+		<option data="">Select</option> 
+		<option data="A">Employee of Household</option>
+		<option data="B">Brother</option>
+		<option data="C">Child</option>
+		<option data="D">Spouse</option>
+		<option data="E">Employee</option>
+		<option data="F">Father</option>
+		<option data="B">Brother/Sister</option>
+		<option data="H">Husband</option>
+		<option data="I">Insured</option>
+		<option data="J">Roommate</option>
+		<option data="M">Mother</option>
+		<option data="O">Other</option>
+		<option data="P">Parent</option>
+		<option data="R">Relative</option>
+		<option data="S">Sister</option>
+		<option data="U">Unlisted</option>
+		<option data="W">Wife</option>		
+	</options>
+		
+	<options id="boolean">
+		<option data="">Select</option> 
+		<option data="N">No</option>
+		<option data="Y">Yes</option>
+	</options>
+	
+	<options id="booleanNumberic">
+		<option data="">Select</option> 
+		<option data="0">No</option>
+		<option data="1">Yes</option>
+	</options>
+	
+	<options id="occupation">
+		<option data="">Select</option> 
+		<option data="DOC">Doctor</option>
+		<option data="PROF">Professional</option>
+		<option data="RET">Retired</option>
+		<option data="STUD">Student</option>
+		<option data="BUSS">Business</option>
+		<option data="UMPD">Unemployed</option>
+	</options>
+	<options id="incidentType">
+		<option data="">Select</option> 
+		<option data="1">Accident with Pedestrian</option>
+		<option data="2">Accident, At Fault, Non-Chargeable</option>
+		<option data="3">Accident, Not At Fault</option>
+		<option data="9">Avoiding Traffic Control Device</option>
+		<option data="47">DUI Alcohol/Liquor</option>
+		<option data="120">Speeding</option>
+	</options>
+</root>

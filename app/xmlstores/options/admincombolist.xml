@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<root>
+	<options id="userstatus">
+		<option data="A">Active</option>
+		<option data="I">Inactive</option>
+	</options>
+	<options id="active-inactive">
+		<option data="A">Active</option>
+		<option data="I">Inactive</option>
+	</options>
+	<options id="usergroup">
+		<option data="">Select one</option>
+		<option data="A">Agent</option>
+		<option data="U">Underwriter</option>
+		<option data="S">Administrator</option>
+	</options>
+	<options id="group">
+	  <query>
+	  	<select>a.description Label,a.group_code Data</select>
+	  	<from>groups a</from>
+	  	<orderby>a.description</orderby>
+	  </query>
+	</options>
+	<options id="lob">
+	  <query>
+	  	<select>description Label,lob_code Data</select>
+	  	<from>line_of_businesses union select 'All' Label, 'ALL' Data</from>
+	  	<orderby>Label</orderby>
+	  </query>
+	</options>
+</root>

@@ -1,0 +1,17 @@
+<RESTURLS>
+	<url id="agency">
+		<create>/agencies.xml</create>
+		<update>/agencies/::id::.xml</update>
+		<view>/agencies/::id::.xml</view>
+	</url>
+	<url id="user">
+		<create>/users.xml</create>
+		<update>/users/::id::.xml</update>
+		<view>/users/::id::.xml</view>
+	</url>
+	<url id="agent">
+		<create>/agents.xml</create>
+		<update>/agents/::id::.xml</update>
+		<view>/agents/::id::.xml</view>
+	</url>
+</RESTURLS>

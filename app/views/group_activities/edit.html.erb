@@ -1,0 +1,24 @@
+<h1>Editing group_activity</h1>
+
+<% form_for(@group_activity) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :activity_code %><br />
+    <%= f.text_field :activity_code %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @group_activity %> |
+<%= link_to 'Back', group_activities_path %>

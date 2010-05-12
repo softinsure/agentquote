@@ -1,0 +1,2 @@
+module PageUpdatedInfosHelper
+end

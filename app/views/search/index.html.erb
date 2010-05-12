@@ -1,0 +1,21 @@
+<h1>Listing Users</h1>
+
+<table>
+  <tr>
+    <th>UserId</th>
+    <th>Password</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+   </tr>
+
+<% for user in @results %>
+  <tr>
+    <td><%=h user.login %></td>
+    <td><%=h user.password %></td>
+    <td><%=h user.first_name %></td>
+    <td><%=h user.last_name %></td>
+    <td><%=h user.email %></td>
+  </tr>
+<% end %>
+</table>

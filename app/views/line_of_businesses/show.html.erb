@@ -1,0 +1,23 @@
+<p>
+  <b>Lob code:</b>
+  <%=h @line_of_business.lob_code %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @line_of_business.description %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @line_of_business.status %>
+</p>
+
+<p>
+  <b>Editable:</b>
+  <%=h @line_of_business.editable %>
+</p>
+
+
+<%= link_to 'Edit', edit_line_of_business_path(@line_of_business) %> |
+<%= link_to 'Back', line_of_businesses_path %>

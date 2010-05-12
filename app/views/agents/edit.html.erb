@@ -1,0 +1,12 @@
+<h1>Editing agent</h1>
+
+<%= error_messages_for :agent %>
+
+<% form_for(@agent) do |f| %>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @agent %> |
+<%= link_to 'Back', agents_path %>

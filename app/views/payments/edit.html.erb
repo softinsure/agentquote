@@ -1,0 +1,56 @@
+<h1>Editing payment</h1>
+
+<% form_for(@payment) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :quote_id %><br />
+    <%= f.text_field :quote_id %>
+  </p>
+  <p>
+    <%= f.label :payment_plan %><br />
+    <%= f.text_field :payment_plan %>
+  </p>
+  <p>
+    <%= f.label :down_payment_type %><br />
+    <%= f.text_field :down_payment_type %>
+  </p>
+  <p>
+    <%= f.label :bill_type %><br />
+    <%= f.text_field :bill_type %>
+  </p>
+  <p>
+    <%= f.label :min_down %><br />
+    <%= f.text_field :min_down %>
+  </p>
+  <p>
+    <%= f.label :installment %><br />
+    <%= f.text_field :installment %>
+  </p>
+  <p>
+    <%= f.label :total_charge %><br />
+    <%= f.text_field :total_charge %>
+  </p>
+  <p>
+    <%= f.label :agency_fee %><br />
+    <%= f.text_field :agency_fee %>
+  </p>
+  <p>
+    <%= f.label :policy_fee %><br />
+    <%= f.text_field :policy_fee %>
+  </p>
+  <p>
+    <%= f.label :misc_fee %><br />
+    <%= f.text_field :misc_fee %>
+  </p>
+  <p>
+    <%= f.label :misc_fee_reason %><br />
+    <%= f.text_field :misc_fee_reason %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @payment %> |
+<%= link_to 'Back', payments_path %>

@@ -1,0 +1,16 @@
+<TextFlow id="home" paddingBottom="5" paddingLeft="20" paddingRight="5" paddingTop="20" paragraphSpaceBefore="5" whiteSpaceCollapse="preserve" xmlns="http://ns.adobe.com/textLayout/2008">
+<p styleName="title">Transactions</p>
+<p styleName="para">Currently following transactions are available in the left menu. This menu is basically is used to start a new transaction like quoting.</p>
+<p styleName="parahead">Personal Auto:</p>
+<p styleName="para">Use left menu to create a new Personal Auto quote.</p>
+<p styleName="parahead">Home Owner:</p>
+<p styleName="para">Under Construction.</p>
+<p styleName="title">My Work</p>
+<p styleName="para">Place to check quotes/policies that are in process. Users can view, edit, clone and search depending upon their permissions and level of access.</p>
+<p styleName="title">My Policies:</p>
+<p styleName="para">Place to check policies. Users can view, endorse and search policies depending upon their permissions and level of access.</p>
+<p styleName="title">Admin:</p>
+<p styleName="para">Place to do admin activities. This menu option is not available for everyone. Access can be restricted to group level using admin screen.</p>
+<p styleName="title">Error Log:</p>
+<p styleName="para">Place to check day to day application error. This menu option is not available for everyone. Access can be restricted to group level using admin screen.</p>
+</TextFlow>

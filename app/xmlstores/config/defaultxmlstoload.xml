@@ -1,0 +1,6 @@
+<xmlstoload>
+	<xml id="navigation" filepath="xmlstores/navigation/basenavigation.xml"/>
+	<xml id="transactions" filepath="xmlstores/config/transaction.xml"/>
+	<xml id="basecombolist" filepath="xmlstores/options/basecombolist.xml"/>
+	<xml id="containermap" filepath="xmlstores/config/containermap.xml"/>
+</xmlstoload>

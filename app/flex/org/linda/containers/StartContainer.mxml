@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layouts2:VLayout
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	xmlns:mx="library://ns.adobe.com/flex/mx"
+	height="100%"
+	width="100%"
+	xmlns:containers="containers.*"
+	creationComplete="init();"
+	xmlns:views="views.*"
+	xmlns:views1="org.ludo.views.*"
+	xmlns:views2="org.linda.views.*"
+	xmlns:layouts="org.linda.layouts.*"
+	xmlns:layouts2="org.ludo.layouts.*"
+	>
+	<fx:Script>
+		<![CDATA[
+			import org.frest.utils.FrUtils;
+			import org.linda.controllers.ContainerController;
+			import org.linda.controllers.EventNames;
+			public function init():void
+			{
+				agentlogin.title="Agent Login: use userid/password as demo/demo"
+				ContainerController.getInstance().startbox=this;
+			}
+			public function loadStart():void
+			{
+				FrUtils.cairngormDispatchEvent(EventNames.LOAD_START);
+			}
+			
+		]]>
+	</fx:Script>
+		<layouts:StartHeader id="appHeader"/>
+		<!--
+		<containers:TopNavigation width="100%" id="topNav"/>
+		-->
+		<layouts2:HLayout width="100%" height="100%" textAlign="left">
+				<layouts2:layout>
+						<s:HorizontalLayout/>
+				</layouts2:layout>
+		<views2:StartMainBox width="70%"></views2:StartMainBox>
+		<views1:AgentLoginBox id="agentlogin" width="30%"></views1:AgentLoginBox>
+		</layouts2:HLayout>		
+	</layouts2:VLayout>

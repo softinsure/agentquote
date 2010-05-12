@@ -1,0 +1,30 @@
+<views>
+	<fieldSet id="GaragingLocation" type="standard">
+		<field type="field">Addr/Addr1</field>
+		<field type="space"> </field>
+		<field type="field">Addr/Addr2</field>
+		<field type="space"> </field>
+		<field type="field">Addr/City</field>
+		<field type="string">, </field>
+		<field type="field">Addr/StateProvCd</field>
+		<field type="space"> </field>
+		<field type="field">Addr/PostalCode</field>
+	</fieldSet>
+	<fieldSet id="Driver" type="standard">
+		<field type="field">GeneralPartyInfo/NameInfo/PersonName/GivenName</field>
+		<field type="space"> </field>
+		<field type="field">GeneralPartyInfo/NameInfo/PersonName/OtherGivenName</field>
+		<field type="space"> </field>
+		<field type="field">GeneralPartyInfo/NameInfo/PersonName/Surname</field>
+	</fieldSet>
+	<fieldSet id="Vehicle" type="standard">
+		<field type="field">ModelYear</field>
+		<field type="space"></field>
+		<field type="field">Manufacturer</field>
+		<field type="space"></field>
+		<field type="field">Model</field>
+		<field type="space"></field>
+		<field type="string">#</field>
+		<field type="field">VehIdentificationNumber</field>
+	</fieldSet>
+</views>

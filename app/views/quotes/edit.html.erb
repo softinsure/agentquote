@@ -1,0 +1,37 @@
+<h1>Editing quote</h1>
+
+<%= error_messages_for :quote %>
+
+<% form_for(@quote) do |f| %>
+  <p>
+    <b>Lob</b><br />
+    <%= f.text_field :lob %>
+  </p>
+
+  <p>
+    <b>Policy type</b><br />
+    <%= f.text_field :policy_type %>
+  </p>
+
+  <p>
+    <b>Policy term</b><br />
+    <%= f.text_field :policy_term %>
+  </p>
+
+   <p>
+    <b>Policy effective date</b><br />
+    <%= f.date_select :policy_effective_date %>
+  </p>
+
+  <p>
+    <b>Policy expiration date</b><br />
+    <%= f.date_select :policy_expiration_date %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @quote %> |
+<%= link_to 'Back', quotes_path %>

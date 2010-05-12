@@ -1,0 +1,31 @@
+<AcordListTemplates>
+	<template id="drivers">
+		<fieldSet type="standard">
+			<field type="field">GeneralPartyInfo/NameInfo/PersonName/GivenName</field>
+			<field type="space"></field>
+			<field type="field">GeneralPartyInfo/NameInfo/PersonName/OtherGivenName</field>
+			<field type="space"></field>
+			<field type="field">GeneralPartyInfo/NameInfo/PersonName/Surname</field>
+		</fieldSet>
+		<groupmap>PersAutoLineBusiness/PersDriver</groupmap>
+		<valuefield type="attribute">id</valuefield>
+		<blankoption data="">Select One</blankoption>
+	</template>
+	<template id="location">
+		<fieldSet type="standard">
+			<field type="field">Addr/Addr1</field>
+			<field type="space"> </field>
+			<field type="field">Addr/Addr2</field>
+			<field type="space"> </field>
+			<field type="field">Addr/City</field>
+			<field type="string">, </field>
+			<field type="field">Addr/StateProvCd</field>
+			<field type="space"> </field>
+			<field type="field">Addr/PostalCode</field>
+		</fieldSet>
+		<groupmap>Location</groupmap>
+		<filter>Addr/AddrTypeCd='GaragingAddress'</filter>
+		<valuefield type="attribute">id</valuefield>
+		<blankoption data="">Select One</blankoption>
+	</template>
+</AcordListTemplates>

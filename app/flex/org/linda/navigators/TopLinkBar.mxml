@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group
+	xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" xmlns:mx="library://ns.adobe.com/flex/mx"
+	xmlns="*"
+	creationComplete="generateTopNavigation()" >
+	<fx:Script>
+	<![CDATA[
+		import mx.controls.Alert;
+		import mx.events.ItemClickEvent;
+		
+		import org.ludo.controllers.MessageController;
+		[Bindable] private var menuList:XMLList;
+		private var lastSelect:int=0;
+		private var currSelect:int=0;
+		private var confirmchange:Boolean=false;
+		public var topmenu:HLinkBar;
+		private var container:String="default";
+		
+		private function setConfirmChange(confirmchange:String):void
+		{
+			if(confirmchange=="true")
+			{
+				this.confirmchange=true;
+			}
+			else
+			{
+				this.confirmchange=false;
+			}
+		}
+		private function topRightBarClicked(evt:ItemClickEvent):void {
+
+			switch(String(evt.item["action"]))
+			{
+				case 'signout':
+					LoginController.getInstance().doConfirmLogOut();
+					break;
+				case 'underconstruction':
+					MessageController.popUpMessage(String(evt.item["action"]),"Under Construction!");
+					return;
+					break;
+				default:
+					MessageController.popUpMessage("No Action","No correct action specified!");
+					break;
+			}
+		}
+		private function generateTopNavigation():void
+		{
+			try
+			{
+				menuList=LudoUtils.dataStore.getFromXmlContainer("navigation").panel.(@id == 'toplinkbar').menu;
+		     	if(menuList!=null)
+		    	{
+			    	for each (var menu:XML in menuList)
+					{
+			            topmenu= new HLinkBar();
+			            topmenu.menu=menu;
+			            topmenu.functiontocall=topRightBarClicked
+			            this.addChild(topmenu);
+			        }
+			    }
+			}
+			catch(error:Error)
+			{
+				ErrorController.logError(error,"NULL","generateNavigation");
+			}
+		
+		}
+	]]>
+	</fx:Script>
+</s:Group>

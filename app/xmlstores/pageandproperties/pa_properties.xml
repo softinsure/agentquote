@@ -1,0 +1,16 @@
+<PageAndProperties>
+	<page id="default" description="General Information" requiredtobind="Y" readonlyifquotein="B" ratedependant="Y"/>
+	<page id="location" description="Garaging Location" requiredtobind="Y" readonlyifquotein="B" ratedependant="Y"/>
+	<page id="coverage" description="Coverage Information" requiredtobind="Y" readonlyifquotein="B" ratedependant="Y"/>
+	<page id="driver" description="Driver Information" requiredtobind="Y" readonlyifquotein="B" ratedependant="Y"/>
+	<page id="incident" description="Incedents" readonlyifquotein="B" ratedependant="Y"/>
+	<page id="vehicle" description="Vehicles" requiredtobind="Y" readonlyifquotein="B" ratedependant="Y"/>
+	<page id="paymentplan" description="Quote Premium and Payment Plan" requiredtobind="Y" readonlyifquotein="B,E"/>
+	<page id="empinformation" description="Employment Information" requiredtobind="Y" readonlyifquotein="B,E"/>
+	<page id="priorcarrier" description="Prior Carrier Information" requiredtobind="Y" readonlyifquotein="B,E"/>
+	<page id="uwqpage" description="Underwriting Questions" requiredtobind="Y" readonlyifquotein="B,E"/>
+	<page id="agentcomments" description="Agent Comments" requiredtobind="Y" readonlyifquotein="B,E"/>
+	<page id="qsummary" description="Summary" readonlyifquotein="B"/>
+	<page id="rightqsummary" description="Agency Information/Contract Term" readonlyifquotein="B" ratedependant="Y"/>
+	<page id="rightdefault" description="Agency Information/Contract Term" readonlyifquotein="B" ratedependant="Y"/>
+</PageAndProperties>

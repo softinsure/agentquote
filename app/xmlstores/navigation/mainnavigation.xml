@@ -1,0 +1,54 @@
+<collection>
+	<panel id="topmenu">		
+		<menu id="top" direction="horizontal" stylename="topAppLinkBar">		
+			<menuitem id="1" label="Home" iconmap="home::top" container="default"/>
+			<menuitem id="2" label="My Work" iconmap="work::top" container="work"/>
+			<menuitem id="4" label="My Policies" iconmap="work::top" container="policy"/>
+			<menuitem id="3" label="My Quote" iconmap="quote::top" confirmchange="true" container="quote" enabled="false"/>
+			<menuitem id="5" label="Admin" iconmap="admin::top" container="admin"/>
+			<menuitem id="6" label="Error Log" iconmap="cross::top" container="error"/>
+			<menuitem id="7" label="Debug Box" permissionfor="DBG" iconmap="debug::top" container="debug"/>
+		</menu>
+	</panel>
+	<panel id="toprightmenu">		
+		<menu id="topright" stylename="topLinkBar" direction="horizontal" itemclick="org.ludo.controllers.ActionController.topRight_itemclicked">		
+			<menuitem id="1" label="Feed back" iconmap="feedback" action="feedback"/>
+			<menuitem id="2" label="Sign Out" iconmap="signout" action="signout"/>
+		</menu>
+	</panel>
+	<panel id="homeleft">		
+		<menu id="mainleft" direction="vertical" title="Transaction" itemclick="org.ludo.controllers.ActionController.homeLeft_itemclicked">		
+			<menuitem id="1" container="quote" permissionfor="CQ" label="Personal Auto" lob="PA" transactiontouse="personalauto" enabled="true" pageid="default" action="new"/>
+			<menuitem id="2" container="quote" permissionfor="CQ" label="Home Owner" lob="HO" enabled="true"  pageid="default" action="underconstruction"/>
+		</menu>
+	</panel>
+	<panel id="adminleft">		
+		<menu id="mainleft" direction="vertical" title="Administration" itemclick="org.ludo.controllers.ActionController.homeLeft_itemclicked">		
+			<menuitem id="1" label="User Administration" transactiontouse="useradmin" container="user" enabled="true" currentselect="false" pageid="default" action="new"/>
+			<menuitem id="2" label="Agency Administration" transactiontouse="agencyadmin" container="agency" enabled="true" currentselect="false" pageid="agency" action="new"/>
+			<menuitem id="3" label="Agent Administration" transactiontouse="agentadmin" container="agent" enabled="true" currentselect="false" pageid="agent" action="new"/>
+			<menuitem id="4" label="Payment Plan Setup" transactiontouse="paymentplan" container="paymentplan" enabled="true" currentselect="false" pageid="paymentplan" action="new"/>
+			<menuitem id="5" label="Group Administration" transactiontouse="groupadmin" container="group" enabled="true" currentselect="false" pageid="group" action="new"/>
+			<menuitem id="6" label="Group Activity Setup" transactiontouse="groupactivity" container="groupactivity" enabled="true" currentselect="false" pageid="groupactivity" action="new"/>
+			<menuitem id="7" label="LOB Setup" transactiontouse="lob" container="lob" enabled="true" currentselect="false" pageid="lob" action="new"/>
+			<menuitem id="8" label="Group Permission Setup" transactiontouse="permission" container="permission" action="custom"/>
+		</menu>
+	</panel>
+	<panel id="left_pa">		
+		<menu id="mainleft" type="transaction" direction="vertical" title="Personal Auto" itemclick="org.ludo.controllers.ActionController.transQuoteLeft_itemclicked">		
+			<menuitem id="1" label="General Information" enabled="true" pageid="default" action="screen"/>
+			<menuitem id="2" label="Garaging Location" enabled="false" pageid="location" action="screen"/>
+			<menuitem id="3" label="Coverage Information" enabled="false" pageid="coverage" action="screen"/>
+			<menuitem id="4" label="Drivers" enabled="false" pageid="driver" action="screen"/>
+			<menuitem id="5" label="Incidents" enabled="false" pageid="incident" action="screen"/>
+			<menuitem id="6" label="Vehicles" enabled="false" pageid="vehicle" action="screen"/>
+			<menuitem id="6" label="Payment Plan" enabled="false" viewifquotein="!E" pageid="paymentplan" action="screen"/>
+			<menuitem id="7" label="Employment Information" enabled="false" pageid="empinformation" action="screen"/>
+			<menuitem id="9" label="Prior Carrier Information" enabled="false" pageid="priorcarrier" action="screen"/>
+			<menuitem id="9" label="Underwriting Questions" enabled="false" pageid="uwqpage" action="screen"/>
+			<menuitem id="10" label="Agent Comments" enabled="false" pageid="agentcomments" action="screen"/>
+			<menuitem id="11" label="Quote Summary" enabled="false" pageid="qsummary" action="screen"/>
+			<menuitem id="12" label="Prorated Premium" enabled="false" pageid="proratedpremium" viewifquotein="E" action="screen"/>
+		</menu>
+	</panel>
+</collection>

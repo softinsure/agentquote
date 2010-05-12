@@ -1,0 +1,11 @@
+<xmlstoload>
+	<xml id="navigation" filepath="xmlstores/navigation/mainnavigation.xml"/>
+	<xml id="basesearch" filepath="xmlstores/pagelib/base/basesearch.xml"/>
+	<xml id="basetemplate" filepath="xmlstores/templates/base.xml"/>
+	<xml id="activitynavigation" filepath="xmlstores/navigation/activitynavigation.xml"/>
+	<xml id="transactions" filepath="xmlstores/config/transaction.xml"/>
+	<xml id="basecombolist" filepath="xmlstores/options/basecombolist.xml"/>
+	<xml id="basecombolistfromdb" filepath="xmlstores/options/basecombolistfromdb.xml"/>
+	<xml id="containermap" filepath="xmlstores/config/containermap.xml"/>
+	<xml id="resturl" filepath="xmlstores/config/urlmap.xml"/>
+</xmlstoload>

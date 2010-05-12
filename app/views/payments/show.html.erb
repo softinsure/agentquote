@@ -1,0 +1,58 @@
+<p>
+  <b>Quote:</b>
+  <%=h @payment.quote_id %>
+</p>
+
+<p>
+  <b>Payment plan:</b>
+  <%=h @payment.payment_plan %>
+</p>
+
+<p>
+  <b>Down payment type:</b>
+  <%=h @payment.down_payment_type %>
+</p>
+
+<p>
+  <b>Bill type:</b>
+  <%=h @payment.bill_type %>
+</p>
+
+<p>
+  <b>Min down:</b>
+  <%=h @payment.min_down %>
+</p>
+
+<p>
+  <b>Installment:</b>
+  <%=h @payment.installment %>
+</p>
+
+<p>
+  <b>Total charge:</b>
+  <%=h @payment.total_charge %>
+</p>
+
+<p>
+  <b>Agency fee:</b>
+  <%=h @payment.agency_fee %>
+</p>
+
+<p>
+  <b>Policy fee:</b>
+  <%=h @payment.policy_fee %>
+</p>
+
+<p>
+  <b>Misc fee:</b>
+  <%=h @payment.misc_fee %>
+</p>
+
+<p>
+  <b>Misc fee reason:</b>
+  <%=h @payment.misc_fee_reason %>
+</p>
+
+
+<%= link_to 'Edit', edit_payment_path(@payment) %> |
+<%= link_to 'Back', payments_path %>

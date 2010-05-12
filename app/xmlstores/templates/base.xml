@@ -1,0 +1,23 @@
+﻿<templates>
+<template id="paymentinfo">
+<PaymentInfo>
+<TotalCharge/>
+<MinimumDownPayment/>
+<PolicyFee/>
+<Miscellaneous>
+<Fee>
+	<Name/>
+	<Amount/>
+	<Reason/>
+</Fee>
+<Schedules>
+	<Schedule>
+		<Item/>
+		<Amount/>
+		<DueDate/>
+	</Schedule>
+</Schedules>
+</Miscellaneous>
+</PaymentInfo>
+</template>
+</templates>

@@ -1,0 +1,26 @@
+<h1>New xmlstore</h1>
+
+<%= error_messages_for :xmlstore %>
+
+<% form_for(@xmlstore) do |f| %>
+  <p>
+    <b>Quote</b><br />
+    <%= f.text_field :quote_id %>
+  </p>
+
+  <p>
+    <b>Xmlstring</b><br />
+    <%= f.text_area :xmlstring %>
+  </p>
+
+  <p>
+    <b>Original xml</b><br />
+    <%= f.text_area :original_xml %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', xmlstores_path %>

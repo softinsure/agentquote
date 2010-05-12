@@ -1,0 +1,15 @@
+<gridsets>
+	<gridset id="coverage" type="standard">
+		<header type="fieldset" fieldset="Vehicle"/>
+		<colElement width="150" datafield="CoverageCd" header="Coverage Code"/>
+		<colElement width="150" datafield="Limit[ValuationCd='PerOcc']/FormatInteger" header="Per Occurance"/>
+		<colElement width="150" datafield="Limit[ValuationCd='PerPerson']/FormatInteger" header="Per Person"/>
+		<colElement width="150" datafield="Deductible/FormatInteger" header="Deductible"/>
+		<colElement datafield="CurrentTermAmt/Amt" header="Premium"/>
+	</gridset>
+	<gridset id="incidents" type="standard" source="root">
+		<header type="fieldset" fieldset="Driver"/>
+		<colElement width="200" datafield="AccidentViolationCd" lookupsource="xml::basecombolist::incidentType" header="Incident"/>
+		<colElement datafield="AccidentViolationDt" header="Incident Date"/>
+	</gridset>
+</gridsets>

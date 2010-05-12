@@ -1,0 +1,65 @@
+<collection>
+  <page id="commontop">
+    <!--
+   <panel id="changedetail" hideifnorow="true" type="advancedisplaygrid" title="Change Detail" datamap="quote.change_list">
+      <colElement width="120" datafield="page_description" header="Page"/>
+      <colElement width="120" datafield="description" header="Field Name"/>
+      <colElement width="20" datafield="action" header="Action"/>
+      <colElement datafield="unitnumber" header="Unit #"/>
+      <colElement datafield="valueBeforeChange" header="Value Before Change"/>
+      <colElement datafield="valueAfterChange" header="Value After Change"/>
+   </panel>
+   				<change_detail>
+				<id>{id}</id>
+				<pageid>{_pageid}</pageid>
+				<action>{_action}</action>
+				<unitnumber>{_unitnumber}</unitnumber>
+				<description>{_description}</description>
+				<type>{_type}</type>
+				<value_before_change>{_valueBeforeChange}</value_before_change>
+				<value_after_change>{_valueAfterChange}</value_after_change>
+				<datamap>{_datamap}</datamap>
+   -->
+    <panel id="bindingrisk" hideifnorow="true" type="advancedisplaygrid" title="Binding Risks" datamap="quote.risk_list">
+      <colElement width="120" datafield="Description" header="Page"/>
+      <colElement width="160" datafield="Risk" header="Message"/>
+      <colElement datafield="Unit" header="Unit #"/>
+   </panel>
+  </page>
+  <page id="commonbottom">
+    <panel id="quoteinfo" viewifquotein="!E" type="fieldset" title="Quote Infomation">
+      <fieldElement type="display"  datamap="quote.quote_number" id="quotenum" label="Quote Number"/>
+      <fieldElement type="display"  datamap="quote.last_rated_at" id="lastrated" label="Last Rated On"/>
+    </panel>
+    <panel id="policyinfo" viewifquotein="B,E" type="fieldset" title="Policy Infomation">
+      <fieldElement type="display"  datamap="quote.policy.policyHeader.policy_prefix" id="policypfx" label="Policy Prefix"/>
+      <fieldElement type="display"  datamap="quote.policy.policyHeader.policy_number" id="policynum" label="Policy Number"/>
+      <fieldElement type="display"  datamap="quote.quoted_premium" id="quotedprem" label="Premium"/>
+      <fieldElement type="display"  datamap="quote.policy_effective_date" id="effdt" label="Effective Date"/>
+      <fieldElement type="display"  datamap="quote.policy_expiration_date" id="expdt" label="Expiration Date"/>
+      <fieldElement type="display" datamap="quote.policy_term" id="policyterm" label="Term (in months)"/>
+      <fieldElement type="display" datamap="quote.payment_plan"  id="paymentplan" label="Payment Plan"/>
+    </panel>
+    <panel id="agencyinfo" type="fieldset" title="Agency Information">
+      <fieldElement type="hidden" xmlmap="PersPolicy/LOBCd"  readfrom="defaultvalue::PA"/>
+      <fieldElement type="TextInput" xmlmap="Producer/GeneralPartyInfo/NameInfo/CommlName/CommercialName" readfrom="model::currentSession.agency.name" id="agencyName" label="Agency Name" />
+      <fieldElement type="AddressInput" small="true" requiredflag="true" id="agency" xmlmap="Producer/GeneralPartyInfo/Addr/" childmap="Addr1,Addr2,City,StateProvCd,PostalCode" readfrom="model::currentSession.agent" readfromchild="address,address2,city,state,zip" validation="string|property=text;required=true;requiredFieldError=This is a required field" />
+      <fieldElement type="TextInput" id="email" xmlmap="Producer/GeneralPartyInfo/Communications/EmailInfo/EmailAddr" readfrom="model::currentSession.agent.email" label="Email Address" validation="email|property=text" />
+      <fieldElement type="TextInput" id="gagent" xmlmap="Producer/ItemIdInfo/AgencyId" readfrom="model::currentSession.agent.agent_code" requiredflag="true" label="General Agent" />
+    </panel>
+    <panel id="contractterm" viewifquotein="Q,A" readonlyifquotein="E" type="fieldset" title="Contract Term">
+      <fieldElement type="ContractTermInput" datamap="quote.policy_effective_date,quote.policy_expiration_date,quote.policy_term" xmlmap="PersPolicy/ContractTerm/" childmap="EffectiveDt,ExpirationDt,DurationPeriod/NumUnits" id="effDt" label="Policy" requiredflag="true"/>
+    </panel>
+  </page>
+  <page id="rightqsummary" belongstopageid="qsummary">
+    <panel id="paymentplan" viewifquotein="Q,A" type="fieldset" title="Quoted Premium and Payment Plan">
+      <fieldElement type="display"  datamap="quote.quoted_premium" xmlmap="CurrentTermAmt/Amt" id="quotedprem" label="Quoted Premium"/>
+      <fieldElement type="display"  datamap="quote.policy_fee" id="polfee" label="Policy Fee"/>
+      <fieldElement type="display"  datamap="quote.total_charge" id="total" label="Total Charge"/>
+      <fieldElement type="display" datamap="quote.policy_term" id="policyterm" label="Policy Term"/>
+      <fieldElement type="display" datamap="quote.payment_plan"  id="paymentplan" label="Payment Plan"/>
+      <fieldElement type="display" datamap="quote.min_down" id="mindown" label="Minimum Down Amount"/>
+      <fieldElement type="display" datamap="quote.installment" id="installment" label="Installment"/>
+    </panel>
+  </page>
+</collection>

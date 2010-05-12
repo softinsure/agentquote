@@ -1,0 +1,24 @@
+<h1>Editing page_updated_info</h1>
+
+<% form_for(@page_updated_info) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :quote_id %><br />
+    <%= f.text_field :quote_id %>
+  </p>
+  <p>
+    <%= f.label :pageid %><br />
+    <%= f.text_field :pageid %>
+  </p>
+  <p>
+    <%= f.label :required_fields_entered %><br />
+    <%= f.check_box :required_fields_entered %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @page_updated_info %> |
+<%= link_to 'Back', page_updated_infos_path %>

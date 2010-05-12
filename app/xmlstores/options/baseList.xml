@@ -1,0 +1,17 @@
+<comboListRef>
+	<optionList id="test">
+		<option name="Select One"></option>
+		<option name="1">100</option>
+		<option name="2">200</option>
+		<option name="3">300</option>
+		<option name="4">400</option>
+		<option name="5">500</option>
+	</optionList>
+	<optionList id="test2">
+		<option name="1"><value>"100"</value></option>
+		<option name="2"><value>"200"</value></option>
+		<option name="3"><value>"300"</value></option>
+		<option name="4"><value>"400"</value></option>
+		<option name="5"><value>"500"</value></option>
+	</optionList>
+</comboListRef>

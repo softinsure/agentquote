@@ -1,0 +1,66 @@
+<h1>New search_entities</h1>
+
+<%= error_messages_for :search_entities %>
+
+<% form_for(@search_entities) do |f| %>
+  <p>
+    <b>Insured name</b><br />
+    <%= f.text_field :insured_name %>
+  </p>
+
+  <p>
+    <b>Entity1</b><br />
+    <%= f.text_field :entity1 %>
+  </p>
+
+  <p>
+    <b>Entity2</b><br />
+    <%= f.text_field :entity2 %>
+  </p>
+
+  <p>
+    <b>Entity3</b><br />
+    <%= f.text_field :entity3 %>
+  </p>
+
+  <p>
+    <b>Entity4</b><br />
+    <%= f.text_field :entity4 %>
+  </p>
+
+  <p>
+    <b>Entity5</b><br />
+    <%= f.text_field :entity5 %>
+  </p>
+
+  <p>
+    <b>Entity6</b><br />
+    <%= f.text_field :entity6 %>
+  </p>
+
+  <p>
+    <b>Entity7</b><br />
+    <%= f.text_field :entity7 %>
+  </p>
+
+  <p>
+    <b>Entity8</b><br />
+    <%= f.text_field :entity8 %>
+  </p>
+
+  <p>
+    <b>Entity9</b><br />
+    <%= f.text_field :entity9 %>
+  </p>
+
+  <p>
+    <b>Entity10</b><br />
+    <%= f.text_field :entity10 %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', search_entities_path %>

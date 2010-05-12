@@ -1,0 +1,28 @@
+<p>
+  <b>Group code:</b>
+  <%=h @group_permission.group_code %>
+</p>
+
+<p>
+  <b>Activity code:</b>
+  <%=h @group_permission.activity_code %>
+</p>
+
+<p>
+  <b>Lob code:</b>
+  <%=h @group_permission.lob_code %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @group_permission.status %>
+</p>
+
+<p>
+  <b>Editable:</b>
+  <%=h @group_permission.editable %>
+</p>
+
+
+<%= link_to 'Edit', edit_group_permission_path(@group_permission) %> |
+<%= link_to 'Back', group_permissions_path %>

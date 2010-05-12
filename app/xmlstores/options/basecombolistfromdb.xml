@@ -1,0 +1,9 @@
+<root>
+	<options id="payplan">
+	  <query>
+	  	<select>a.plan_desc Label,a.plan_code Data</select>
+	  	<from>payment_plans a</from>
+	  	<orderby>a.display_order</orderby>
+	  </query>
+	</options>
+</root>

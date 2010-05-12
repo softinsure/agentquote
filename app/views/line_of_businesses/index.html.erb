@@ -1,0 +1,26 @@
+<h1>Listing line_of_businesses</h1>
+
+<table>
+  <tr>
+    <th>Lob code</th>
+    <th>Description</th>
+    <th>Status</th>
+    <th>Editable</th>
+  </tr>
+
+<% @line_of_businesses.each do |line_of_business| %>
+  <tr>
+    <td><%=h line_of_business.lob_code %></td>
+    <td><%=h line_of_business.description %></td>
+    <td><%=h line_of_business.status %></td>
+    <td><%=h line_of_business.editable %></td>
+    <td><%= link_to 'Show', line_of_business %></td>
+    <td><%= link_to 'Edit', edit_line_of_business_path(line_of_business) %></td>
+    <td><%= link_to 'Destroy', line_of_business, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New line_of_business', new_line_of_business_path %>

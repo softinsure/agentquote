@@ -1,0 +1,12 @@
+<h1>Editing agency</h1>
+
+<%= error_messages_for :agency %>
+
+<% form_for(@agency) do |f| %>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @agency %> |
+<%= link_to 'Back', agencies_path %>

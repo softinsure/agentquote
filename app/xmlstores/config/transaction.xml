@@ -1,0 +1,113 @@
+<AllTransactions>
+	<transaction name="personalauto">
+		<applicationflow>default,location,coverage,driver,incident,vehicle,paymentplan,qsummary,empinformation,priorcarrier,uwqpage,agentcomments</applicationflow>
+		<applicationflow_e>default,location,coverage,driver,incident,vehicle,qsummary,proratedpremium</applicationflow_e>
+		<pageafterrate>paymentplan</pageafterrate>
+		<pageafterrate_e>proratedpremium</pageafterrate_e>
+		<pageafterissue>policyconfirmation</pageafterissue>
+		<changedetailpage>endorsement</changedetailpage>
+		<pageafterapplication>default</pageafterapplication>
+		<xmlstoloadconfig>xmlstores/config/paxmlstoload.xml</xmlstoloadconfig>
+		<acordroot>PersAutoPolicyQuoteInqRq</acordroot>
+		<policyterm>6</policyterm>
+		<rightpage default="rightdefault">true</rightpage>
+		<applicationflowmenu>mainleft</applicationflowmenu>
+		<defaulttopmenuindex menuid="topmenu::top">3</defaulttopmenuindex>
+		<defaultleftmenuindex>0</defaultleftmenuindex>
+		<defaultlabelwidth>250</defaultlabelwidth>
+	</transaction>
+	<transaction name="useradmin">
+		<screenid>adminscreen</screenid>
+		<modelname>user</modelname>
+		<container>user</container>
+		<defaultscreen>user</defaultscreen>
+		<fieldsetid>adminfieldsets</fieldsetid>
+		<activitymenuid>activityuser</activitymenuid>
+		<defaulttopmenuindex>3</defaulttopmenuindex>
+		<defaultleftmenuindex>0</defaultleftmenuindex>
+		<defaultactivitymenuindex>0</defaultactivitymenuindex>
+		<defaultlabelwidth>250</defaultlabelwidth>
+	</transaction>
+	<transaction name="agencyadmin">
+		<screenid>adminscreen</screenid>
+		<modelname>agency</modelname>
+		<container>agency</container>
+		<defaultscreen>agency</defaultscreen>
+		<fieldsetid>adminfieldsets</fieldsetid>
+		<activitymenuid>activityuser</activitymenuid>
+		<defaulttopmenuindex>3</defaulttopmenuindex>
+		<defaultleftmenuindex>0</defaultleftmenuindex>
+		<defaultactivitymenuindex>0</defaultactivitymenuindex>
+		<defaultlabelwidth>250</defaultlabelwidth>
+	</transaction>
+	<transaction name="groupadmin">
+		<screenid>adminscreen</screenid>
+		<modelname>group</modelname>
+		<container>group</container>
+		<defaultscreen>group</defaultscreen>
+		<fieldsetid>adminfieldsets</fieldsetid>
+		<activitymenuid>activityuser</activitymenuid>
+		<defaulttopmenuindex>3</defaulttopmenuindex>
+		<defaultleftmenuindex>0</defaultleftmenuindex>
+		<defaultactivitymenuindex>0</defaultactivitymenuindex>
+		<defaultlabelwidth>250</defaultlabelwidth>
+	</transaction>
+	<transaction name="agentadmin">
+		<screenid>adminscreen</screenid>
+		<modelname>agent</modelname>
+		<container>agent</container>
+		<defaultscreen>agent</defaultscreen>
+		<fieldsetid>adminfieldsets</fieldsetid>
+		<activitymenuid>activityuser</activitymenuid>
+		<defaulttopmenuindex>3</defaulttopmenuindex>
+		<defaultleftmenuindex>0</defaultleftmenuindex>
+		<defaultactivitymenuindex>0</defaultactivitymenuindex>
+		<defaultlabelwidth>250</defaultlabelwidth>
+	</transaction>
+	<transaction name="paymentplan">
+		<screenid>adminscreen</screenid>
+		<modelname>paymentplan</modelname>
+		<container>paymentplan</container>
+		<defaultscreen>paymentplan</defaultscreen>
+		<fieldsetid>adminfieldsets</fieldsetid>
+		<activitymenuid>activityuser</activitymenuid>
+		<defaulttopmenuindex>3</defaulttopmenuindex>
+		<defaultleftmenuindex>0</defaultleftmenuindex>
+		<defaultactivitymenuindex>0</defaultactivitymenuindex>
+		<defaultlabelwidth>250</defaultlabelwidth>
+	</transaction>
+	<transaction name="groupactivity">
+		<screenid>adminscreen</screenid>
+		<modelname>groupactivity</modelname>
+		<container>groupactivity</container>
+		<defaultscreen>groupactivity</defaultscreen>
+		<fieldsetid>adminfieldsets</fieldsetid>
+		<activitymenuid>activityuser</activitymenuid>
+		<defaulttopmenuindex>3</defaulttopmenuindex>
+		<defaultleftmenuindex>0</defaultleftmenuindex>
+		<defaultactivitymenuindex>0</defaultactivitymenuindex>
+		<defaultlabelwidth>250</defaultlabelwidth>
+	</transaction>
+	<transaction name="lob">
+		<screenid>adminscreen</screenid>
+		<modelname>lineofbusiness</modelname>
+		<container>lob</container>
+		<defaultscreen>lob</defaultscreen>
+		<fieldsetid>adminfieldsets</fieldsetid>
+		<activitymenuid>activityuser</activitymenuid>
+		<defaulttopmenuindex>3</defaulttopmenuindex>
+		<defaultleftmenuindex>0</defaultleftmenuindex>
+		<defaultactivitymenuindex>0</defaultactivitymenuindex>
+		<defaultlabelwidth>250</defaultlabelwidth>
+	</transaction>
+	<transaction name="permission">
+		<screenid>adminscreen</screenid>
+		<container>permission</container>
+		<fieldsetid>adminfieldsets</fieldsetid>
+		<activitymenuid>activityuser</activitymenuid>
+		<defaulttopmenuindex>3</defaulttopmenuindex>
+		<defaultleftmenuindex>0</defaultleftmenuindex>
+		<defaultactivitymenuindex>0</defaultactivitymenuindex>
+		<defaultlabelwidth>250</defaultlabelwidth>
+	</transaction>
+</AllTransactions>

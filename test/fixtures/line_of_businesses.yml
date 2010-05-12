@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  lob_code: MyString
+  description: MyString
+  status: MyString
+  editable: 
+
+two:
+  lob_code: MyString
+  description: MyString
+  status: MyString
+  editable: 

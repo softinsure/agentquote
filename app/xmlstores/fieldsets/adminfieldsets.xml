@@ -1,0 +1,50 @@
+<fieldsets>
+	<fieldset id="agencyaddress" type="standard">
+		<field type="field">address</field>
+		<field type="space"> </field>
+		<field type="field">address2</field>
+		<field type="space"> </field>
+		<field type="field">city</field>
+		<field type="string">, </field>
+		<field type="field">state</field>
+		<field type="space"> </field>
+		<field type="field">zip</field>
+	</fieldset>
+	<fieldset id="agentaddress" type="standard">
+		<field type="field">address</field>
+		<field type="space"> </field>
+		<field type="field">address2</field>
+		<field type="space"> </field>
+		<field type="field">city</field>
+		<field type="string">, </field>
+		<field type="field">state</field>
+		<field type="space"> </field>
+		<field type="field">zip</field>
+	</fieldset>
+	<fieldset id="contactname" type="standard">
+		<field type="field">contact_first_name</field>
+		<field type="space"> </field>
+		<field type="field">contact_middle_name</field>
+		<field type="space"> </field>
+		<field type="field">contact_last_name</field>
+	</fieldset>
+	<fieldset id="agentname" type="standard">
+		<field type="field">first_name</field>
+		<field type="space"> </field>
+		<field type="field">middle_name</field>
+		<field type="space"> </field>
+		<field type="field">last_name</field>
+	</fieldset>
+	<fieldset id="activity" type="standard">
+		<field type="field">activity_desc</field>
+		<field type="string">(</field>
+		<field type="field">activity_code</field>
+		<field type="string">)</field>
+	</fieldset>
+	<fieldset id="lob" type="standard">
+		<field type="field">lob_desc</field>
+		<field type="string">(</field>
+		<field type="field">lob_code</field>
+		<field type="string">)</field>
+	</fieldset>
+</fieldsets>

@@ -1,0 +1,36 @@
+<h1>Listing quotes</h1>
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Lob</th>
+    <th>Policy type</th>
+    <th>Quote status</th>
+    <th>Policy term</th>
+    <th>Quote effective date</th>
+    <th>Quote expiration date</th>
+    <th>Policy effective date</th>
+    <th>Policy expiration date</th>
+  </tr>
+
+<% for quote in @quotes %>
+  <tr>
+    <td><%=h quote.quote_type %></td>
+    <td><%=h quote.lob %></td>
+    <td><%=h quote.policy_type %></td>
+    <td><%=h quote.quote_status %></td>
+    <td><%=h quote.policy_term %></td>
+    <td><%=h quote.quote_effective_date %></td>
+    <td><%=h quote.quote_expiration_date %></td>
+    <td><%=h quote.policy_effective_date %></td>
+    <td><%=h quote.policy_expiration_date %></td>
+    <td><%= link_to 'Show', quote %></td>
+    <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
+    <td><%= link_to 'Destroy', quote, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New quote', new_quote_path %>

@@ -1,0 +1,86 @@
+<collection>
+  <search id="quotesearch" title="Work in Progress">
+  	<datagrid>
+	  <colElement datafield="quote_number" header="Quote #"/>
+      <colElement datafield="quote_type" header="Type"/>
+	  <colElement datafield="lob" header="LOB"/>
+	  <colElement datafield="updated_at" labelFunction="org.ludo.staticfunctions.DatagridLabel.dateLabel" header="Last Update"/>
+	  <colElement datafield="quote_status" header="Status"/>
+	  <colElement datafield="quote_effective_date" header="Quote Effective Date"/>
+	  <colElement datafield="policy_effective_date" header="Policy Effective Date"/>
+	  <colElement datafield="id" type="buttonbar" buttontype="link" width="180" header="Action" method="org.ludo.controllers.ActionController.workBoxButtonbarClicked">
+        <object label="View" action="view" iconmap="viewsmall" text="view" width="60"/>
+        <object label="Edit" permissionfor="CQ,MQ,MP" action="edit" text="Edit" iconmap="editsmall" width="60"/>
+        <object label="Copy" permissionfor="CQ,MQ,MP" action="copy" iconmap="viewsmall" text="copy" width="60"/>
+      </colElement>
+	  </datagrid>
+	  <query>
+	  	<limit>10</limit>
+	  	<select>q.id,q.quote_number,q.quote_type,q.lob,q.updated_at,q.quote_status,q.quote_effective_date,q.policy_effective_date</select>
+	  	<from>quotes q</from>
+		<where>q.quote_status in ('Q','A','E')</where>
+		<orderby>id desc</orderby>		
+	</query>
+	<searchby>
+		<fieldElement type="TextInput" datatype="integer" properties="maxChars=10;width=100;restrict=[0-9]" datafield="quote_number" label="Quote #" />      	
+  	</searchby>
+	<orderby>
+		<fieldElement type="TextInput" datatype="date" datafield="id" label="Quote #" />      	
+  	</orderby>
+  </search>
+  <search id="policysearch" title="Policies">
+  	<datagrid>
+	  <colElement datafield="policy_prefix" header="Prefix"/>
+      <colElement datafield="policy_number" header="Policy #"/>
+      <colElement datafield="lob" header="LOB"/>
+	  <colElement datafield="current_activity" header="Current Activity"/>
+	  <colElement datafield="updated_at" labelFunction="org.ludo.staticfunctions.DatagridLabel.dateLabel" header="Last Update"/>
+	  <colElement datafield="current_status" header="Status"/>
+	  <colElement datafield="org_effective_date" header="Org Effective Date"/>
+	  <colElement datafield="policy_effective_date" header="Term Effective Date"/>
+	  <colElement datafield="policy_expiration_date" header="Term Expiration Date"/>
+	  <colElement datafield="id" type="buttonbar" buttontype="link" width="130" header="Action" method="org.ludo.controllers.ActionController.policySearchButtonbarClicked">
+        <object label="View" iconmap="viewsmall" text="view" action="view" width="60"/>
+        <object label="Endorse" permissionfor="MP" text="endorse" action="endorse" iconmap="editsmall" width="60"/>
+      </colElement>
+	  </datagrid>
+	  <query>
+	  	<limit>10</limit>
+	  	<select>q.id,ph.policy_prefix,ph.policy_number,ph.updated_at,ph.current_status,ph.current_activity,ph.org_effective_date,q.policy_effective_date, q.policy_expiration_date,q.lob</select>
+	  	<from>policy_headers ph, policies p, quotes q</from>
+		<where>ph.policy_id=p.id and p.quote_id=q.id</where>
+		<orderby>ph.id desc</orderby>		
+	</query>
+	<searchby>
+		<fieldElement type="TextInput" datatype="integer" properties="maxChars=10;width=100;restrict=[0-9]" datafield="quote_number" label="Quote #" />      	
+  	</searchby>
+	<orderby>
+		<fieldElement type="TextInput" datatype="date" datafield="id" label="Reference #" />      	
+  	</orderby>
+  </search>
+  <search id="errorsearch" title="Error Log">
+  	<datagrid>
+	  <colElement properties="headerWordWrap=true" datafield="id" header="Error #"/>
+      <colElement properties="headerWordWrap=true" datafield="created_at" labelFunction="org.ludo.staticfunctions.DatagridLabel.dateLabel" header="Logged At"/>
+	  <colElement datafield="error_type" header="Type"/>
+	  <colElement datafield="error_desc" width="200" header="Description"/>
+	  <colElement datafield="error_source" header="Source"/>
+	  <colElement properties="headerWordWrap=true" datafield="quote_id" header="Reference Quote#"/>
+	  <colElement datafield="id" type="buttonbar" buttontype="link" width="120" header="Action" method="org.ludo.controllers.ActionController.workBoxButtonbarClicked">
+        <object label="View" action="viewerror" iconmap="viewsmall" text="view" width="40"/>
+      </colElement>
+	  </datagrid>
+	  <query>
+	  	<limit>5</limit>
+	  	<select>id,created_at,error_type,left(error_desc,100) error_desc,error_source,quote_id</select>
+	  	<from>error_logs</from>
+		<orderby>created_at desc</orderby>		
+	</query>
+	<searchby>
+		<fieldElement type="TextInput" datatype="integer" properties="maxChars=10;width=100;restrict=[0-9]" datafield="id" label="Error #" />      	
+  	</searchby>
+	<orderby>
+		<fieldElement type="TextInput" datatype="date" datafield="created_at" label="Logged At" />      	
+  	</orderby>
+  </search>
+</collection>

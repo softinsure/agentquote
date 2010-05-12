@@ -1,0 +1,12 @@
+<h1>New documents</h1>
+
+<%= error_messages_for :documents %>
+
+<% form_for(:documents, @documents, :url => {:action=>'create'}, :html=> {:multipart=>true}) do |form| %>
+  <p>
+    <%= form.file_field :document %> 
+	<%= form.text_field :description %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', documents_path %>

@@ -1,0 +1,58 @@
+<p>
+  <b>Policy prefix:</b>
+  <%=h @policy.policy_prefix %>
+</p>
+
+<p>
+  <b>Policy suffix:</b>
+  <%=h @policy.policy_suffix %>
+</p>
+
+<p>
+  <b>Policy number:</b>
+  <%=h @policy.policy_number %>
+</p>
+
+<p>
+  <b>Prior policy number:</b>
+  <%=h @policy.prior_policy_number %>
+</p>
+
+<p>
+  <b>Org effective date:</b>
+  <%=h @policy.org_effective_date %>
+</p>
+
+<p>
+  <b>Current status:</b>
+  <%=h @policy.current_status %>
+</p>
+
+<p>
+  <b>Num endorsed:</b>
+  <%=h @policy.num_endorsed %>
+</p>
+
+<p>
+  <b>Num renewed:</b>
+  <%=h @policy.num_renewed %>
+</p>
+
+<p>
+  <b>Num reinstated:</b>
+  <%=h @policy.num_reinstated %>
+</p>
+
+<p>
+  <b>Quote:</b>
+  <%=h @policy.quote_id %>
+</p>
+
+<p>
+  <b>Ref number:</b>
+  <%=h @policy.ref_number %>
+</p>
+
+
+<%= link_to 'Edit', edit_policy_path(@policy) %> |
+<%= link_to 'Back', policies_path %>

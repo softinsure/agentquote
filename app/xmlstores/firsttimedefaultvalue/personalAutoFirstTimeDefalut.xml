@@ -1,0 +1,20 @@
+﻿<firsttimedefaults>
+  <firsttimedefault id="GaragingLocation" type="unit" fromroot="InsuredOrPrincipal[@id='Insured']/GeneralPartyInfo/Addr[AddrTypeCd='Mailing']" toroot="Addr[AddrTypeCd='GaragingAddress']">
+    <copy from="Addr1" to="Addr1"></copy>
+    <copy from="Addr2" to="Addr2"></copy>
+    <copy from="City" to="City"></copy>
+    <copy from="StateProvCd" to="StateProvCd"></copy>
+    <copy from="PostalCode" to="PostalCode"></copy>
+    <copy from="Addr1" to="Addr1"></copy>
+  </firsttimedefault>
+  <firsttimedefault id="DriverName" type="unit" fromroot="InsuredOrPrincipal[@id='Insured']/GeneralPartyInfo/NameInfo/PersonName" toroot="GeneralPartyInfo/NameInfo/PersonName">
+    <copy from="GivenName" to="GivenName"></copy>
+    <copy from="Surname" to="Surname"></copy>
+    <copy from="OtherGivenName" to="OtherGivenName"></copy>
+  </firsttimedefault>
+  <firsttimedefault id="DriverName" type="unit" fromroot="InsuredOrPrincipal[@id='Coinsured']/GeneralPartyInfo/NameInfo/PersonName" toroot="GeneralPartyInfo/NameInfo/PersonName">
+    <copy from="GivenName" to="GivenName"></copy>
+    <copy from="Surname" to="Surname"></copy>
+    <copy from="OtherGivenName" to="OtherGivenName"></copy>
+  </firsttimedefault>
+</firsttimedefaults>

@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<collection>
+  <page id="confirmendorsement" title="Summary of Changes"  commonbottom="false" viewifquotein="E">
+   <panel id="changedetail" hideifnorow="true" type="advancedisplaygrid" title="Change Detail" datamap="quote.change_list">
+       <colElement width="130" datafield="page_description" header="Page"/>
+      <colElement width="120" datafield="description" header="Field Name"/>
+      <colElement width="100" datafield="unitnumber" header="Unit #"/>
+      <colElement width="50" datafield="action" header="Action"/>
+      <colElement datafield="value_before_change" header="Value Before Change"/>
+      <colElement datafield="value_after_change" header="Value After Change"/>
+   </panel>
+   <panel id="endrtxt" type="fieldset" title="Please Enter Endorsement Text">
+      <fieldElement requiredflag="true" type="TextArea" datamap="quote.policy.policyHeader.last_endorsement_text"  properties="maxChars=1000;width=600;height=80" id="endrtext" />
+    </panel>
+    <panel id="actionscd" type="pageactionbar">
+      <fieldElement type="actionbuttonbar" method="org.ludo.controllers.ActionController.pageControlBarClicked">
+        <action viewmode="V" label="Continue" action="continueview" width="50" />
+        <action label="Confirm Endorsement" action="confirmendorsement" width="50" />
+      </fieldElement>
+	 </panel>
+  </page> 
+  <page id="proratedpremium" title="Inforce and Prorated Premium Information" initfunc="org.linda.services.Common.proRataCalculation"  commonbottom="false" viewifquotein="E">
+     <panel id="proratainfo" type="fieldset" title="Inforce and Prorated Premium Information">
+		<fieldElement type="display"  datamap="quote.quoted_premium" id="revisedprem" label="Revised Term Premium "/>
+		<fieldElement type="display"  datamap="quote.prorated_premium" id="proratededprem" label="Prorated Premium "/>
+		<fieldElement type="display"  datamap="quote.policy.policyHeader.last_endorsed_dt" id="endreffdt" label="Endorsement Effective Date"/>
+    </panel>
+     <panel id="actionspro" type="pageactionbar">
+      <fieldElement type="actionbuttonbar" method="org.ludo.controllers.ActionController.pageControlBarClicked">
+        <action viewmode="V" label="Continue" action="continueview" width="50" />
+        <action viewmode="E" label="Accept Endorsement" pagetogo="confirmendorsement" action="nextpage" width="120" />
+        <action viewmode="E" label="Rate Again"  action="rate" width="50" />
+        <action viewmode="E" label="Reject Endorsement" action="rejectendorsement" width="120" />
+      </fieldElement>
+	 </panel>
+  </page>
+  <page id="endorsement" commonbottom="false" viewifquotein="E" tip="Following Information has been changed.&#13;Please select an option from the Side Navigation Menu to make more changes to this Policy.&#13;Click 'Continue' to go to next page in flow, 'Back' to go to the previous page, 'Rate' for rating">
+     <panel id="actionscd" type="pageactionbar">
+      <fieldElement type="actionbuttonbar" method="org.ludo.controllers.ActionController.pageControlBarClicked">
+        <action label="Back" action="current" width="50" />
+        <action label="Rate" inpage="endorsement" action="rate" width="50" />
+        <action label="Continue" action="nextpage" width="50" />
+      </fieldElement>
+	 </panel>
+   <panel id="changedetail" hideifnorow="true" type="advancedisplaygrid" title="Change Detail" datamap="quote.change_list">
+      <colElement width="130" datafield="page_description" header="Page"/>
+      <colElement width="120" datafield="description" header="Field Name"/>
+      <colElement width="100" datafield="unitnumber" header="Unit #"/>
+      <colElement width="50" datafield="action" header="Action"/>
+      <colElement datafield="value_before_change" header="Value Before Change"/>
+      <colElement datafield="value_after_change" header="Value After Change"/>
+   </panel>
+  </page>
+  <page id="default" title="Applicant Information" tip="To get help, please click on the help icon.">
+ <!--   <panel id="agencyinfo" type="fieldset" title="Agency Information">
+      <fieldElement type="TextInput" xmlmap="Producer/GeneralPartyInfo/NameInfo/CommlName/CommercialName" id="agencyName" label="Agency Name" />
+      <fieldElement type="AddressInput" requiredflag="true" id="agency" xmlmap="Producer/GeneralPartyInfo/Addr/" childmap="Addr1,Addr2,City,StateProvCd,PostalCode" validation="string|property=text;required=true;requiredFieldError=This is a required field" />
+      <fieldElement type="TextInput" id="email" xmlmap="Producer/GeneralPartyInfo/Communications/EmailInfo/EmailAddr" label="Email Address" validation="email|property=text" />
+      <fieldElement type="TextInput" id="gagent" xmlmap="Producer/ItemIdInfo/AgencyId" readfrom="model::currentSession.agent.agent_code" requiredflag="true" label="General Agent" />
+      <fieldElement type="spacer" height="20" />
+    </panel>
+    <panel id="contractterm" type="fieldset" title="Contract Term">
+      <fieldElement type="ContractTermInput" xmlmap="PersPolicy/ContractTerm/" childmap="EffectiveDt,ExpirationDt,DurationPeriod/NumUnits" id="effDt" label="Policy" requiredflag="true" validation="string|property=text" />
+    </panel>
+  -->
+    <panel id="applicantinfo" type="fieldset" title="Applicant Information">
+      <fieldElement type="NameInput" id="ins1" xmlmap="InsuredOrPrincipal[@id='Insured']/GeneralPartyInfo/NameInfo/PersonName/" childmap="GivenName,Surname,OtherGivenName" requiredflag="true" validation="string|property=text;required=true" />
+      <fieldElement type="PhoneInput" id="insphone" label="Phone" defaulttype="Home" xmlmap="InsuredOrPrincipal[@id='Insured']/GeneralPartyInfo/Communications/PhoneInfo[PhoneTypeCd='Phone']/" childmap="CommunicationUseCd,PhoneNumber" />
+    </panel>
+    <panel id="coapplicantinfo" type="fieldset" title="Co-Applicant Information" tip="Enter Co-Applicant Information if there is any.">
+      <fieldElement type="NameInput" id="ins2" xmlmap="InsuredOrPrincipal[@id='Coinsured']/GeneralPartyInfo/NameInfo/PersonName/" childmap="GivenName,Surname,OtherGivenName" />
+    </panel>
+    <panel id="mailingadd" type="fieldset" title="Mailing Address">
+      <fieldElement type="AddressInput" requiredflag="true" id="ma" xmlmap="InsuredOrPrincipal[@id='Insured']/GeneralPartyInfo/Addr[AddrTypeCd='Mailing']/" childmap="Addr1,Addr2,City,StateProvCd,PostalCode" validation="string|property=text;required=true" />
+    </panel>
+    <panel id="prevadd" type="fieldset" title="Previous Address" tip="Please enter the previous address if the years at Current Address is less than 3 years">
+      <fieldElement type="AddressInput" id="pa" xmlmap="InsuredOrPrincipal[@id='Insured']/GeneralPartyInfo/Addr[AddrTypeCd='Previuos']/" childmap="Addr1,Addr2,City,StateProvCd,PostalCode" validation="string|property=text" />
+    </panel>
+  </page>
+  <page id="location" title="Garaging Locations" tip="Please add all the locations where the vehicles are garaged.">
+    <panel id="locationgrid" firsttimedefaultsets="xml::GaragingLocation" type="unitgrid" title="Garaging Locations" xmlmap="Location[Addr/AddrTypeCd='GaragingAddress']" identifier="id" identifierformat="Location_#seq#">
+      <colElement type="fieldset" header="Location" fieldset="GaragingLocation" />
+      <colElement datafield="@id" type="buttonbar" buttontype="link" width="180" header="Action" method="org.ludo.controllers.ActionController.unitButtonBarClicked" methodparam="locationinfo">
+        <object label="View" action="view" text="View" width="60" />
+        <object label="Edit" action="edit" viewmode="E" text="Edit" width="60" />
+        <object label="Delete" action="delete" viewmode="E" text="Delete" width="60" />
+      </colElement>
+      <unit id="locationinfo" type="fieldset" title="Add/Edit Location" emptymessage="There are no Garaging Locations currently entered">
+        <fieldElement type="hidden" xmlmap="Addr/AddrTypeCd" readfrom="defaultvalue::GaragingAddress" />
+        <fieldElement type="AddressInput" requiredflag="true" id="GAAddr" xmlmap="Addr/" childmap="Addr1,Addr2,City,StateProvCd,PostalCode" validation="string|required=true" />
+        <fieldElement type="spacer" height="40" />
+        <fieldElement type="buttonbar" method="org.ludo.controllers.ActionController.pageControlBarClicked" methodparam="driver">
+          <object label="Save" viewmode="E" action="save" />
+          <object label="Close" viewmode="V" action="cancel" />
+          <object label="Cancel" viewmode="E" action="cancel" />
+        </fieldElement>
+      </unit>
+    </panel>
+  </page>
+  <page id="coverage" title="Policy Level Coverages - Apply to All Vehicles" tip="To get help, please click on the help icon.">
+    <panel id="polcoverage" type="fieldset" title="Policy Level Coverage">
+		<fieldElement type="coverageinput" coveragecode="BI" unitxmlmap="PersAutoLineBusiness/PersVeh" requiredflag="true" />
+        <fieldElement type="coverageinput" coveragecode="PD" unitxmlmap="PersAutoLineBusiness/PersVeh" requiredflag="true" />
+        <fieldElement type="coverageinput" coveragecode="MED" unitxmlmap="PersAutoLineBusiness/PersVeh" requiredflag="true" />
+        <fieldElement type="coverageinput" coveragecode="UMBI" unitxmlmap="PersAutoLineBusiness/PersVeh" />
+        <fieldElement type="coverageinput" coveragecode="UMPD" unitxmlmap="PersAutoLineBusiness/PersVeh" />
+    </panel>
+  </page>
+  <page id="driver" title="Driver Information" tip="Please list all Drivers">
+    <panel id="driverinfogrid" firsttimedefaultsets="xml::DriverName" type="unitgrid" title="Driver Information" xmlmap="PersAutoLineBusiness/PersDriver" identifier="id" identifierformat="Driver_#seq#">
+      <colElement datafield="@id" type="fieldset" header="Driver" fieldset="Driver" />
+      <colElement datafield="@id" type="buttonbar" buttontype="link" header="Action" width="180" method="org.ludo.controllers.ActionController.unitButtonBarClicked" methodparam="driverinfo">
+        <object label="View" action="view" viewmode="V" text="View" width="60" />
+        <object label="Edit" action="edit" viewmode="E" text="Edit" width="60" />
+        <object label="Delete" action="delete" viewmode="E" text="Delete" width="60" />
+      </colElement>
+      <unit id="driverinfo" type="fieldset" title="Add/Edit Driver">
+        <!--
+        <fieldElement type="TextInput" required="true" id="11" validation="string|property=text;required=true;requiredFieldError=Marital Status"
+					label="Marital Status" xmlmap="DriverInfo/PersonInfo/MaritalStatusCd" />
+	 -->
+        <fieldElement type="NameInput" requiredflag="true" id="driver1" xmlmap="GeneralPartyInfo/NameInfo/PersonName/" childmap="GivenName,Surname,OtherGivenName" validation="string|property=text;required=true;requiredFieldError=Both First Name and Last Name are required." />
+        <fieldElement type="ComboBox" xmlmap="DriverInfo/PersonInfo/GenderCd" requiredflag="true" validation="string|property=text;required=true" id="gencer" label="Gender" lookupsource="xml::basecombolist::gender"></fieldElement>
+       	<!--
+       	<fieldElement type="ComboBox" xmlmap="DriverInfo/PersonInfo/GenderCd" requiredflag="true" validation="string|property=text;required=true" id="gencer" label="Gender" lookupsource="xml::basecombolist::gender"></fieldElement>
+        -->
+        <fieldElement type="ComboBox" requiredflag="true" validation="string|property=text;required=true" id="mstatus" label="Marital Status" xmlmap="DriverInfo/PersonInfo/MaritalStatusCd" lookupsource="xml::basecombolist::maritalStatus"></fieldElement>
+        <fieldElement type="ComboBox" xmlmap="PersDriverInfo/DriverRelationshipToApplicantCd" requiredflag="true" validation="string|property=text;required=true" id="rapl" label="Relation to Applicant" lookupsource="xml::basecombolist::relationToApplicant"></fieldElement>
+        <fieldElement type="datefield" xmlmap="DriverInfo/PersonInfo/BirthDt" requiredflag="true" id="dob" label="Date of Births" />
+        <fieldElement type="ComboBox" xmlmap="DriverInfo/PersonInfo/OccupationClassCd" requiredflag="true" validation="string|property=text;required=true" id="occu" label="Occupation" lookupsource="xml::basecombolist::occupation"></fieldElement>
+        <fieldElement type="TextInput" xmlmap="DriverInfo/License[@LicenseTypeCd='Driver']/LicensePermitNumber" requiredflag="true" validation="string|property=text;required=true" id="dln" label="Licensed Number" />
+        <fieldElement type="datefield" xmlmap="DriverInfo/License[@LicenseTypeCd='Driver']/LicenseTerm/EffectiveDt" requiredflag="true" id="dld" label="Date Licensed" />
+        <fieldElement type="ComboBox" xmlmap="DriverInfo/License[@LicenseTypeCd='Driver']/StateProvCd" requiredflag="true" validation="string|property=text;required=true" id="lstats" label="License State" lookupsource="xml::basecombolist::state"></fieldElement>
+        <fieldElement type="hidden" xmlmap="DriverInfo/License[@LicenseTypeCd='Driver']/LicenseStatusCd" readfrom="defaultvalue::Active"/>
+        <fieldElement type="hidden" xmlmap="GeneralPartyInfo/NameInfo/TaxIdentity/TaxIdTypeCd" readfrom="defaultvalue::SSN"/>
+        <fieldElement type="TextInput" xmlmap="GeneralPartyInfo/NameInfo/TaxIdentity/TaxId" id="ssn" label="SSN" />
+        <fieldElement type="buttonbar" method="org.ludo.controllers.ActionController.pageControlBarClicked" methodparam="driver">
+          <object label="Save" viewmode="E" action="save" />
+          <object label="Close" viewmode="V" action="cancel" />
+          <object label="Cancel" viewmode="E" action="cancel" />
+        </fieldElement>
+      </unit>
+    </panel>
+  </page>
+  <page id="incident" title="Incedents" tip="Please enter all your accidents or violations here.">
+    <panel id="incidentgrid" type="unitgrid" title="Incident Details" xmlmap="PersPolicy/AccidentViolation" identifier="id" identifierformat="violation_#seq#">
+      <colElement datafield="@DriverRef" header="Driver" type="fieldset" fieldset="Driver::PersAutoLineBusiness/PersDriver::id::@DriverRef" width="250" />
+      <colElement datafield="AccidentViolationDt" header="Date" width="250" />
+      <colElement datafield="AccidentViolationCd" lookupsource="xml::basecombolist::incidentType" header="Incident Type" width="250" />
+      <colElement datafield="@id" type="buttonbar" buttontype="link" width="180" header="Action" method="org.ludo.controllers.ActionController.unitButtonBarClicked" methodparam="incidentinfo">
+        <object label="View" action="view" text="View" width="60" />
+        <object label="Edit" action="edit" viewmode="E" text="Edit" width="60" />
+        <object label="Delete" action="delete" viewmode="E" text="Delete" width="60" />
+      </colElement>
+      <unit id="incidentinfo" type="fieldset" title="Add/Edit Location" emptymessage="No Incident Details found for this quote">
+        <fieldElement type="ComboBox" xmlmap="@DriverRef" requiredflag="true" refresh="true" validation="string|property=value;required=true" lookupsource="xml::workitem::drivers::listtemplate" id="driver" label="Driver" />
+        <fieldElement type="datefield" xmlmap="AccidentViolationDt" requiredflag="true" id="doi" label="Date of Incident" />
+        <fieldElement type="ComboBox" xmlmap="AccidentViolationCd" requiredflag="true" validation="string|property=value;required=true" lookupsource="xml::basecombolist::incidentType" id="itype" label="Incident Type" />
+        <fieldElement type="buttonbar" method="org.ludo.controllers.ActionController.pageControlBarClicked" methodparam="driver">
+          <object label="Save" viewmode="E" action="save" />
+          <object label="Close" viewmode="V" action="cancel" />
+          <object label="Cancel" viewmode="E" action="cancel" />
+        </fieldElement>
+      </unit>
+    </panel>
+  </page>
+  <page id="vehicle" title="Vehicle Information" tip="Please enter your VIN number below and other pertinent information for each vehicle">
+    <panel id="vehicleinfogrid" type="unitgrid" title="Vehicle Information" xmlmap="PersAutoLineBusiness/PersVeh" identifier="id" identifierformat="Vehicle_#seq#">
+      <colElement datafield="@id" type="fieldset" header="Vehicle Description" fieldset="Vehicle" />
+      <colElement datafield="@id" type="buttonbar" buttontype="link" header="Action" width="180" method="org.ludo.controllers.ActionController.unitButtonBarClicked" methodparam="vehicleinfo">
+        <object label="View" action="view" viewmode="V" text="View" width="60" />
+        <object label="Edit" action="edit" viewmode="E" text="Edit" width="60" />
+        <object label="Delete" action="delete" viewmode="E" text="Delete" width="60" />
+      </colElement>
+      <unit id="vehicleinfo" type="fieldset" title="Add/Edit Vehicle">
+        <fieldElement type="SecHeader" title="Vehicle Description" />
+        <fieldElement type="TextInput" xmlmap="VehIdentificationNumber" requiredflag="true" validation="string|property=text;required=true" id="vin" label="VIN Number" />
+        <fieldElement type="vehicleinput" requiredflag="true" xmlmap="/" childmap="ModelYear,Manufacturer,Model" validation="string|property=value;required=true" makelookupsource="xml::pa_combolist::vehiclemake" id="auto" />
+        <fieldElement type="hidden" xmlmap="VehTypeCd" readfrom="defaultvalue::C"/>
+        <fieldElement type="ComboBox" xmlmap="VehBodyTypeCd" requiredflag="true" validation="string|property=value;required=true" lookupsource="xml::pa_combolist::vehiclebody" id="body" label="Body Type" />
+        <fieldElement type="ComboBox" xmlmap="LeasedVehInd" requiredflag="true" validation="string|property=value;required=true" lookupsource="xml::basecombolist::boolean" id="leased" label="Leased?" />
+        <fieldElement type="TextInput" xmlmap="NumUnits" validation="number|property=text" id="units" properties="maxChars=5;width=50;restrict=[0-9]" label="HP/CC" />
+        <fieldElement type="TextInput" xmlmap="VehSymbolCd" validation="number|property=text;required=true" id="symbol" properties="maxChars=2;width=50;restrict=[0-9]" label="Symbol" />
+        <fieldElement type="TextInput" xmlmap="RateClassCd" id="class" properties="maxChars=5;width=50;restrict=[0-9]" label="Rated Class" />
+        <fieldElement type="ComboBox" xmlmap="@LocationRef" requiredflag="true" refresh="true" validation="string|property=value;required=true" lookupsource="xml::workitem::location::listtemplate" id="driver" label="Garaging Location" />
+        <fieldElement type="ComboBox" xmlmap="GaragingCd" requiredflag="true" validation="string|property=value;required=true" lookupsource="xml::pa_combolist::garagingtype" id="gtype" label="Garaging Type" />
+        <fieldElement type="ComboBox" xmlmap="@RatedDriverRef" requiredflag="true" refresh="true" validation="string|property=value;required=true" lookupsource="xml::workitem::drivers::listtemplate" id="driver" label="Principle Driver" />
+        <fieldElement type="ComboBox" xmlmap="Registration/StateProvCd" lookupsource="xml::basecombolist::state" id="rstate" label="Registered State" />
+        <fieldElement type="spacer" height="20" />
+        <fieldElement type="SecHeader" title="Safety Features" />
+        <fieldElement type="ComboBox" xmlmap="AntiTheftDeviceCd" lookupsource="xml::pa_combolist::antiTheft" id="atheft" label="Anti Theft" />
+        <fieldElement type="ComboBox" xmlmap="AirBagTypeCd" lookupsource="xml::pa_combolist::restrain" id="abag" label="Restraint" />
+        <fieldElement type="ComboBox" xmlmap="AntiLockBrakeCd" lookupsource="xml::pa_combolist::antiLockBrakes" id="alock" label="Anti-Lock Brake" />
+        <fieldElement type="ComboBox" xmlmap="AirBagTypeCd" lookupsource="xml::pa_combolist::restrain" id="abag" label="Restraint" />
+        <fieldElement type="ComboBox" xmlmap="AntiLockBrakeCd" lookupsource="xml::pa_combolist::antiLockBrakes" id="alock" label="Anti-Lock Brake" />
+        <fieldElement type="spacer" height="20" />
+        <fieldElement type="SecHeader" title="Vehicle Usage" />
+        <fieldElement type="TextInput" requiredifquotein="A" xmlmap="DistanceOneWay/NumUnits" label="Miles Driven One Way" validation="integer|property=text" properties="maxChars=3;width=50;restrict=[0-9]" />
+        <fieldElement type="TextInput" xmlmap="NumDaysDrivenPerWeek" label="Days Per Week" validation="integer|property=text" properties="maxChars=1;width=50;restrict=[0-7]" />
+        <fieldElement type="ComboBox" xmlmap="VehUseCd" label="Usage" validation="string|property=value;required=true" requiredflag="true" lookupsource="xml::pa_combolist::usage" />
+        <fieldElement type="TextInput" xmlmap="OdometerReading/NumUnits" label="Odometer Reading" validation="integer|property=text" properties="maxChars=7;width=50;restrict=[0-9]" />
+        <fieldElement type="TextInput" xmlmap="EstimatedAnnualDistance/NumUnits" label="Annual Mileage" validation="integer|property=text" properties="maxChars=7;width=50;restrict=[0-9]" />
+		<!--
+        <fieldElement type="SecHeader" title="Policy Level Coverages - Apply to All Vehicles" />
+        <fieldElement type="coverageinput" coveragecode="BI" unitxmlmap="PersAutoLineBusiness/PersVeh" requiredflag="true" />
+        <fieldElement type="coverageinput" coveragecode="PD" unitxmlmap="PersAutoLineBusiness/PersVeh" requiredflag="true" />
+        <fieldElement type="coverageinput" coveragecode="MED" unitxmlmap="PersAutoLineBusiness/PersVeh" requiredflag="true" />
+        <fieldElement type="coverageinput" coveragecode="UMBI" unitxmlmap="PersAutoLineBusiness/PersVeh" />
+        <fieldElement type="coverageinput" coveragecode="UMPD" unitxmlmap="PersAutoLineBusiness/PersVeh" />
+		-->
+        <fieldElement type="SecHeader" title="Coverage Specific to Vehicle" />
+        <fieldElement type="coverageinput" coveragecode="COMP" />
+        <fieldElement type="coverageinput" coveragecode="COLL" />
+        <fieldElement type="coverageinput" coveragecode="TOW" />
+        <fieldElement type="coverageinput" coveragecode="RNT" />
+        <fieldElement type="buttonbar" method="org.ludo.controllers.ActionController.pageControlBarClicked" methodparam="vehicle">
+          <object label="Save" viewmode="E" action="save" />
+          <object label="Close" viewmode="V" action="cancel" />
+          <object label="Cancel" viewmode="E" action="cancel" />
+        </fieldElement>
+      </unit>
+    </panel>
+  </page>
+  <page id="empinformation" title="Employment Information">
+    <panel id="applicantempinfo" type="fieldset" title="Applicant Employment Information">
+      <fieldElement type="TextInput" xmlmap="InsuredOrPrincipal[InsuredOrPrincipalInfo/InsuredOrPrincipalRoleCd='Insured']/InsuredOrPrincipalInfo/PersonInfo/MiscParty[MiscPartyInfo/MiscPartyRoleCd='Employer']/GeneralPartyInfo/NameInfo/CommlName/CommercialName" id="emplname" label="Employer Name" />
+      <fieldElement type="AddressInput" id="insea" label="Employer Address" xmlmap="InsuredOrPrincipal[InsuredOrPrincipalInfo/InsuredOrPrincipalRoleCd='Insured']/InsuredOrPrincipalInfo/PersonInfo/MiscParty[MiscPartyInfo/MiscPartyRoleCd='Employer']/GeneralPartyInfo/Addr/" childmap="Addr1,Addr2,City,StateProvCd,PostalCode" validation="string|property=text;" />
+      <fieldElement type="TextInput" xmlmap="InsuredOrPrincipal[InsuredOrPrincipalInfo/InsuredOrPrincipalRoleCd='Insured']/InsuredOrPrincipalInfo/PersonInfo/LengthTimeCurrentOccupation/NumUnits" label="Years in Current Occupation" />
+      <fieldElement type="TextInput" xmlmap="InsuredOrPrincipal[InsuredOrPrincipalInfo/InsuredOrPrincipalRoleCd='Insured']/InsuredOrPrincipalInfo/PersonInfo/LengthTimeWithPreviousEmployer/NumUnits" label="Years with Prior Employer" />
+      <fieldElement type="PhoneInput" id="insea" label="Work Phone" phonetype="false" xmlmap="InsuredOrPrincipal[InsuredOrPrincipalInfo/InsuredOrPrincipalRoleCd='Insured']/InsuredOrPrincipalInfo/PersonInfo/MiscParty[MiscPartyInfo/MiscPartyRoleCd='Employer']/GeneralPartyInfo/Communications/PhoneInfo/PhoneNumber/" childmap="CommunicationUseCd,PhoneNumber" validation="string|property=text;" />
+    </panel>
+    <panel id="coapplicantempinfo" type="fieldset" title="Co-Applicant Employment Information" tip="Please complete the co-applicant section only if you have a co-applicant on this submission.">
+      <fieldElement type="TextInput" xmlmap="InsuredOrPrincipal[InsuredOrPrincipalInfo/InsuredOrPrincipalRoleCd='Coinsured']/InsuredOrPrincipalInfo/PersonInfo/MiscParty[MiscPartyInfo/MiscPartyRoleCd='Employer']/GeneralPartyInfo/NameInfo/CommlName/CommercialName" id="emplname" label="Employer Name" />
+      <fieldElement type="AddressInput" id="insea" label="Employer Address" xmlmap="InsuredOrPrincipal[InsuredOrPrincipalInfo/InsuredOrPrincipalRoleCd='Coinsured']/InsuredOrPrincipalInfo/PersonInfo/MiscParty[MiscPartyInfo/MiscPartyRoleCd='Employer']/GeneralPartyInfo/Addr/" childmap="Addr1,Addr2,City,StateProvCd,PostalCode" validation="string|property=text;" />
+      <fieldElement type="TextInput" xmlmap="InsuredOrPrincipal[InsuredOrPrincipalInfo/InsuredOrPrincipalRoleCd='Coinsured']/InsuredOrPrincipalInfo/PersonInfo/LengthTimeCurrentOccupation/NumUnits" label="Years in Current Occupation" />
+      <fieldElement type="TextInput" xmlmap="InsuredOrPrincipal[InsuredOrPrincipalInfo/InsuredOrPrincipalRoleCd='Coinsured']/InsuredOrPrincipalInfo/PersonInfo/LengthTimeWithPreviousEmployer/NumUnits" label="Years with Prior Employer" />
+      <fieldElement type="PhoneInput" id="insea" label="Work Phone" phonetype="false" xmlmap="InsuredOrPrincipal[InsuredOrPrincipalInfo/InsuredOrPrincipalRoleCd='Coinsured']/InsuredOrPrincipalInfo/PersonInfo/MiscParty[MiscPartyInfo/MiscPartyRoleCd='Employer']/GeneralPartyInfo/Communications/PhoneInfo/PhoneNumber/" childmap="CommunicationUseCd,PhoneNumber" validation="string|property=text;" />
+    </panel>
+  </page>
+  <page id="priorcarrier" title="Prior Carrier Information">
+    <panel id="incidentgrid" type="unitgrid" title="Prior Carrier Details" xmlmap="PersPolicy/OtherOrPriorPolicy[PolicyCd='Prior']" identifier="id" identifierformat="priorcarrier_#seq#">
+      <colElement datafield="InsurerName" header="Carrier Name" width="100" />
+      <colElement datafield="ContractTerm/ExpirationDt" header="Expiration Date" />
+      <colElement datafield="@id" type="buttonbar" buttontype="link" width="180" header="Action" method="org.ludo.controllers.ActionController.unitButtonBarClicked" methodparam="priorcarrier">
+        <object label="View" action="view" viewmode="V" text="View" width="60" />
+        <object label="Edit" action="edit" viewmode="E" text="Edit" width="60" />
+        <object label="Delete" action="delete" viewmode="E" text="Delete" width="60" />
+      </colElement>
+      <unit id="priorcarrier" type="fieldset" title="Add/Edit Carrier" emptymessage="No Carrier Details found for this quote">
+        <fieldElement type="hidden" xmlmap="PolicyCd" readfrom="defaultvalue::Prior" />
+        <fieldElement type="hidden" xmlmap="LOBCd" readfrom="defaultvalue::PA" />
+        <fieldElement type="datefield" requiredflag="true" xmlmap="ContractTerm/ExpirationDt" label="Expiration Date" />
+        <fieldElement type="TextInput" requiredflag="true" xmlmap="InsurerName" label="Carrier Name"/>
+        <fieldElement type="TextInput" requiredflag="true" xmlmap="PolicyNumber" label="Policy Number" validation="string|property=text;required=true" />
+        <fieldElement type="buttonbar" method="org.ludo.controllers.ActionController.pageControlBarClicked" methodparam="driver">
+          <object label="Save" viewmode="E" action="save" />
+          <object label="Close" viewmode="V" action="cancel" />
+          <object label="Cancel" viewmode="E" action="cancel" />
+        </fieldElement>
+      </unit>
+    </panel>
+  </page>
+  <page id="paymentplan" title="Quote Premium and Payment Plan">
+    <panel id="paymentplan" type="fieldset" title="Quote Premium and Payment Plan">
+      <fieldElement type="display"  datamap="quote.quoted_premium" xmlmap="CurrentTermAmt/Amt" id="quotedprem" label="Quoted Premium"/>
+      <fieldElement type="display"  datamap="quote.policy_fee" id="polfee" label="Policy Fee"/>
+      <fieldElement type="TextInput"  datamap="quote.misc_fee" id="miscfee" onchange="org.ludo.controllers.ActionController.miscFeeChanged"  label="Misc. Fee"/>
+      <fieldElement type="TextInput"  datamap="quote.misc_fee_reason" id="miscfeereason" label="Misc. Fee Reason"/>
+      <fieldElement type="display"  datamap="quote.total_charge" id="total" label="Total Charge"/>
+      <fieldElement type="display" datamap="quote.policy_term" id="policyterm" label="Policy Term"/>
+      <!--
+	  <fieldElement type="ComboBox" datamap="quote.payment_plan" xmlmapaction="save" xmlmap="PersPolicy/PaymentOption/PaymentPlanCd" requiredflag="true" validation="string|property=text;required=true" id="paymentplan" label="Payment Plan"
+	   onselect="org.ludo.controllers.ActionController.paymentPlanSelected" finder="payplan::pasearch::plan_code::paymentplan::org.ludo.controllers.ActionController.paymentPlanSelection"  lookupsource="database::basecombolistfromdb::payplan"></fieldElement>
+	  -->
+      <fieldElement type="TextInput" datamap="quote.payment_plan" xmlmapaction="save" xmlmap="PersPolicy/PaymentOption/PaymentPlanCd" requiredflag="true" id="paymentplan" properties="editable=false" label="Payment Plan" finder="payplan::pasearch::plan_code::paymentplan::org.ludo.controllers.ActionController.paymentPlanSelection"></fieldElement>
+      <fieldElement type="ComboBox" xmlmap="PersPolicy/BillingMethodCd" requiredflag="true" validation="string|property=text;required=true" id="billtype" label="Billing Type" lookupsource="xml::basecombolist::billingmethod"></fieldElement>
+      <fieldElement type="message" id="info1" label="Please Note: Minimum Down includes Policy Fee and Installment includes an Installment Fee." />
+      <fieldElement type="display" datamap="quote.min_down" id="mindown" label="Minimum Down Amount"/>
+      <fieldElement type="display" datamap="quote.installment" id="installment" label="Installment"/>
+    </panel>
+  </page>
+  <page id="uwqpage" title="Underwriting Questions" labelwidth="500">
+    <panel id="remarks" type="fieldset" title="Questionnaire">
+      <fieldElement type="RadioList" validation="radiolist|property=selectedValue;required=true;" xmlmap="UWQQuestions/QuestionAnswer[QuestionCd='PAUWQ1']/Answer" requiredflag="true" lookupsource="xml::basecombolist::radioyesno" id="leased" label="With the exception of any encumbrances, are any vehicles not solely owned by and registered to the applicant?" />
+    </panel>
+    <panel id="remarks" type="fieldset" title="Remarks">
+      <fieldElement type="TextArea" xmlmap="MQRemarks/Remark[Code='UWQRemark']/Text" properties="maxChars=1000;width=600;height=80" id="agentcomments" />
+    </panel>
+  </page>
+  <page id="agentcomments" title="Agent Comments" tip="Please enter any comments that may be helpful to the underwriter in their review of this submission.">
+    <panel id="comments" type="fieldset" title="Agent Comments">
+      <fieldElement type="TextArea" xmlmap="ALLMQRemarks/Remark[Code='AgentComments']/Text" properties="maxChars=1000;width=600;height=80" id="agentcomments" />
+    </panel>
+  </page>
+  <page id="qsummary" rightpageid="rightqsummary" redrawifquotein="Q,A" title="Summary" labelwidth="150">
+     <panel id="actions" viewifquotein="!E" type="pageactionbar">
+      <fieldElement type="actionbuttonbar" method="org.ludo.controllers.ActionController.pageControlBarClicked">
+        <action viewmode="E" viewifquotein="RQ" pagetogo="default" label="Proceed To Application" action="application" width="50" />
+        <action viewmode="E" viewifquotein="RA" pagetogo="default" label="Issue Policy" action="bind" width="50" />
+      </fieldElement>
+    </panel>
+ 	<!--
+    <panel id="agency" type="fieldset" title="Agency Information">
+      <fieldElement type="display" xmlmap="Producer/GeneralPartyInfo/NameInfo/CommlName/CommercialName" id="agencyName" label="Agency Name:" />
+      <fieldElement type="display" id="gagent" xmlmap="Producer/ItemIdInfo/AgencyId" label="Agent ID:" />
+    </panel>
+	-->
+    <panel id="agency" type="fieldset" title="Genaral Information">
+    	<!--
+      <fieldElement type="display" datamap="quote.id" label="Reference #:" />
+	  -->
+      <fieldElement type="display" fieldset="insured::InsuredOrPrincipal[@id='Insured']/GeneralPartyInfo/NameInfo/PersonName" label="Named Insured:" />
+      <fieldElement type="display" fieldset="address::InsuredOrPrincipal[@id='Insured']/GeneralPartyInfo/Addr[AddrTypeCd='Mailing']" label="Mailing Address:" />
+<!--
+     <fieldElement type="display" xmlmap="PersPolicy/ContractTerm/EffectiveDt" label="Policy Effective Date:" />
+      <fieldElement type="display" xmlmap="PersPolicy/ContractTerm/ExpirationDt" label="Policy Expiration Date:" />
+-->
+    </panel>
+    <panel id="did" hideheader="true" type="advancedisplaygrid" title="Driver Information" xmlmap="PersAutoLineBusiness/PersDriver">
+      <colElement datafield="@id" type="datagrid" header="Driver" fieldset="incidents::PersPolicy/AccidentViolation::DriverRef" />
+    </panel>
+    <panel id="vid" hideheader="true" type="advancedisplaygrid" title="Vehicle Information" xmlmap="PersAutoLineBusiness/PersVeh">
+      <!--<colElement datafield="@id" type="fieldset" header="Vehicle Description" fieldset="Vehicle"/>-->
+      <colElement datafield="@id" type="datagrid" header="Vehicle Description" fieldset="coverage::Coverage" />
+    </panel>
+  </page>
+  <!--
+  <page id="commontop">
+    <panel id="bindingrisk" hideifnorow="true" type="advancedisplaygrid" title="Binding Risks" datamap="quote.risk_list">
+      <colElement width="120" datafield="Description" header="Page"/>
+      <colElement width="160" datafield="Risk" header="Message"/>
+      <colElement datafield="Unit" header="Unit #"/>
+   </panel>
+  </page>
+  -->
+  <page id="policyconfirmation" title="Policy Conformation">
+    <panel id="cid" title="Policy Confirmation">
+		<fieldElement type="message" id="msg" label="Policy has been issued successfully. No Payments were made."/>
+    </panel>
+  </page>
+  <page id="endorsementconfirmation" title="Endorsement Conformation">
+    <panel id="cid" title="Endorsement Confirmation">
+		<fieldElement type="message" id="msg" label="Changes to the policy have been accepted. No Payments were made."/>
+    </panel>
+  </page>
+  <page id="commonbottom">
+    <panel id="actions" type="pageactionbar">
+      <fieldElement type="actionbuttonbar" method="org.ludo.controllers.ActionController.pageControlBarClicked" methodparam="location">
+        <action viewmode="V" label="Continue" action="continueview" width="50" />
+        <action viewmode="E" label="Continue" action="continue" width="50" />
+        <action viewmode="E" label="Rate" viewifquotein="!E" inpage="vehicle" action="rate" width="50" />
+        <moreaction viewmode="E" label="Save" action="save" width="50" />
+      </fieldElement>
+    </panel>
+  </page>
+</collection>

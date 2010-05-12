@@ -1,0 +1,24 @@
+<h1>Listing xmlstores</h1>
+
+<table>
+  <tr>
+    <th>Quote</th>
+    <th>Xmlstring</th>
+    <th>Original xml</th>
+  </tr>
+
+<% for xmlstore in @xmlstores %>
+  <tr>
+    <td><%=h xmlstore.quote_id %></td>
+    <td><%=h xmlstore.xmlstring %></td>
+    <td><%=h xmlstore.original_xml %></td>
+    <td><%= link_to 'Show', xmlstore %></td>
+    <td><%= link_to 'Edit', edit_xmlstore_path(xmlstore) %></td>
+    <td><%= link_to 'Destroy', xmlstore, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New xmlstore', new_xmlstore_path %>

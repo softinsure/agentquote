@@ -1,0 +1,24 @@
+<h1>Listing page_updated_infos</h1>
+
+<table>
+  <tr>
+    <th>Quote</th>
+    <th>Pageid</th>
+    <th>Required fields entered</th>
+  </tr>
+
+<% @page_updated_infos.each do |page_updated_info| %>
+  <tr>
+    <td><%=h page_updated_info.quote_id %></td>
+    <td><%=h page_updated_info.pageid %></td>
+    <td><%=h page_updated_info.required_fields_entered %></td>
+    <td><%= link_to 'Show', page_updated_info %></td>
+    <td><%= link_to 'Edit', edit_page_updated_info_path(page_updated_info) %></td>
+    <td><%= link_to 'Destroy', page_updated_info, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New page_updated_info', new_page_updated_info_path %>

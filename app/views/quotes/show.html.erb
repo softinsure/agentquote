@@ -1,0 +1,48 @@
+<p>
+  <b>Type:</b>
+  <%=h @quote.quote_type %>
+</p>
+
+<p>
+  <b>Lob:</b>
+  <%=h @quote.lob %>
+</p>
+
+<p>
+  <b>Policy type:</b>
+  <%=h @quote.policy_type %>
+</p>
+
+<p>
+  <b>Quote status:</b>
+  <%=h @quote.quote_status %>
+</p>
+
+<p>
+  <b>Policy term:</b>
+  <%=h @quote.policy_term %>
+</p>
+
+<p>
+  <b>Quote effective date:</b>
+  <%=h @quote.quote_effective_date %>
+</p>
+
+<p>
+  <b>Quote expiration date:</b>
+  <%=h @quote.quote_expiration_date %>
+</p>
+
+<p>
+  <b>Policy effective date:</b>
+  <%=h @quote.policy_effective_date %>
+</p>
+
+<p>
+  <b>Policy expiration date:</b>
+  <%=h @quote.policy_expiration_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_quote_path(@quote) %> |
+<%= link_to 'Back', quotes_path %>

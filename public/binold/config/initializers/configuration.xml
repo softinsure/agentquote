@@ -1,0 +1,10 @@
+<configuration>
+	<key id="displaydateformat" value="MM/DD/YYYY"/>
+	<key id="dbdateformat" value="MM/DD/YYYY"/>
+	<key id="leftnavigationwidth" value="180"/>
+	<key id="applicationrightwidth" value="350"/>
+	<!--
+	<key id="dbdateformat" value="YYYY-MM-DD"/>
+	-->
+	<key id="toprightmenu" value="toprightmenu"/>
+</configuration>

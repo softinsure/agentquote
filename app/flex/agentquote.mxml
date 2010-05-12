@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   pageTitle="Agent Quote Demo"
+			   initialize="applicationStart()"
+			   creationComplete="init()"
+			   height="100%"
+			   width="96%"
+			   horizontalCenter="center"
+			   skinClass="org.ludo.sparks.skins.FxApplicationSkin"
+			   xmlns:containers="org.ludo.containers.*"
+			   xmlns:controllers="org.ludo.controllers.*"
+			   xmlns:custom="org.ludo.components.custom.*"
+			   xmlns:layouts="org.ludo.layouts.*"
+			   xmlns:containers2="org.linda.containers.*"
+			   xmlns:controllers2="org.linda.controllers.*">
+	<fx:Script>
+		<![CDATA[
+			import org.linda.connectors.ParentConnector;
+			
+			import org.frest.utils.FrUtils;
+			import org.ludo.sparks.skins.FxApplicationSkin;
+			import org.ludo.utils.LudoUtils;
+			
+			public function set applicationState(state:String):void
+			{
+				this.currentState=state;
+			}
+			private function applicationStart():void
+			{
+				FrUtils.applicationUsed=this;
+				ParentConnector.setConnectors();
+			}
+			private function loadApps():void
+			{
+				LudoUtils.navController.appstack=this.appStack;
+				LudoUtils.navController.mainContainer=this.mainContainer;
+				LudoUtils.navController.startBox=this.startBox;
+				this.startBox.loadStart();
+				//generateSearchPanel();
+				//rezize width
+			}			
+			private function init():void
+			{
+				//LudoUtils.navController.appstack=this.appStack;
+				//LudoUtils.navController.mainContainer=this.mainContainer;
+				//LudoUtils.navController.startBox=this.startBox;
+				//this.startBox.loadStart();
+				//this.currentState="blank";
+				//navManager.appstack=this.appStack;
+				//navManager.mainContainer=this.mainContainer;
+				//navManager.startBox=this.startBox;
+				loadApps();
+				LudoUtils.loginController.rememberedMe()
+				if (!LudoUtils.loginController.remember)
+				{
+		        	//this.currentState="start";
+		        	appStack.selectedChild=this.startBox;
+		        	applicationState="start";
+		        	this.startBox.visible=true;
+		       	    //this.appStack.visible=true;			
+			    	//this.currentState="start";
+					//				
+//		        	appStack.selectedChild=this.startBox;
+					//this.startBox.visible=true;
+		       	    this.appStack.visible=true;			
+				}
+			}
+		]]>
+	</fx:Script>
+	<fx:Style source="assets/css/base.css"/>
+	<s:states>
+		<s:State name="blank"/>
+		<s:State name="start"/>
+		<s:State name="main"/>
+	</s:states>
+	<fx:Declarations>
+		<!--
+		<controllers1:EventController id="controller"/>
+		-->
+		<controllers2:ExtendedEventController id="childcontroller"/>
+		<containers2:StartContainer height="100%" id="startBox" visible="false"></containers2:StartContainer>
+		<containers:MainContainer id="mainContainer"></containers:MainContainer>
+	</fx:Declarations>
+	<!--
+	<s:Scroller tabChildren="true" tabEnabled="false" left="1" top="1" right="1" bottom="1" id="scroller">
+	<layouts:VLayout>
+	-->
+		<custom:CViewStack width="100%" id="appStack" content="{[startBox,mainContainer]}" selectedIndex="0" />
+	<!--
+	</layouts:VLayout>
+	</s:Scroller>
+	-->
+	<!--
+	<containers:StartBox includeIn="start" id="startBox" visible="false"></containers:StartBox>
+	<containers:mainContainer includeIn="main" id="mainContainer"></containers:mainContainer>
+	-->
+	<!--
+	<mx:ViewStack width="100%"
+				  height="100%"
+				  paddingBottom="0"
+				  paddingLeft="0"
+				  paddingRight="0"
+				  paddingTop="0"
+				  id="appStack"
+				  visible="false"
+				  >
+		<containers:StartBox id="startBox" visible="false"></containers:StartBox>
+		<containers1:MainContainer id="mainContainer"></containers1:MainContainer>
+	</mx:ViewStack>
+	-->
+</s:Application>
