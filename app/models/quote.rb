@@ -19,7 +19,11 @@ class Quote < ActiveRecord::Base
     init_quote
   end  
   def init_quote
-    self.quote_number = "%09d" % (Integer(Quote.maximum("id"))+1).to_s
+    @quoteid=Quote.maximum("id")
+    if @quoteid.nil?
+      @quoteid=0
+    end
+    self.quote_number = "%09d" % (@quoteid+1).to_s
     self.quote_effective_date = Date.today if self.quote_effective_date == nil
     self.policy_effective_date = Date.today if self.policy_effective_date == nil
     self.quote_expiration_date = Date.today+1.month if self.quote_expiration_date == nil
