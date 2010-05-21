@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layouts:VLayout xmlns="layouts.*"
-				  xmlns:fx="http://ns.adobe.com/mxml/2009"
-				  xmlns:s="library://ns.adobe.com/flex/spark"
-				  xmlns:mx="library://ns.adobe.com/flex/mx"
-				  width="100%"
-				  height="100%"
-				  creationComplete="init()"
-				  xmlns:layouts="org.ludo.layouts.*">
+<layouts:VLayout
+	xmlns="layouts.*"
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	xmlns:mx="library://ns.adobe.com/flex/mx"
+	width="100%"
+	height="100%"
+	creationComplete="init()"
+	xmlns:layouts="org.ludo.layouts.*">
 	<fx:Script>
 		<![CDATA[
-			import flashx.textLayout.container.ContainerController;
-			import flashx.textLayout.elements.TextFlow;
-			
-			import org.common.utils.XTextLayout;
-			private var textFlow:TextFlow;
-			private var controller:ContainerController;
+			import org.common.utils.XTextFlow;
+			private var txtFlow:XTextFlow;
 
 			private function init():void
 			{
-				XTextLayout.XTextFlowLoader(this,"config/initializers/textflows/startmain.xml","assets/css/startmain.css",null,false,this.width);
+				txtFlow=new XTextFlow(this,null,false,null,this.width);
+				txtFlow.loadByFilePath("config/initializers/textflows/startmain.xml","assets/css/startmain.css");
 			}
+			protected override function updateDisplayList(unscaledWidth:Number, unscaledHeight:Number):void
+			{
+				if(txtFlow!=null)
+				{
+					txtFlow.resize(unscaledWidth);
+				}
+				super.updateDisplayList(unscaledWidth, unscaledHeight);
+			}	    			
+
 		]]>
 	</fx:Script>
 	<!--

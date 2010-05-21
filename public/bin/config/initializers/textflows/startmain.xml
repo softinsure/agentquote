@@ -1,11 +1,18 @@
 <TextFlow id="startmain" paddingBottom="5" paddingLeft="20" paddingRight="5" paddingTop="20" paragraphSpaceBefore="5" whiteSpaceCollapse="preserve" xmlns="http://ns.adobe.com/textLayout/2008">
-<p styleName="title">Why AgentQuote?</p>
-<p styleName="para">AgentQuote is an easy web-based, platform independent, secured, configurable solution for P&amp;C Insurance carriers to accomplish key business transactions quickly and easily. Currently this is under development and a demo version is available to review. This application is being developed considering future web revolution and loosely coupled solutions using some state of the art technologies.</p>
-<p styleName="title">Technologies Used</p>
-<p styleName="parahead">User Interface:</p>
-<p styleName="para">Considering the popularity of Adobe Flash and RIA this is being developed in Flex 4. Also there is a future plan to develop this application in AIR and HTML 5.</p>
-<p styleName="parahead">Web Service:</p>
-<p styleName="para">Ruby on Rails is used as service considering its ability to support REST (Representational State Transfer), agile development, MVC. Currently this secured service is rendered as XML but JSON and others are also under consideration for HTML 5 version.</p>
-<p styleName="parahead">Database:</p>
-<p styleName="para">MySql is used considering its pluggable Storage Engine Architecture (MyISAM, InnoDB, Merge, Memory, Archive, Cluster)and availability in to-dozen platforms (32 and 64 bit) including Windows: (RedHat, SuSE, Fedora, Solaris, HPUS, AIX, SCO, FreeBSD, Mac OS, Windows).</p>
+<div>
+<p styleName="title">What is it?</p>
+<p styleName="para">AgentQuote is a framework that brings you to design a platform independent, secured, configurable RIA (Rich Internet Application) for P&C Insurance carriers to accomplish key business transactions quickly and easily. This framework is being developed considering future web revolution and loosely coupled solutions using some state of the art technologies.</p>
+<p styleName="para"></p>
+<p styleName="para">Considering the popularity of Adobe Flash, the UI framework is developed in Flex 4. The UI is integrated with RSETful web services developed in Ruby on Rails considering its ability to support REST (Representational State Transfer), agile development, MVC and many more. Currently this web service is rendered as XML but JSON and others are also under consideration for HTML 5 version.</p>
+<p styleName="para">MySql is used considering its pluggable Storage Engine Architecture (MyISAM, InnoDB, Merge, Memory, Archive, Cluster)  and availability in to-dozen platforms (32 and 64 bit) including Windows: (RedHat, SuSE, Fedora, Solaris, HPUS, AIX, SCO, FreeBSD, Mac OS, Windows). MongoDB is also under consideration for future development.</p>
+<p styleName="title">Sources</p>
+<p styleName="para">AgentQuote: <a href="http://github.com/softinsure/agentquote" target="_blank">http://github.com/softinsure/agentquote</a></p>
+<p styleName="para">LudoUtils: <a href="http://github.com/softinsure/ludoutils" target="_blank">http://github.com/softinsure/ludoutils</a></p>
+<p styleName="para">FRest: <a href="http://github.com/softinsure/frest" target="_blank">http://github.com/softinsure/frest</a></p>
+<p styleName="para">Ludo: <a href="http://github.com/softinsure/ludo" target="_blank">http://github.com/softinsure/ludo</a></p>
+<p styleName="title">Professional Support</p>
+<p styleName="para">Do you want to use AgentQuote framework but need some help? Please feel free to contact us at <a href="http://www.softinsure.com/agentquotehome/contact" target="_blank">SoftInsure</a>. We can help you to implement AgentQuote.</p>
+<p styleName="title">History</p>
+<p styleName="para">Much of the inspiration for this framework came from the idea to develop an open source insurance solution for insurance industries. The creator of this framework was inspired to use Adobe Flex and Ruby on Rails from the book <a href="http://www.manning.com/armstrong/" target="_blank">Flexible Rails</a> by Peter Armstrong. </p>
+</div>
 </TextFlow>
