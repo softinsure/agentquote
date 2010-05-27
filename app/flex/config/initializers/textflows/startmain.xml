@@ -3,13 +3,14 @@
 <p styleName="title">What is it?</p>
 <p styleName="para">AgentQuote is a framework that brings you to design a platform independent, secured, configurable RIA (Rich Internet Application) for P&C Insurance carriers to accomplish key business transactions quickly and easily. This framework is being developed considering future web revolution and loosely coupled solutions using some state of the art technologies.</p>
 <p styleName="para"></p>
-<p styleName="para">Considering the popularity of Adobe Flash, the UI framework is developed in Flex 4. The UI is integrated with RSETful web services developed in Ruby on Rails considering its ability to support REST (Representational State Transfer), agile development, MVC and many more. Currently this web service is rendered as XML but JSON and others are also under consideration for HTML 5 version.</p>
+<p styleName="para">Considering the popularity of Adobe Flash, the UI framework is developed in Flex 4. The UI is integrated with RESTful web services developed in Ruby on Rails considering its ability to support REST (Representational State Transfer), agile development, MVC and many more. Currently this web service is rendered as XML but JSON and others are also under consideration for HTML 5 version.</p>
 <p styleName="para">MySql is used considering its pluggable Storage Engine Architecture (MyISAM, InnoDB, Merge, Memory, Archive, Cluster)  and availability in to-dozen platforms (32 and 64 bit) including Windows: (RedHat, SuSE, Fedora, Solaris, HPUS, AIX, SCO, FreeBSD, Mac OS, Windows). MongoDB is also under consideration for future development.</p>
 <p styleName="title">Sources</p>
 <p styleName="para">AgentQuote: <a href="http://github.com/softinsure/agentquote" target="_blank">http://github.com/softinsure/agentquote</a></p>
 <p styleName="para">LudoUtils: <a href="http://github.com/softinsure/ludoutils" target="_blank">http://github.com/softinsure/ludoutils</a></p>
 <p styleName="para">FRest: <a href="http://github.com/softinsure/frest" target="_blank">http://github.com/softinsure/frest</a></p>
 <p styleName="para">Ludo: <a href="http://github.com/softinsure/ludo" target="_blank">http://github.com/softinsure/ludo</a></p>
+<p styleName="para">Application and DB: <a href="http://github.com/softinsure/agentquote/downloads" target="_blank">http://github.com/softinsure/agentquote/downloads</a></p>
 <p styleName="title">Professional Support</p>
 <p styleName="para">Do you want to use AgentQuote framework but need some help? Please feel free to contact us at <a href="http://www.softinsure.com/agentquotehome/contact" target="_blank">SoftInsure</a>. We can help you to implement AgentQuote.</p>
 <p styleName="title">History</p>
