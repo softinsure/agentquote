@@ -43,7 +43,7 @@
     <panel id="agencyinfo" type="fieldset" title="Agency Information">
       <fieldElement type="hidden" xmlmap="PersPolicy/LOBCd"  readfrom="defaultvalue::PA"/>
       <fieldElement type="TextInput" xmlmap="Producer/GeneralPartyInfo/NameInfo/CommlName/CommercialName" readfrom="model::currentSession.agency.name" id="agencyName" label="Agency Name" />
-      <fieldElement type="AddressInput" small="true" requiredflag="true" id="agency" xmlmap="Producer/GeneralPartyInfo/Addr/" childmap="Addr1,Addr2,City,StateProvCd,PostalCode" readfrom="model::currentSession.agent" readfromchild="address,address2,city,state,zip" validation="string|property=text;required=true;requiredFieldError=This is a required field" />
+      <fieldElement type="AddressInput" small="true" requiredflag="true" id="agency" xmlmap="Producer/GeneralPartyInfo/Addr[AddrTypeCd='Mailing']/" childmap="Addr1,Addr2,City,StateProvCd,PostalCode" readfrom="model::currentSession.agent" readfromchild="address,address2,city,state,zip" validation="string|property=text;required=true;requiredFieldError=This is a required field" />
       <fieldElement type="TextInput" id="email" xmlmap="Producer/GeneralPartyInfo/Communications/EmailInfo/EmailAddr" readfrom="model::currentSession.agent.email" label="Email Address" validation="email|property=text" />
       <fieldElement type="TextInput" id="gagent" xmlmap="Producer/ItemIdInfo/AgencyId" readfrom="model::currentSession.agent.agent_code" requiredflag="true" label="General Agent" />
     </panel>
