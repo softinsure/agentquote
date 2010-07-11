@@ -1,0 +1,457 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+@namespace layouts "org.ludo.layouts.*";
+@namespace base "org.ludo.components.base.*";
+@namespace mxml "org.ludo.components.mxml.*";
+@namespace containers "org.ludo.containers.*";
+@namespace navigators "org.linda.navigators.*";
+@namespace views "org.ludo.views.*";
+@namespace layouts1 "org.linda.layouts.*";
+@namespace containers1 "org.linda.containers.*";
+@font-face {
+	src: url("../fonts/MyriadWebPro.ttf") ;
+	fontFamily: Myriad;
+	advancedAntiAliasing: true;
+}
+@font-face {
+	src: url("../fonts/MyriadWebPro-Bold.ttf") ;
+	fontFamily: MyriadPro;
+	fontWeight: bold;
+	advancedAntiAliasing: true;
+}
+s|Application
+{
+	font-family: verdana;
+	font-size:10;
+	/*background-color: #333333;
+	base-color: #333333;*/
+}
+mx|Panel
+{
+	drop-shadow-visible:false;
+	padding-bottom: 1;
+}
+/*
+s|Panel
+{
+	drop-shadow-visible:false;
+	padding-bottom: 1;
+}
+*/
+s|HGroup.mainDetail
+{
+	padding-right: 1;
+	padding-left: 1;
+	padding-top: 0;
+	padding-bottom: 0;
+	vertical-gap: 0;
+	horizontal-gap: 0;
+}
+s|HGroup.startDetail
+{
+	padding-right: 1;
+	padding-left: 1;
+	padding-top: 0;
+	padding-bottom: 0;
+	vertical-gap: 0;
+	horizontal-gap: 0;
+	vertical-align:middle;
+}
+containers|MainContainer
+{
+	padding-right: 1;
+	padding-left: 1;
+	padding-top: 1;
+	padding-bottom: 1;
+	vertical-gap: 0;
+	horizontal-gap: 0;
+}
+containers1|StartContainer
+{
+	padding-right: 1;
+	padding-left: 1;
+	padding-top: 1;
+	padding-bottom: 1;
+	vertical-gap: 0;
+	horizontal-gap: 0;
+}
+views|QuoteBox
+{
+	padding-right: 0;
+	padding-left: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	vertical-gap: 0;
+	horizontal-gap: 0;
+}
+containers|ActivityDetail
+{
+	padding-right: 0;
+	padding-left: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	vertical-gap: 0;
+	horizontal-gap: 0;
+}
+layouts|ApplicationHeader
+{
+	background-color: #333333;
+	content-background-color: #333333;
+	font-weight: normal;
+	font-size: 10;
+	color: #FFFFFF;
+	/*
+	skin-class: ClassReference('assets.skins.AppHeader');
+	*/
+}
+layouts1|StartHeader
+{
+	background-color: #333333;
+	content-background-color: #333333;
+	font-weight: normal;
+	font-size: 10;
+	color: #FFFFFF;
+	/*
+	skin-class: ClassReference('assets.skins.AppHeader');
+	*/
+}
+s|Label.headerDesc
+{
+	font-size: 13;
+	font-family: MyriadPro;
+	font-weight: bold;
+	vertical-align:middle;
+	horizontal-align:center;
+}
+layouts|ActionBar
+{
+	vertical-gap: 0;
+	vertical-align:middle;
+	horizontal-align:center;
+	drop-shadow-visible: false;
+	border-alpha: 0.58;
+	corner-radius: 0;
+	padding-left: 2;
+	padding-bottom: 2;
+	padding-right: 2;
+	padding-top: 2;
+}
+mx|HBox.controlBox
+{
+	horizontal-align: right;
+	vertical-align: middle;
+}
+s|Label.label
+{
+}
+mx|Label.label
+{
+}
+mx|Text.label
+{
+}
+/*
+base|AutosizingDataGrid
+{
+	color: #333333;
+	alternating-item-colors: #f8f8f8, #ffffff;
+	vertical-grid-lines: true;
+	header-style-name: "dataGridHeader";
+	horizontal-grid-lines: true;
+	padding-right: 1;
+	padding-left: 1;
+	padding-top: 1;
+	padding-bottom: 1;
+	border-style: solid;
+	text-align: left;
+}
+.dataGridHeader
+{
+	color: #000000;
+	font-size: 13;
+	font-weight:bold;
+	horizontal-align: left;
+	text-align: center;
+}
+*/
+mxml|CDataGrid.searchGrid
+{
+}
+mx|Box.searchButtonBox
+{
+	padding-right: 1;
+	padding-left: 1;
+	padding-top: 1;
+	padding-bottom: 1;
+	vertical-gap: 1;
+	horizontal-gap: 1;
+}
+mx|Box.searchButtonBox
+{
+	padding-right: 1;
+	padding-left: 1;
+	padding-top: 1;
+	padding-bottom: 1;
+	vertical-gap: 1;
+	horizontal-gap: 1;
+}
+mx|Box.searchPanelBox
+{
+	padding-right: 1;
+	padding-left: 1;
+	padding-top: 1;
+	padding-bottom: 1;
+	vertical-gap: 1;
+	horizontal-gap: 1;
+}
+mxml|DataViewGrid
+{
+	roll-over-color: #FFFFFF;
+	selection-color: #FFFFFF;
+	padding-right: 2;
+	padding-left: 2;
+	padding-top: 1;
+	padding-bottom: 1;
+	border-style: none;
+	header-style-name: "displayGridHeader";
+}
+.displayGridHeader
+{
+	horizontal-align:left;
+}
+mxml|NestedGrid
+{
+/*	border-thickness: 0;*/
+	padding-right: 0;
+	padding-left: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	vertical-gap: 0;
+	horizontal-gap: 0;
+}
+mxml|CDataGrid.nestedDisplayGrid
+{
+	horizontal-grid-lines: false;
+	roll-over-color: #FFFFFF;
+	selection-color: #FFFFFF;
+	border-style: none;
+	text-align: left;
+}
+containers|ActivityDetail
+{
+	border-style: none;
+	/*font-weight: bold;*/
+	padding-right: 0;
+	padding-left: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+s|Group.activtyDetail
+{
+
+}
+mx|Label.activyLabels
+{
+}
+layouts|ApplicationRight
+{
+	border-style: none;
+	/*font-weight: bold;*/
+	padding-right: 0;
+	padding-left: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	vertical-gap: 0;
+	horizontal-gap: 1;
+	border-thickness: 0;
+}
+/*
+layouts|ButtonBox
+{
+	background-color: #D4EDC9;
+	vertical-align:middle;
+	horizontal-align:center;
+}
+*/
+layouts|DataEntryVBox
+{
+	padding-right: 1;
+	padding-left: 1;
+	padding-top: 1;
+	padding-bottom: 1;
+}
+/*
+layouts|labelBox
+{
+	padding-left: 2;
+	padding-bottom: 0;
+	padding-right: 0;
+	padding-top: 0;
+	text-align: left;
+	font-size: 12;
+	font-weight: bold;
+}
+*/
+s|Label.pageHeader
+{
+	background-color:#333333;
+	padding-right: 5;
+	padding-left: 5;
+	padding-top: 5;
+	padding-bottom: 5;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-size:14;
+	border-style: solid;
+}
+s|Label.pageTipBox
+{
+	border-style: solid;
+	border-color: #EEB939;
+	padding-bottom: 5;
+	padding-top: 5;
+	padding-left: 1;
+	padding-right: 1;
+	border-thickness: 1;
+	background-color: #FAEAC3;
+}
+s|Label.panelTipBox
+{
+	border-style: solid;
+	border-color: #CAAA55;
+	padding-bottom: 2;
+	padding-top: 2;
+	padding-left: 2;
+	padding-right: 2;
+/*	border-thickness: 1;*/
+	background-color: #F9EE97;
+}
+s|Label.sectionHeaders
+{
+	border-style: none;
+	font-size: 13;
+	padding-bottom: 1;
+	padding-top: 1;
+	padding-left: 1;
+	padding-right: 1;
+/*	border-thickness: 0;*/
+	background-color: #CDEA68;
+}
+mx|Text.displayText
+{
+}
+layouts|PanelBox.agentInfo
+{
+}
+mxml|CDataGrid.unitGrid
+{
+	header-style-name: "unitGridHeader";
+}
+.unitGridHeader
+{
+	color: #7A0B0B;
+	font-size: 13;
+	horizontal-align:left;
+}
+mx|Label.emptymessage
+{
+	font-weight: bold;
+}
+/*
+navigators|TopLinkBar
+{
+	border-thickness: 0;
+	text-align: right;
+}
+*/
+/*
+------------------------------------------------------------------------
+ALERT
+------------------------------------------------------------------------
+*/
+mx|Alert
+{
+/*	background-size: 			"100%";*/
+	padding-left: 				0;
+	padding-bottom: 			14;
+	padding-right: 				0;
+	padding-top: 				0;
+	header-height: 				25;
+	borderStyle: 				solid;
+/*	border-thickness-top:		0;
+	border-thickness-bottom:	0;
+	border-thickness-left:		0;
+	border-thickness-right:		0;*/
+	color: 						#333333;
+	message-style-name: 		"alertText";
+	button-style-name: 			"alertButton";
+	title-style-name:			"alertTitle";
+	background-color: #FFFFFF;
+/*	border-thickness: 1;*/
+}
+
+.alertButton
+{
+	font-weight:			normal;
+	padding-left: 			6;
+	padding-right: 			6;
+	text-roll-over-color: 	#333333;
+	text-selected-color: #000000;
+}
+.alertText
+{
+	background-size: "100%";
+	font-weight: normal;
+}
+.alertTitle
+{
+	font-weight: bold;
+	padding-left: 3;
+	background-color: #DDF199;
+}
+layouts|VLayout.linkBarNavigator
+{
+	padding-right: 0;
+	padding-left: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	vertical-gap: 0;
+	horizontal-gap: 0;
+	border-color:#333333;
+	background-color: #5A6369;
+	border-thickness: 1;
+}
+mx|LinkBar.linkBar
+{
+	padding-right: 0;
+	padding-left: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	vertical-gap: 0;
+	horizontal-gap: 0;
+	border-color:#333333;
+	background-color: #5A6369;
+}
+s|Label.linkBarNavigatorTitle
+{
+	background-color:#333333;
+	padding-right: 5;
+	padding-left: 5;
+	padding-top: 5;
+	padding-bottom: 5;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-size:12;
+}
+s|Label.linkBarNavigatorTrans
+{
+	background-color:#5A6369;
+	padding-right: 5;
+	padding-left: 5;
+	padding-top: 5;
+	padding-bottom: 5;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-size:12;
+}

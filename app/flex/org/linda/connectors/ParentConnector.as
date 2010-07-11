@@ -4,11 +4,12 @@ package org.linda.connectors
 	
 	import org.linda.controllers.AdminController;
 	import org.linda.controllers.ExtendedActionController;
-	import org.linda.services.Bind;
-	import org.linda.services.Endorsement;
 	import org.linda.services.Application;
-	import org.linda.services.RaterService;
+	import org.linda.services.Bind;
 	import org.linda.services.Common;
+	import org.linda.services.Endorsement;
+	import org.linda.services.Produce;
+	import org.linda.services.RaterService;
 	import org.ludo.connectors.ImageConnector;
 	import org.ludo.controllers.ActionController;
 	import org.ludo.utils.LudoUtils;
@@ -33,7 +34,7 @@ package org.linda.connectors
 			//image connector
 			LudoUtils.referencedMethods.referenceMethod("getimage",ImageFactory.getImageByName);
 			//after produce
-			LudoUtils.referencedMethods.referenceMethod("produce",Application.callAfterMakeApplication);
+			LudoUtils.referencedMethods.referenceMethod("produce",Produce.callAfterMakeProduce);
 			//after bind
 			LudoUtils.referencedMethods.referenceMethod("bind",Bind.callAfterBindPolicy);
 			//call rater
@@ -42,6 +43,9 @@ package org.linda.connectors
 			LudoUtils.referencedMethods.referenceMethod("confirmendorsement",Endorsement.confirmEndorsement);
 			//reject endorse ment
 			LudoUtils.referencedMethods.referenceMethod("rejectendorsement",Endorsement.rejectEndorsement);
+			//after application
+			LudoUtils.referencedMethods.referenceMethod("application",Application.callAfterMakeApplication);
+						
 		}
 	}
 }

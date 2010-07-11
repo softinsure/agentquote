@@ -297,6 +297,7 @@
       <fieldElement type="actionbuttonbar" method="org.ludo.controllers.ActionController.pageControlBarClicked">
         <action viewmode="E" viewifquotein="RQ" pagetogo="default" label="Proceed To Application" action="application" width="50" />
         <action viewmode="E" viewifquotein="RA" pagetogo="default" label="Issue Policy" action="bind" width="50" />
+		<action viewmode="E" viewifquotein="RA" label="Continue" action="continue" width="50" />
       </fieldElement>
     </panel>
  	<!--
