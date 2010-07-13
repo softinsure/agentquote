@@ -42,13 +42,13 @@
 			<menuitem id="4" label="Drivers" enabled="false" pageid="driver" action="screen"/>
 			<menuitem id="5" label="Incidents" enabled="false" pageid="incident" action="screen"/>
 			<menuitem id="6" label="Vehicles" enabled="false" pageid="vehicle" action="screen"/>
-			<menuitem id="6" label="Payment Plan" enabled="false" viewifquotein="!E" pageid="paymentplan" action="screen"/>
-			<menuitem id="7" label="Employment Information" enabled="false" pageid="empinformation" action="screen"/>
+			<menuitem id="7" label="Payment Plan" enabled="false" pageid="paymentplan" action="screen"/>
+			<menuitem id="8" label="Employment Information" enabled="false" pageid="empinformation" action="screen"/>
 			<menuitem id="9" label="Prior Carrier Information" enabled="false" pageid="priorcarrier" action="screen"/>
-			<menuitem id="9" label="Underwriting Questions" enabled="false" pageid="uwqpage" action="screen"/>
-			<menuitem id="10" label="Agent Comments" enabled="false" pageid="agentcomments" action="screen"/>
-			<menuitem id="11" label="Quote Summary" enabled="false" pageid="qsummary" action="screen"/>
-			<menuitem id="12" label="Prorated Premium" enabled="false" pageid="proratedpremium" viewifquotein="E" action="screen"/>
+			<menuitem id="10" label="Underwriting Questions" enabled="false" pageid="uwqpage" action="screen"/>
+			<menuitem id="11" label="Agent Comments" enabled="false" pageid="agentcomments" action="screen"/>
+			<menuitem id="12" label="Quote Summary" enabled="false" pageid="qsummary" action="screen"/>
+			<menuitem id="13" label="Prorated Premium" enabled="false" pageid="proratedpremium" viewifquotein="E" action="screen"/>
 		</menu>
 	</panel>
 </collection>
