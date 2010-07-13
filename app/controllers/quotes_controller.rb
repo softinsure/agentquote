@@ -35,8 +35,8 @@ class QuotesController < ApplicationController
   # GET /quotes/clone/1.xml
  def clone
     @quote=Quote.find(params[:id]).clone  :include=> [:xmlstore,:search_entities,:page_updated_info,:policy], :except => [:quote_number,:created_at ]
-    @quote.xmlstore = Xmlstore.new if @quote.xmlstore == nil
-    @quote.xmlstore.xmlstring=Xmlstore.get_acord_file(@quote.lob) if @quote.xmlstore.xmlstring ==nil
+    #@quote.xmlstore = Xmlstore.new if @quote.xmlstore == nil
+    #@quote.xmlstore.xmlstring=Xmlstore.get_acord_file(@quote.lob) if @quote.xmlstore.xmlstring ==nil
     @quote.save
     set_in_use(@quote.id,"E");
     #encodeXmls(@quote)
