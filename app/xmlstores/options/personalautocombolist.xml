@@ -85,6 +85,7 @@
 		<option data="YUGO">Yugo</option>
 	</options>
 	<options id="garagingtype">
+		<option data="">Select</option> 
 		<option data="N">Not Garaged</option>
 		<option data="A">Garaged at School</option>
 		<option data="B">Off Street at School</option>
@@ -118,12 +119,14 @@
 		<option data="UTL   4D">Sport Utility Vehicle</option>
 	</options>	
 	<options id="airbag">
+		<option data="">Select</option> 
 		<option data="Driver">Driver Only Air Bag</option>
 		<option data="FrontBoth">Front Air Bags Driver and Passenger</option>
 		<option data="FrontSide">Front and Side Air Bags</option>
 		<option data="None">None</option>
 	</options>
 	<options id="restrain">
+		<option data="">Select</option> 
 		<option data="A">Active restraint</option>
 		<option data="D">Driver side air bag</option>
 		<option data="E">Driver front and side</option>
@@ -138,6 +141,7 @@
 		<option data="W">Driver front... head</option>
 	</options>
 	<options id="antiTheft">
+		<option data="">Select</option> 
 		<option data="A">Alarm system</option>
 		<option data="B">Security Battery</option>
 		<option data="D">Active Disabling</option>
@@ -157,6 +161,7 @@
 		<option data="Y">Anti-theft device-n</option>
 	</options>
 	<options id="antiLockBrakes">		
+		<option data="">Select</option> 
 		<option data="N">Anti-Lock Brakes</option>
 		<option data="O">Optional Equipment</option>
 		<option data="R">Rear Wheel ALB-Standard</option>
