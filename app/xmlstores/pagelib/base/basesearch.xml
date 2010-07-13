@@ -41,7 +41,7 @@
 	  <colElement datafield="policy_expiration_date" header="Term Expiration Date"/>
 	  <colElement datafield="id" type="buttonbar" buttontype="link" width="130" header="Action" method="org.ludo.controllers.ActionController.policySearchButtonbarClicked">
         <object label="View" iconmap="viewsmall" text="view" action="view" width="60"/>
-        <object label="Endorse" permissionfor="MP" text="endorse" action="endorse" iconmap="editsmall" width="60"/>
+        <object label="Endorse" permissionfor="MP" disableifdatafieldvaluein="X::current_status" text="endorse" action="endorse" iconmap="editsmall" width="60"/>
       </colElement>
 	  </datagrid>
 	  <query>
