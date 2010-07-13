@@ -36,11 +36,11 @@ class Xmlstore < ActiveRecord::Base
   	  	ObjectSpace.each_object(Quote) {|o| parent_quote = o if o.xmlstore.include?(self)}
   	  end
   	  if parent_quote
-  	  	self.xmlstring = Xmlstore.get_acord_file(parent_quote.lob);
+  	  	self.xmlstring = Xmlstore.get_acord_file(parent_quote.lob) if self.xmlstring == nil;
   	  end
       #read file from directory
       #filename=RAILS_ROOT+"/app/flex/xmlstores/acord/request_pa.xml";
-      filename=RAILS_ROOT+"/app/xmlstores/acord/request_pa.xml";
+      #filename=RAILS_ROOT+"/app/xmlstores/acord/request_pa.xml";
       #f=File.new(filename,"r");
       #self.xmlstring = f.gets.chomp;
       #self.xmlstring = (File.open(filename).read).gsub(/\r\n|\n|\r|\xEF\xBB\xBF/,"");
