@@ -1,0 +1,12 @@
+#Wed May 19 14:59:14 EDT 2010
+eclipse.preferences.version=1
+org.radrails.rails.core.compiler.problem.railsDeprecationActiveRecordFindMethods=warning
+org.radrails.rails.core.compiler.problem.railsDeprecationHumanSizeHelperAlias=warning
+org.radrails.rails.core.compiler.problem.railsDeprecationImageLinkMethods=warning
+org.radrails.rails.core.compiler.problem.railsDeprecationPostFormat=warning
+org.radrails.rails.core.compiler.problem.railsDeprecationPushWithAttributes=warning
+org.radrails.rails.core.compiler.problem.railsDeprecationRedirectCalls=warning
+org.radrails.rails.core.compiler.problem.railsDeprecationRenderCalls=warning
+org.radrails.rails.core.compiler.problem.railsDeprecationStartEndFormTag=warning
+org.radrails.rails.core.compiler.problem.railsDeprecationUpdateElementFunction=warning
+org.radrails.rails.core.compiler.problem.railsInstanceVariable=warning

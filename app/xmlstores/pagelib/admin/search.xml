@@ -149,6 +149,34 @@
 		<object label="Administration Home" action="loadcontainer" container="admin" width="60"/>
 	</controlbuttons>
  </search>
+  <search id="configxmlsearch" title="Config XML Setup">
+  	<datagrid>
+  	  <colElement datafield="name" header="Name"/>
+      <colElement datafield="config_type" header="Type"/>
+      <colElement datafield="used_for" header="Used For"/>
+      <colElement datafield="active" header="Active"/>
+      <colElement datafield="version" header="Version"/>
+      <colElement datafield="id" type="buttonbar" buttontype="link" width="180" header="Action" modelclasspath="org.ludo.models.ConfigXml">
+        <object label="View" action="view" text="view" width="60"/>
+        <object label="Edit" action="edit" permissionfor="ADM" text="Edit" width="60"/>
+      </colElement>
+	  </datagrid>
+	  <query>
+	  	<limit>10</limit>
+	  	<select>a.id,a.config_type,a.name,a.used_for,a.active,a.version</select>
+	  	<from>config_xmls a</from>
+	  </query>
+	<searchby>
+		<fieldElement type="TextInput" properties="maxChars=20;width=100;" operator="like" datafield="name" label="Name" />      	
+	</searchby>
+	<orderby>
+		<fieldElement datafield="version" label="Version" />      	
+	</orderby>
+	<controlbuttons titleboxstyle="controlBox" buttonbarstyle="panelHeaderButton">
+		<object label="Add new XML" permissionfor="ADM" action="new" width="60" modelclasspath="org.ludo.models.ConfigXml"/>
+		<object label="Administration Home" action="loadcontainer" container="admin" width="60"/>
+	</controlbuttons>
+ </search>
   <search id="lobsearch" title="LOB Setup">
   	<datagrid>
   	  <colElement datafield="description" header="Decription"/>

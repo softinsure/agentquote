@@ -4,6 +4,29 @@
 		<option data="A">Active</option>
 		<option data="I">Inactive</option>
 	</options>
+	<options id="configtype">
+		<option data="">Select one</option>
+		<option data="acord">acord</option>
+		<option data="config">config</option>
+		<option data="fieldsets">field sets</option>
+		<option data="firsttimedefaultvalue">first time default value</option>
+		<option data="gridsets">grid sets</option>
+		<option data="navigation">navigation</option>
+		<option data="options">options</option>
+		<option data="others">others</option>
+		<option data="pageandproperties">page and properties</option>
+		<option data="pagelib">page lib</option>
+		<option data="templates">templates</option>
+		<option data="textlayouts">text layouts</option>
+		<option data="views">views</option>
+	</options>
+	<options id="used_for">
+	  <query>
+	  	<select>description Label,lob_code Data</select>
+	  	<from>line_of_businesses union select 'All' Label, 'ALL' Data union select 'ADM' Label, 'Admin' Data</from>
+	  	<orderby>Label</orderby>
+	  </query>
+	</options>
 	<options id="active-inactive">
 		<option data="A">Active</option>
 		<option data="I">Inactive</option>

@@ -32,6 +32,8 @@
 			<menuitem id="6" label="Group Activity Setup" transactiontouse="groupactivity" container="groupactivity" enabled="true" currentselect="false" pageid="groupactivity" action="new"/>
 			<menuitem id="7" label="LOB Setup" transactiontouse="lob" container="lob" enabled="true" currentselect="false" pageid="lob" action="new"/>
 			<menuitem id="8" label="Group Permission Setup" transactiontouse="permission" container="permission" action="custom"/>
+			<menuitem id="9" label="Config XML Setup" transactiontouse="configxml" container="configxml" enabled="true" currentselect="false" pageid="configxml" action="new"/>
+			<menuitem id="10" label="Configuration" transactiontouse="configuration" container="configuration" action="custom"/>
 		</menu>
 	</panel>
 	<panel id="left_pa">		

@@ -91,7 +91,7 @@
 	</panel>
   </page>
   <page id="lob" title="Add/Update LOB" tip="To get help, please click on the help icon.">
-    <panel id="group" type="fieldset" title="LOB Setup">
+    <panel id="lob" type="fieldset" title="LOB Setup">
     	<fieldElement type="TextInput" requiredflag="true" validation="string|property=text;required=true^servererror|field=lob_code" id="lob_code" datamap="lineofbusinessToUpdate.lob_code" label="LOB Code" />
     	<fieldElement type="TextInput" requiredflag="true" validation="string|property=text;required=true^servererror|field=description" id="description" datamap="lineofbusinessToUpdate.description" label="Descriptrion" />
 		<fieldElement type="radiolist" requiredflag="true" validation="string|property=text;required=true" id="status" label="Status" datamap="lineofbusinessToUpdate.status" deafult="A" lookupsource="xml::admincombolist::active-inactive"/>
@@ -125,6 +125,15 @@
       	<!--<fieldElement type="TextInput" requiredflag="true" validation="string|property=text;required=true" id="email" properties="maxChars=20" datamap="userToUpdate.agent_code" label="Agent ID" />-->
 		<fieldElement type="datefield" requiredflag="true" id="efdt" label="Effective Date" datamap="userToUpdate.effective_at"/>
     </panel>
+  </page>
+  <page id="configxml" title="Add/Update Config XML" tip="To get help, please click on the help icon.">
+    <panel id="config" type="fieldset" title="Config XML Setup">
+     	<fieldElement type="ComboBox"  requiredflag="true" validation="string|property=value;required=true" id="config_type" label="Type" datamap="configxmlToUpdate.config_type" lookupsource="xml::admincombolist::configtype"/>
+     	<fieldElement type="ComboBox"  requiredflag="true" validation="string|property=value;required=true" id="for" label="Used For" datamap="configxmlToUpdate.used_for" lookupsource="database::admincombolist::used_for"/>
+	   	<fieldElement type="TextInput" requiredflag="true" validation="string|property=text;required=true^servererror|field=name" id="name" datamap="configxmlToUpdate.name" label="name" />
+    	<fieldElement type="radiolist" requiredflag="true" validation="string|property=text;required=true" id="active" label="Active" datamap="configxmlToUpdate.active" deafult="A" lookupsource="xml::admincombolist::active-inactive"/>
+        <fieldElement type="xmltree"  label="Xml" requiredflag="true" validation="xml|property=text;required=true" properties="width=300;height=200" id="xmlstring" datamap="configxmlToUpdate.xmlstring" />
+	</panel>
   </page>
   <page id="commonbottom">
     <panel id="actions" type="pageactionbar">

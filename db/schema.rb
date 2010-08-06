@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100309011341) do
+ActiveRecord::Schema.define(:version => 20100723030040) do
 
   create_table "agencies", :force => true do |t|
     t.string   "name",                :limit => 100, :null => false
@@ -59,6 +59,18 @@ ActiveRecord::Schema.define(:version => 20100309011341) do
     t.string  "ssn",            :limit => 45
   end
 
+  create_table "config_xmls", :force => true do |t|
+    t.string   "name"
+    t.string   "type"
+    t.string   "for"
+    t.string   "active"
+    t.text     "xmlstring"
+    t.integer  "creator_id"
+    t.integer  "updater_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "documents", :force => true do |t|
     t.integer  "quote_id",      :default => 0, :null => false
     t.binary   "document_data",                :null => false
@@ -95,11 +107,11 @@ ActiveRecord::Schema.define(:version => 20100309011341) do
   end
 
   create_table "group_permissions", :force => true do |t|
-    t.string   "group_code"
-    t.string   "activity_code"
-    t.string   "lob_code"
-    t.string   "status"
-    t.string   "editable"
+    t.string   "group_code",    :limit => 20
+    t.string   "activity_code", :limit => 20
+    t.string   "lob_code",      :limit => 20
+    t.string   "status",        :limit => 1
+    t.string   "editable",      :limit => 1
     t.integer  "creator_id"
     t.integer  "updater_id"
     t.datetime "created_at"
@@ -292,11 +304,15 @@ ActiveRecord::Schema.define(:version => 20100309011341) do
   end
 
   create_table "sessions", :force => true do |t|
-    t.integer  "users_id"
-    t.string   "ip_address"
-    t.string   "path"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "session_id",                   :null => false
+    t.integer  "quote_id"
+    t.string   "quote_use_mode",  :limit => 1
+    t.datetime "expired_at"
+    t.integer  "qoute_in_use"
+    t.integer  "session_timeout", :limit => 2
   end
 
   create_table "users", :id => false, :force => true do |t|
@@ -305,8 +321,8 @@ ActiveRecord::Schema.define(:version => 20100309011341) do
     t.string   "email"
     t.string   "first_name",                :limit => 80
     t.string   "last_name",                 :limit => 80
-    t.string   "encrypted_password",        :limit => 40
-    t.string   "salt",                      :limit => 40
+    t.string   "encrypted_password"
+    t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "remember_token"

@@ -1,0 +1,8 @@
+#Wed May 19 14:59:14 EDT 2010
+eclipse.preferences.version=1
+org.rubypeople.rdt.core.compiler.problem.constantReassignment=warning
+org.rubypeople.rdt.core.compiler.problem.emptyStatement=ignore
+org.rubypeople.rdt.core.compiler.problem.redefinition.core.class.method=ignore
+org.rubypeople.rdt.core.compiler.problem.ruby19HashCommaSyntax=warning
+org.rubypeople.rdt.core.compiler.problem.ruby19WhenStatements=warning
+org.rubypeople.rdt.core.compiler.problem.unreachableCode=warning

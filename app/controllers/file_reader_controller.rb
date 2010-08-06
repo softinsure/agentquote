@@ -1,11 +1,11 @@
 class FileReaderController < ApplicationController
   require 'xmlsimple'
   def read
-      @config_file_path =params[:file_reader][:file_path]
-      @data = read_file(filepath)    
+      filepath =params[:file_reader][:file_path]
+      data = read_file(filepath)    
       respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => {"rows"=>@data}}
+      format.xml  { render :xml => data}
      end
   end
   def configloader_test
@@ -30,6 +30,16 @@ class FileReaderController < ApplicationController
       format.xml  { render :xml => @hash}
      end
   end
+  def filelist
+      file_path =params[:file_reader][:file_path]
+      filelist={};
+      files=RAILS_ROOT+file_path
+      filelist=file_lists(files)
+      respond_to do |format|
+      format.html # index.html.erb
+      format.xml{render :xml =>filelist}
+     end
+  end
   def read_xml(filepath,key)
       #read file from directory
       #filename=RAILS_ROOT+"/app/flex/"+filepath;
@@ -45,6 +55,26 @@ class FileReaderController < ApplicationController
       filename=RAILS_ROOT+"/app/"+filepath;
       return (File.open(filename).read);
       #return (File.open(filename).read).gsub(/\r\n|\n|\t|\r|\xEF\xBB\xBF/,"");
+      rescue => e
+        file_error(e);
+  end
+  def read_file(filepath)
+      return (File.open(RAILS_ROOT+filepath).read);
+      rescue => e
+        file_error(e);
+  end
+  def file_lists(filepath)
+      array={}
+      Dir.foreach(filepath) do |f|
+        if f=="." || f==".."
+          
+        elsif File.directory?(filepath+'/'+f)
+          array[f]=file_lists(filepath+'/'+f);
+        else
+          array[f]=''
+        end
+      end
+      return array
       rescue => e
         file_error(e);
   end

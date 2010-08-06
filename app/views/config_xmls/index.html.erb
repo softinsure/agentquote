@@ -1,0 +1,30 @@
+<h1>Listing config_xmls</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>For</th>
+    <th>Version</th>
+    <th>Active</th>
+    <th>Xmlstring</th>
+  </tr>
+
+<% @config_xmls.each do |config_xml| %>
+  <tr>
+    <td><%=h config_xml.name %></td>
+    <td><%=h config_xml.type %></td>
+    <td><%=h config_xml.for %></td>
+    <td><%=h config_xml.version %></td>
+    <td><%=h config_xml.active %></td>
+    <td><%=h config_xml.xmlstring %></td>
+    <td><%= link_to 'Show', config_xml %></td>
+    <td><%= link_to 'Edit', edit_config_xml_path(config_xml) %></td>
+    <td><%= link_to 'Destroy', config_xml, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New config_xml', new_config_xml_path %>

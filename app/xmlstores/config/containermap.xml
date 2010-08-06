@@ -136,6 +136,20 @@
 		<footer></footer>
 		<header></header>
 	</container>
+	<container name="configuration">
+		<topnavigation>topmenu</topnavigation>
+		<leftnavigation>NoLeftNavBar</leftnavigation>
+		<activitydetail refresh="true">configurationbox</activitydetail>
+		<footer></footer>
+		<header></header>
+	</container>
+	<container name="configxml">
+		<topnavigation>topmenu</topnavigation>
+		<leftnavigation>NoLeftNavBar</leftnavigation>
+		<activitydetail searchconfig="adminsearch" searchid="configxmlsearch">searchbox</activitydetail>
+		<footer></footer>
+		<header></header>
+	</container>
 	<container name="pageholder">
 		<topnavigation>topmenu</topnavigation>
 		<leftnavigation>NoLeftNavBar</leftnavigation>

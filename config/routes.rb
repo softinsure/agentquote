@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :config_xmls
+
   map.resources :group_permissions
 
   map.resources :line_of_businesses

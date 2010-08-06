@@ -1,0 +1,33 @@
+<p>
+  <b>Name:</b>
+  <%=h @config_xml.name %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @config_xml.type %>
+</p>
+
+<p>
+  <b>For:</b>
+  <%=h @config_xml.for %>
+</p>
+
+<p>
+  <b>Version:</b>
+  <%=h @config_xml.version %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%=h @config_xml.active %>
+</p>
+
+<p>
+  <b>Xmlstring:</b>
+  <%=h @config_xml.xmlstring %>
+</p>
+
+
+<%= link_to 'Edit', edit_config_xml_path(@config_xml) %> |
+<%= link_to 'Back', config_xmls_path %>

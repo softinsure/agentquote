@@ -110,4 +110,26 @@
 		<defaultactivitymenuindex>0</defaultactivitymenuindex>
 		<defaultlabelwidth>250</defaultlabelwidth>
 	</transaction>
+	<transaction name="configuration">
+		<screenid>adminscreen</screenid>
+		<container>configuration</container>
+		<fieldsetid>adminfieldsets</fieldsetid>
+		<activitymenuid>activityuser</activitymenuid>
+		<defaulttopmenuindex>3</defaulttopmenuindex>
+		<defaultleftmenuindex>0</defaultleftmenuindex>
+		<defaultactivitymenuindex>0</defaultactivitymenuindex>
+		<defaultlabelwidth>250</defaultlabelwidth>
+	</transaction>
+	<transaction name="configxml">
+		<screenid>adminscreen</screenid>
+		<modelname>configxml</modelname>
+		<container>configxml</container>
+		<defaultscreen>configxml</defaultscreen>
+		<fieldsetid>adminfieldsets</fieldsetid>
+		<activitymenuid>activityuser</activitymenuid>
+		<defaulttopmenuindex>3</defaulttopmenuindex>
+		<defaultleftmenuindex>0</defaultleftmenuindex>
+		<defaultactivitymenuindex>0</defaultactivitymenuindex>
+		<defaultlabelwidth>250</defaultlabelwidth>
+	</transaction>
 </AllTransactions>
