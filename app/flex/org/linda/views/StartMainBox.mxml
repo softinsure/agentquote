@@ -16,7 +16,7 @@
 			private function init():void
 			{
 				txtFlow=new XTextFlow(this,null,false,null,this.width);
-				txtFlow.loadByFilePath("config/initializers/textflows/startmain.xml","assets/css/startmain.css");
+				txtFlow.load("config/initializers/textflows/startmain.xml","assets/css/startmain.css");
 			}
 			protected override function updateDisplayList(unscaledWidth:Number, unscaledHeight:Number):void
 			{

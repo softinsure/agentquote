@@ -1,8 +1,12 @@
-<s:Group
+<s:SkinnableContainer
 	xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" xmlns:mx="library://ns.adobe.com/flex/mx" 
 	creationComplete="init();"
 	width="100%"
+	minHeight="20"
 	xmlns:containers="org.ludo.containers.*">
+	<s:layout>
+		<s:VerticalLayout horizontalAlign="center" verticalAlign="middle"/>
+	</s:layout>
 	<fx:Script>
 	<![CDATA[
 		import org.linda.controllers.ContainerController;
@@ -16,6 +20,14 @@
 		{
 			this.desc=desc;
 		}
+		override protected function updateDisplayList(unscaledWidth:Number, unscaledHeight:Number):void
+		{
+			if(getStyle("dividerColor")!=null)
+			{
+				bottomLine.color=getStyle("dividerColor");
+			}
+			super.updateDisplayList(unscaledWidth, unscaledHeight);
+		}	
 		private function init():void
 		{
 			ContainerController.getInstance().startheader=this;
@@ -23,9 +35,11 @@
 		}	
 	]]>
 	</fx:Script>
+	<!--
 	<s:Rect width="100%" height="100%">
 		<s:fill><s:SolidColor color="{getStyle('backgroundColor')}"/></s:fill>
 	</s:Rect>
+	-->
 	<s:HGroup width="100%">
 		<mx:Image source="{imgSource}"/>
 		<s:Label styleName="headerDesc"
@@ -34,4 +48,9 @@
 				 width="100%"/>
 		<containers:TopUserNavigation id="topLinkBar"/>
 	</s:HGroup>
-</s:Group>
+	<s:Rect left="0" right="0" top="0" bottom="0" height="1" width="100%" alpha=".8">
+		<s:fill>
+			<s:SolidColor id="bottomLine" color="0x000000" />
+		</s:fill>
+	</s:Rect>
+</s:SkinnableContainer>

@@ -7,8 +7,8 @@
 	  <colElement datafield="email" header="Email"/>
 	  <colElement datafield="status" header="User Status"/>
 	  <colElement datafield="id" type="buttonbar" buttontype="link" width="180" header="Action" modelclasspath="org.ludo.models.User">
-        <object label="View" action="view" text="view" width="60"/>
-        <object label="Edit" permissionfor="ADM" action="edit" text="Edit" width="60"/>
+        <object label="View" iconmap="viewsmall" action="view" text="view" width="60"/>
+        <object label="Edit" iconmap="editsmall" permissionfor="ADM" action="edit" text="Edit" width="60"/>
       </colElement>
 	  </datagrid>
 	  <query>
@@ -40,8 +40,8 @@
       <colElement datafield="contact_phone1" header="Contact Phone"/>
       <colElement datafield="id" type="fieldset" header="Address" fieldset="agencyaddress"/>
 	  <colElement datafield="id" type="buttonbar" buttontype="link" width="180" header="Action" modelclasspath="org.ludo.models.Agency">
-        <object label="View" action="view" text="view" width="60"/>
-        <object label="Edit" permissionfor="ADM" action="edit" text="Edit" width="60"/>
+        <object label="View" action="view" iconmap="viewsmall"  text="view" width="60"/>
+        <object label="Edit" permissionfor="ADM" iconmap="editsmall" action="edit" text="Edit" width="60"/>
       </colElement>
 	  </datagrid>
 	  <query>
@@ -71,8 +71,8 @@
       <colElement datafield="id" type="fieldset" header="Name" fieldset="agentname"/>
       <colElement datafield="id" type="fieldset" header="Address" fieldset="agentaddress"/>
 	  <colElement datafield="id" type="buttonbar" buttontype="link" width="180" header="Action" modelclasspath="org.ludo.models.Agent">
-        <object label="View" action="view" text="view" width="60"/>
-        <object label="Edit" permissionfor="ADM" action="edit" text="Edit" width="60"/>
+        <object label="View" iconmap="viewsmall" action="view" text="view" width="60"/>
+        <object label="Edit" iconmap="editsmall" permissionfor="ADM" action="edit" text="Edit" width="60"/>
       </colElement>
 	  </datagrid>
 	  <query>
@@ -102,8 +102,8 @@
       <colElement datafield="status" header="Status"/>
       <colElement datafield="editable" header="Editable"/>
       <colElement datafield="id" type="buttonbar" buttontype="link" width="180" header="Action" modelclasspath="org.ludo.models.Group">
-        <object label="View" action="view" text="view" width="60"/>
-        <object label="Edit" permissionfor="ADM" action="edit" text="Edit" width="60"/>
+        <object label="View" iconmap="viewsmall" action="view" text="view" width="60"/>
+        <object label="Edit" iconmap="editsmall" permissionfor="ADM" action="edit" text="Edit" width="60"/>
       </colElement>
 	  </datagrid>
 	  <query>
@@ -129,8 +129,8 @@
       <colElement datafield="status" header="Status"/>
       <colElement datafield="editable" header="Editable"/>
       <colElement datafield="id" type="buttonbar" buttontype="link" width="180" header="Action" modelclasspath="org.ludo.models.GroupActivity">
-        <object label="View" action="view" text="view" width="60"/>
-        <object label="Edit" permissionfor="ADM" action="edit" text="Edit" width="60"/>
+        <object label="View" iconmap="viewsmall" action="view" text="view" width="60"/>
+        <object label="Edit" iconmap="editsmall" permissionfor="ADM" action="edit" text="Edit" width="60"/>
       </colElement>
 	  </datagrid>
 	  <query>
@@ -157,8 +157,8 @@
       <colElement datafield="active" header="Active"/>
       <colElement datafield="version" header="Version"/>
       <colElement datafield="id" type="buttonbar" buttontype="link" width="180" header="Action" modelclasspath="org.ludo.models.ConfigXml">
-        <object label="View" action="view" text="view" width="60"/>
-        <object label="Edit" action="edit" permissionfor="ADM" text="Edit" width="60"/>
+        <object label="View" iconmap="viewsmall" action="view" text="view" width="60"/>
+        <object label="Edit" iconmap="editsmall" action="edit" permissionfor="ADM" text="Edit" width="60"/>
       </colElement>
 	  </datagrid>
 	  <query>
@@ -184,8 +184,8 @@
       <colElement datafield="status" header="Status"/>
       <colElement datafield="editable" header="Editable"/>
       <colElement datafield="id" type="buttonbar" buttontype="link" width="180" header="Action" modelclasspath="org.ludo.models.LineOfBusiness">
-        <object label="View" action="view" text="view" width="60"/>
-        <object label="Edit" action="edit" permissionfor="ADM" text="Edit" width="60"/>
+        <object label="View" iconmap="viewsmall" action="view" text="view" width="60"/>
+        <object label="Edit" iconmap="editsmall" action="edit" permissionfor="ADM" text="Edit" width="60"/>
       </colElement>
 	  </datagrid>
 	  <query>
@@ -213,8 +213,8 @@
 	  <colElement datafield="down_payment" header="Down Payment"/>
       <colElement datafield="down_payment_days" header="Down Payment Days"/>
       <colElement datafield="id" type="buttonbar" buttontype="link" width="180" header="Action" modelclasspath="org.ludo.models.PaymentPlan">
-        <object label="View" action="view" text="view" width="60"/>
-        <object label="Edit" permissionfor="ADM" action="edit" text="Edit" width="60"/>
+        <object label="View" iconmap="viewsmall" action="view" text="view" width="60"/>
+        <object label="Edit" iconmap="editsmall" permissionfor="ADM" action="edit" text="Edit" width="60"/>
       </colElement>
 	  </datagrid>
 	  <query>

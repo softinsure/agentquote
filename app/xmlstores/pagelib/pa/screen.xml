@@ -81,9 +81,9 @@
     <panel id="locationgrid" firsttimedefaultsets="xml::GaragingLocation" type="unitgrid" title="Garaging Locations" xmlmap="Location[Addr/AddrTypeCd='GaragingAddress']" identifier="id" identifierformat="Location_#seq#">
       <colElement type="fieldset" header="Location" fieldset="GaragingLocation" />
       <colElement datafield="@id" type="buttonbar" buttontype="link" width="180" header="Action" method="org.ludo.controllers.ActionController.unitButtonBarClicked" methodparam="locationinfo">
-        <object label="View" action="view" text="View" width="60" />
-        <object label="Edit" action="edit" viewmode="E" text="Edit" width="60" />
-        <object label="Delete" action="delete" viewmode="E" text="Delete" width="60" />
+        <object label="View" action="view" text="View" iconmap="viewsmall" width="60" />
+        <object label="Edit" action="edit" viewmode="E" iconmap="editsmall" text="Edit" width="60" />
+        <object label="Delete" action="delete" viewmode="E" iconmap="deletesmall" text="Delete" width="60" />
       </colElement>
       <unit id="locationinfo" type="fieldset" title="Add/Edit Location" emptymessage="There are no Garaging Locations currently entered">
         <fieldElement type="hidden" xmlmap="Addr/AddrTypeCd" readfrom="defaultvalue::GaragingAddress" />
@@ -110,9 +110,9 @@
     <panel id="driverinfogrid" firsttimedefaultsets="xml::DriverName" type="unitgrid" title="Driver Information" xmlmap="PersAutoLineBusiness/PersDriver" identifier="id" identifierformat="Driver_#seq#">
       <colElement datafield="@id" type="fieldset" header="Driver" fieldset="Driver" />
       <colElement datafield="@id" type="buttonbar" buttontype="link" header="Action" width="180" method="org.ludo.controllers.ActionController.unitButtonBarClicked" methodparam="driverinfo">
-        <object label="View" action="view" viewmode="V" text="View" width="60" />
-        <object label="Edit" action="edit" viewmode="E" text="Edit" width="60" />
-        <object label="Delete" action="delete" viewmode="E" text="Delete" width="60" />
+        <object label="View" action="view" iconmap="viewsmall" viewmode="V" text="View" width="60" />
+        <object label="Edit" action="edit" iconmap="editsmall" viewmode="E" text="Edit" width="60" />
+        <object label="Delete" action="delete" iconmap="deletesmall" viewmode="E" text="Delete" width="60" />
       </colElement>
       <unit id="driverinfo" type="fieldset" title="Add/Edit Driver">
         <!--
@@ -148,9 +148,9 @@
       <colElement datafield="AccidentViolationDt" header="Date" width="250" />
       <colElement datafield="AccidentViolationCd" lookupsource="xml::basecombolist::incidentType" header="Incident Type" width="250" />
       <colElement datafield="@id" type="buttonbar" buttontype="link" width="180" header="Action" method="org.ludo.controllers.ActionController.unitButtonBarClicked" methodparam="incidentinfo">
-        <object label="View" action="view" text="View" width="60" />
-        <object label="Edit" action="edit" viewmode="E" text="Edit" width="60" />
-        <object label="Delete" action="delete" viewmode="E" text="Delete" width="60" />
+        <object label="View" action="view" iconmap="viewsmall" text="View" width="60" />
+        <object label="Edit" action="edit" iconmap="editsmall" viewmode="E" text="Edit" width="60" />
+        <object label="Delete" action="delete" iconmap="deletesmall" viewmode="E" text="Delete" width="60" />
       </colElement>
       <unit id="incidentinfo" type="fieldset" title="Add/Edit Location" emptymessage="No Incident Details found for this quote">
         <fieldElement type="ComboBox" xmlmap="@DriverRef" requiredflag="true" refresh="true" validation="string|property=value;required=true" lookupsource="xml::workitem::drivers::listtemplate" id="driver" label="Driver" />
@@ -168,9 +168,9 @@
     <panel id="vehicleinfogrid" type="unitgrid" title="Vehicle Information" xmlmap="PersAutoLineBusiness/PersVeh" identifier="id" identifierformat="Vehicle_#seq#">
       <colElement datafield="@id" type="fieldset" header="Vehicle Description" fieldset="Vehicle" />
       <colElement datafield="@id" type="buttonbar" buttontype="link" header="Action" width="180" method="org.ludo.controllers.ActionController.unitButtonBarClicked" methodparam="vehicleinfo">
-        <object label="View" action="view" viewmode="V" text="View" width="60" />
-        <object label="Edit" action="edit" viewmode="E" text="Edit" width="60" />
-        <object label="Delete" action="delete" viewmode="E" text="Delete" width="60" />
+        <object label="View" action="view" iconmap="viewsmall" viewmode="V" text="View" width="60" />
+        <object label="Edit" action="edit" iconmap="editsmall" viewmode="E" text="Edit" width="60" />
+        <object label="Delete" action="delete" iconmap="deletesmall" viewmode="E" text="Delete" width="60" />
       </colElement>
       <unit id="vehicleinfo" type="fieldset" title="Add/Edit Vehicle">
         <fieldElement type="SecHeader" title="Vehicle Description" />
@@ -242,9 +242,9 @@
       <colElement datafield="InsurerName" header="Carrier Name" width="100" />
       <colElement datafield="ContractTerm/ExpirationDt" header="Expiration Date" />
       <colElement datafield="@id" type="buttonbar" buttontype="link" width="180" header="Action" method="org.ludo.controllers.ActionController.unitButtonBarClicked" methodparam="priorcarrier">
-        <object label="View" action="view" viewmode="V" text="View" width="60" />
-        <object label="Edit" action="edit" viewmode="E" text="Edit" width="60" />
-        <object label="Delete" action="delete" viewmode="E" text="Delete" width="60" />
+        <object label="View" action="view" iconmap="viewsmall" viewmode="V" text="View" width="60" />
+        <object label="Edit" action="edit" iconmap="editsmall" viewmode="E" text="Edit" width="60" />
+        <object label="Delete" action="delete" iconmap="deletesmall" viewmode="E" text="Delete" width="60" />
       </colElement>
       <unit id="priorcarrier" type="fieldset" title="Add/Edit Carrier" emptymessage="No Carrier Details found for this quote">
         <fieldElement type="hidden" xmlmap="PolicyCd" readfrom="defaultvalue::Prior" />

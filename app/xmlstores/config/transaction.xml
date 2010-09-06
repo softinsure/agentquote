@@ -14,7 +14,7 @@
 		<applicationflowmenu>mainleft</applicationflowmenu>
 		<defaulttopmenuindex menuid="topmenu::top">3</defaulttopmenuindex>
 		<defaultleftmenuindex>0</defaultleftmenuindex>
-		<defaultlabelwidth>250</defaultlabelwidth>
+		<defaultlabelwidth>200</defaultlabelwidth>
 	</transaction>
 	<transaction name="useradmin">
 		<screenid>adminscreen</screenid>
@@ -26,7 +26,7 @@
 		<defaulttopmenuindex>3</defaulttopmenuindex>
 		<defaultleftmenuindex>0</defaultleftmenuindex>
 		<defaultactivitymenuindex>0</defaultactivitymenuindex>
-		<defaultlabelwidth>250</defaultlabelwidth>
+		<defaultlabelwidth>200</defaultlabelwidth>
 	</transaction>
 	<transaction name="agencyadmin">
 		<screenid>adminscreen</screenid>
@@ -38,7 +38,7 @@
 		<defaulttopmenuindex>3</defaulttopmenuindex>
 		<defaultleftmenuindex>0</defaultleftmenuindex>
 		<defaultactivitymenuindex>0</defaultactivitymenuindex>
-		<defaultlabelwidth>250</defaultlabelwidth>
+		<defaultlabelwidth>200</defaultlabelwidth>
 	</transaction>
 	<transaction name="groupadmin">
 		<screenid>adminscreen</screenid>
@@ -50,7 +50,7 @@
 		<defaulttopmenuindex>3</defaulttopmenuindex>
 		<defaultleftmenuindex>0</defaultleftmenuindex>
 		<defaultactivitymenuindex>0</defaultactivitymenuindex>
-		<defaultlabelwidth>250</defaultlabelwidth>
+		<defaultlabelwidth>200</defaultlabelwidth>
 	</transaction>
 	<transaction name="agentadmin">
 		<screenid>adminscreen</screenid>
@@ -62,7 +62,7 @@
 		<defaulttopmenuindex>3</defaulttopmenuindex>
 		<defaultleftmenuindex>0</defaultleftmenuindex>
 		<defaultactivitymenuindex>0</defaultactivitymenuindex>
-		<defaultlabelwidth>250</defaultlabelwidth>
+		<defaultlabelwidth>200</defaultlabelwidth>
 	</transaction>
 	<transaction name="paymentplan">
 		<screenid>adminscreen</screenid>
@@ -74,7 +74,7 @@
 		<defaulttopmenuindex>3</defaulttopmenuindex>
 		<defaultleftmenuindex>0</defaultleftmenuindex>
 		<defaultactivitymenuindex>0</defaultactivitymenuindex>
-		<defaultlabelwidth>250</defaultlabelwidth>
+		<defaultlabelwidth>200</defaultlabelwidth>
 	</transaction>
 	<transaction name="groupactivity">
 		<screenid>adminscreen</screenid>
@@ -86,7 +86,7 @@
 		<defaulttopmenuindex>3</defaulttopmenuindex>
 		<defaultleftmenuindex>0</defaultleftmenuindex>
 		<defaultactivitymenuindex>0</defaultactivitymenuindex>
-		<defaultlabelwidth>250</defaultlabelwidth>
+		<defaultlabelwidth>200</defaultlabelwidth>
 	</transaction>
 	<transaction name="lob">
 		<screenid>adminscreen</screenid>
@@ -98,7 +98,7 @@
 		<defaulttopmenuindex>3</defaulttopmenuindex>
 		<defaultleftmenuindex>0</defaultleftmenuindex>
 		<defaultactivitymenuindex>0</defaultactivitymenuindex>
-		<defaultlabelwidth>250</defaultlabelwidth>
+		<defaultlabelwidth>200</defaultlabelwidth>
 	</transaction>
 	<transaction name="permission">
 		<screenid>adminscreen</screenid>
@@ -108,7 +108,7 @@
 		<defaulttopmenuindex>3</defaulttopmenuindex>
 		<defaultleftmenuindex>0</defaultleftmenuindex>
 		<defaultactivitymenuindex>0</defaultactivitymenuindex>
-		<defaultlabelwidth>250</defaultlabelwidth>
+		<defaultlabelwidth>200</defaultlabelwidth>
 	</transaction>
 	<transaction name="configuration">
 		<screenid>adminscreen</screenid>
@@ -118,7 +118,7 @@
 		<defaulttopmenuindex>3</defaulttopmenuindex>
 		<defaultleftmenuindex>0</defaultleftmenuindex>
 		<defaultactivitymenuindex>0</defaultactivitymenuindex>
-		<defaultlabelwidth>250</defaultlabelwidth>
+		<defaultlabelwidth>200</defaultlabelwidth>
 	</transaction>
 	<transaction name="configxml">
 		<screenid>adminscreen</screenid>
@@ -130,6 +130,6 @@
 		<defaulttopmenuindex>3</defaulttopmenuindex>
 		<defaultleftmenuindex>0</defaultleftmenuindex>
 		<defaultactivitymenuindex>0</defaultactivitymenuindex>
-		<defaultlabelwidth>250</defaultlabelwidth>
+		<defaultlabelwidth>200</defaultlabelwidth>
 	</transaction>
 </AllTransactions>

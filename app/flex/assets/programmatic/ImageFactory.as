@@ -14,10 +14,15 @@ package assets.programmatic
 		[Bindable]
 		[Embed(source="/assets/logo/logomain.png")]
 		public static var companyLogo:Class;
+
 		[Bindable]
 		[Embed(source="/assets/icons/edit16.png")]
 		public static var editsmall:Class;
 		
+		[Bindable]
+		[Embed(source="/assets/icons/copy16.png")]
+		public static var copysmall:Class;
+
 		[Bindable]
 		[Embed(source="/assets/icons/view16.png")]
 		public static var viewsmall:Class;
@@ -39,12 +44,20 @@ package assets.programmatic
 		public static var work:Class;
 
 		[Bindable]
+		[Embed(source="/assets/icons/policies.png")]
+		public static var policy:Class;
+		
+		[Bindable]
 		[Embed(source="/assets/icons/quote.png")]
 		public static var quote:Class;
 
 		[Bindable]
 		[Embed(source="/assets/icons/admin.png")]
 		public static var admin:Class;
+
+		[Bindable]
+		[Embed(source="/assets/icons/errorlog.png")]
+		public static var errorlog:Class;
 
 		[Bindable]
 		[Embed(source="/assets/icons/error.png")]
@@ -110,6 +123,14 @@ package assets.programmatic
 		[Embed(source="/assets/icons/signout.png")]
 		public static var signout:Class
 
+		[Bindable]
+		[Embed(source="/assets/icons/help24.png")]
+		public static var help:Class
+		
+		[Bindable]
+		[Embed(source="/assets/icons/direction16.png")]
+		public static var direction:Class
+
 		public static function getImageByName(imageName:String):Class
         {
         	switch(imageName.toLowerCase())//do a lowercase
@@ -129,6 +150,9 @@ package assets.programmatic
         		case "error":
         			return error;
         			break;
+				case "errorlog":
+					return errorlog;
+					break;
         		case "companylogo":
         			return companyLogo;
         			break;
@@ -140,6 +164,9 @@ package assets.programmatic
         			break;
 				case "home":
 					return home;
+					break;
+				case "policy":
+					return policy;
 					break;
 				case "work":
 					return work;
@@ -171,10 +198,21 @@ package assets.programmatic
 				case "viewsmall":
 					return viewsmall;
 					break;
+				case "copysmall":
+					return copysmall;
+					break;
 				case "deletesmall":
 					return deletesmall;
 					break;
-        		default:
+				case "help":
+				case "pagetip":
+					return help;
+					break;
+				case "direction":
+				case "paneltip":
+					return direction;
+					break;
+				default:
          			var img:Class=getDefinitionByName(imageName) as Class;
          			if(img==null)
          			{

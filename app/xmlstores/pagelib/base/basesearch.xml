@@ -11,7 +11,7 @@
 	  <colElement datafield="id" type="buttonbar" buttontype="link" width="180" header="Action" method="org.ludo.controllers.ActionController.workBoxButtonbarClicked">
         <object label="View" action="view" iconmap="viewsmall" text="view" width="60"/>
         <object label="Edit" permissionfor="CQ,MQ,MP" action="edit" text="Edit" iconmap="editsmall" width="60"/>
-        <object label="Copy" permissionfor="CQ,MQ,MP" action="copy" iconmap="viewsmall" text="copy" width="60"/>
+        <object label="Copy" permissionfor="CQ,MQ,MP" action="copy" iconmap="copysmall" text="copy" width="60"/>
       </colElement>
 	  </datagrid>
 	  <query>

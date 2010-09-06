@@ -61,26 +61,10 @@
 s|Application
 {
 	font-family: regular;
-}
-s|SkinnableContainer
-{
-	/*borderWeight:1;*/
-}
-s|TitleWindow
-{
-	skin-class:ClassReference("org.ludo.components.skins.CSparkTitleWindowSkin");
-	headerColors:#8EC675,#8EC675;
-	border-color:#8EC675;
-	borderStyle: solid;
-	titleStyleName: "sTitleWindow";
-}
-.sTitleWindow
-{
-	font-family:regularBold;
+	background-color:#EEF2FB;
 }
 mx|Panel
 {
-	title-background-skin: ClassReference("mx.skins.halo.TitleBackground");
 	drop-shadow-visible:false;
 	padding-bottom: 1;
 	titleStyleName: "mxPanelTitle";
@@ -88,113 +72,60 @@ mx|Panel
 .mxPanelTitle {
 	fontFamily: regularBold;
 }
-mx|DataGrid
-{
-	header-style-name: "DataGridHeader";
-}
-.DataGridHeader
-{
-	font-family:regulatBold
-}
-mxml|CDataGrid
-{
-	header-style-name: "cDataGridHeader";
-}
-.cDataGridHeader
-{
-	font-family:regulatBold
-}
 views|AgentLoginBox
 {
-	border-alpha:1;
-	header-colors: #6B9046, #6B9046;
-	border-color:#6B9046;
+	borderAlpha: 1;
+	headerColors: #D8DFEA, #D8DFEA;
 	titleStyleName: "mxAgentLoginBoxTitle";
 }
 .mxAgentLoginBoxTitle
 {
-	font-family:regularBold;
-	color:#ffffff;
+	fontFamily: italicBold;
 }
 s|Panel
-{	
+{
 	drop-shadow-visible:false;
 	padding-bottom: 1;
 }
-base|SparkPanelBox
+views|SearchBox #titleDisplay
 {
-	border-color:#6B9046;
-	headerColors:#6B9046,#6B9046;
-	titleStyleName: "sparkPanelBox";
-}
-.sparkPanelBox
-{
-	font-family:captionBold;
-	color:#ffffff;
-}
-views|SearchBox
-{
-	border-color:#6B9046;
-	headerColors:#6B9046,#6B9046;
-	titleStyleName: "sparkSearchBox";
-}
-.sparkSearchBox
-{
-	font-family:captionBold;
-	color:#ffffff;
-}
-layouts|PanelBox.searchBy
-{
-	borderAlpha: 1;
-	headerHeight: 19;
-	headerColors:#8EC675,#8EC675;
-	border-color:#8EC675;
-	borderStyle: solid;
-}
-layouts|PanelBox.orderBy
-{
-	borderAlpha: 1;
-	headerHeight: 19;
-	headerColors:#8EC675,#8EC675;
-	border-color:#8EC675;
-	borderStyle: solid;
+	fontFamily: captionBold;
+	header-colors:#9B9BEF,#9B9BEF
 }
 s|HGroup.mainDetail
 {
-	padding-right: 0;
-	padding-left: 0;
+	padding-right: 1;
+	padding-left: 1;
 	padding-top: 0;
 	padding-bottom: 0;
 	vertical-gap: 0;
 	horizontal-gap: 0;
-	border-style:solid;
 }
 s|HGroup.startDetail
 {
-	padding-right: 0;
-	padding-left: 0;
+	padding-right: 1;
+	padding-left: 1;
 	padding-top: 0;
 	padding-bottom: 0;
 	vertical-gap: 0;
 	horizontal-gap: 0;
 	vertical-align:middle;
-	border-style:solid;
 }
 containers|MainContainer
 {
-	padding-right: 0;
-	padding-left: 0;
-	padding-top: 0;
-	padding-bottom: 0;
+	padding-right: 1;
+	padding-left: 1;
+	padding-top: 1;
+	padding-bottom: 1;
 	vertical-gap: 0;
 	horizontal-gap: 0;
 }
 containers1|StartContainer
 {
-	padding-right: 0;
-	padding-left: 0;
-	padding-top: 0;
-	padding-bottom: 0;
+	padding-right: 1;
+	padding-left: 1;
+	padding-top: 1;
+	padding-bottom: 1;
 	vertical-gap: 0;
 	horizontal-gap: 0;
 }
@@ -219,30 +150,20 @@ containers|ActivityDetail
 layouts|ApplicationHeader
 {
 	font-family: captionBold;
-	/*
-	background-color: #64741E;
-	content-background-color: #64741E;
-	background-color: #D4ECC8;
-	content-background-color: #D4ECC8;
+	background-color: #48649F;
+	content-background-color: #48649F;
 	font-weight: normal;
-	*/
-	dividerColor:#6B9046;
 	font-size: 10;
-	color: #6B9046;
+	color: #FFFFFF;
 }
 layouts1|StartHeader
 {
 	font-family: captionBold;
-	/*
-	background-color: #64741E;
-	content-background-color: #64741E;
-	background-color: #D4ECC8;
-	content-background-color: #D4ECC8;
+	background-color: #48649F;
+	content-background-color: #48649F;
 	font-weight: normal;
-	*/
-	dividerColor:#6B9046;
 	font-size: 10;
-	color: #6B9046;
+	color: #FFFFFF;
 }
 s|Label.headerDesc
 {
@@ -278,11 +199,32 @@ mx|Label.label
 mx|Text.label
 {
 }
+/*
+base|AutosizingDataGrid
+{
+	color: #48649F;
+	alternating-item-colors: #f8f8f8, #ffffff;
+	vertical-grid-lines: true;
+	header-style-name: "dataGridHeader";
+	horizontal-grid-lines: true;
+	padding-right: 1;
+	padding-left: 1;
+	padding-top: 1;
+	padding-bottom: 1;
+	border-style: solid;
+	text-align: left;
+}
+.dataGridHeader
+{
+	color: #000000;
+	font-size: 13;
+	font-weight:bold;
+	horizontal-align: left;
+	text-align: center;
+}
+*/
 mxml|CDataGrid.searchGrid
 {
-	border-color:#8EC675;
-	verticalGridLineColor: #8EC675;
-	headerColors:#8EC675,#8EC675;
 	header-style-name: "searchGridHeaderStyle";
 }
 
@@ -319,47 +261,36 @@ mx|Box.searchPanelBox
 }
 mxml|DataViewGrid
 {
-	padding-right: 0;
-	padding-left: 0;
-	padding-top: 0;
-	padding-bottom: 0;
+	roll-over-color: #FFFFFF;
+	selection-color: #FFFFFF;
+	padding-right: 2;
+	padding-left: 2;
+	padding-top: 1;
+	padding-bottom: 1;
 	border-style: none;
 	header-style-name: "displayGridHeader";
 }
 .displayGridHeader
 {
+	horizontal-align:left;
 }
 mxml|NestedGrid
 {
-	border-thickness: 0;
-	border-style: none;
-	border-color:#A9DA92;
-	headerHeight: 19;
+/*	border-thickness: 0;*/
 	padding-right: 0;
 	padding-left: 0;
 	padding-top: 0;
 	padding-bottom: 0;
 	vertical-gap: 0;
 	horizontal-gap: 0;
-	headerColors:#A9DA92,#A9DA92;
-	titleStyleName: "mxNestedGridTitle";
-}
-.mxNestedGridTitle
-{
-	fontFamily: italicBold;
 }
 mxml|CDataGrid.nestedDisplayGrid
 {
-	headerColors:#D4EDC9,#D4EDC9;
-	border-color:#D4EDC9;
-	verticalGridLineColor: #D4EDC9;
+	horizontal-grid-lines: false;
+	roll-over-color: #FFFFFF;
+	selection-color: #FFFFFF;
 	border-style: none;
 	text-align: left;
-	header-style-name: "nestedDisplayGrid";
-}
-.nestedDisplayGrid
-{
-	horizontal-align:left;
 }
 containers|ActivityDetail
 {
@@ -404,25 +335,21 @@ layouts|DataEntryVBox
 	padding-top: 1;
 	padding-bottom: 1;
 }
-layouts|SectionHeaders
+/*
+layouts|labelBox
 {
-	headerColors:#6B9046,#6B9046;
-	border-color:#FF6600;
-	titleStyleName: "sectionHeader";
+	padding-left: 2;
+	padding-bottom: 0;
+	padding-right: 0;
+	padding-top: 0;
+	text-align: left;
+	font-size: 12;
+	font-weight: bold;
 }
-.sectionHeader
-{
-	padding-left:5;
-	padding-right:5;
-	padding-ltop:2;
-	padding-bottom:2;
-	font-family:italicBold;
-	color:#FFFFFF;
-	font-size:12;
-}
+*/
 s|Label.pageHeader
 {
-	background-color:#6B9046;
+	background-color:#54618A;
 	padding-right: 5;
 	padding-left: 5;
 	padding-top: 5;
@@ -431,26 +358,22 @@ s|Label.pageHeader
 	font-family:captionBold;
 	font-size:14;
 }
-layouts|TipBox.pageTipBox
+s|Label.pageTipBox
 {
 	padding-bottom: 5;
 	padding-top: 5;
 	padding-left: 1;
 	padding-right: 1;
 	background-color: #ff6600;
-	content-background-color:#ff6600;
 	color:#ffffff;
-	vertical-align:middle;
 }
-layouts|TipBox.panelTipBox
+s|Label.panelTipBox
 {
-	padding-bottom: 3;
-	padding-top: 3;
-	padding-left: 1;
-	padding-right: 1;
-	background-color: #64741E;
-	content-background-color:#64741E;
-	color:#ffffff;
+	padding-bottom: 2;
+	padding-top: 2;
+	padding-left: 2;
+	padding-right: 2;
+	background-color: #ffffcc;
 }
 layouts|PageMsgBox.validation
 {
@@ -498,41 +421,25 @@ s|Label.sectionHeaders
 mx|Text.displayText
 {
 }
-layouts|PanelBox.agentInfo
-{
-	borderAlpha: 1;
-	headerHeight: 19;
-	borderStyle: solid;
-	header-colors:#8EC675,#8EC675;
-	border-color:#8EC675;
-	titleStyleName: "agentInfoTitle";
-}
-.agentInfo 
-{
-	font-family:regularBold;
-}
 layouts|PanelBox.pageBlock
 {
 	borderAlpha: 1;
 	headerHeight: 19;
+	headerColors: #88A5C9, #88A5C9;
 	borderStyle: solid;
-	header-colors:#8EC675,#8EC675;
-	border-color:#8EC675;
 	titleStyleName: "pageBlockTitle";
+	background-color:#C8D8EE;
 }
 .pageBlockTitle 
 {
 	font-family:regularBold;
+	color:#FFFFFF;
 }
-layouts|PanelBox.unitBlock
+mxml|CDataGrid
 {
-	borderStyle: none;
-	borderAlpha: 1;
-	headerHeight: 19;
-	header-colors:#C9E8BB,#C9E8BB;
-	titleStyleName: "unitBlockTitle";
+	header-style-name: "cDataGridHeader";
 }
-.unitBlockTitle 
+.cDataGridHeader
 {
 	font-family:regularBold;
 }
@@ -573,11 +480,11 @@ mx|Alert
 	border-thickness-bottom:	0;
 	border-thickness-left:		0;
 	border-thickness-right:		0;*/
+	color: 						#333333;
 	message-style-name: 		"alertText";
 	button-style-name: 			"alertButton";
 	title-style-name:			"alertTitle";
 	background-color: #FFFFFF;
-	headerColors:#64741E,#64741E;
 /*	border-thickness: 1;*/
 }
 
@@ -596,9 +503,9 @@ mx|Alert
 }
 .alertTitle
 {
-	font-family:captionBold;
+	font-weight: bold;
 	padding-left: 3;
-	color:#FFFFFF;
+	background-color: #DDF199;
 }
 layouts|VLayout.linkBarNavigator
 {
@@ -608,8 +515,8 @@ layouts|VLayout.linkBarNavigator
 	padding-bottom: 0;
 	vertical-gap: 0;
 	horizontal-gap: 0;
-	border-color:#6B9046;
-	background-color: #62A025;
+	border-color:#54618A;
+	background-color: #D8DFEA;
 	border-thickness: 1;
 }
 mx|LinkBar.linkBar
@@ -620,14 +527,14 @@ mx|LinkBar.linkBar
 	padding-bottom: 0;
 	vertical-gap: 0;
 	horizontal-gap: 0;
-	border-color:#6B9046;
-	background-color: #62A025;
+	border-color:#54618A;
+	background-color: #D8DFEA;
 }
 s|Label.linkBarNavigatorTitle
 {
 	font-family:captionBold;
 	font-size:14;
-	background-color:#6B9046;
+	background-color:#54618A;
 	padding-right: 5;
 	padding-left: 5;
 	padding-top: 5;
@@ -638,10 +545,7 @@ s|Label.linkBarNavigatorTrans
 {
 	font-family:italicBold;
 	font-size:13;
-	/*
-	background-color:#62A025;
-	*/
-	background-color:#8EC675;
+	background-color:#D8DFEA;
 	padding-right: 5;
 	padding-left: 5;
 	padding-top: 5;
@@ -655,7 +559,7 @@ s|ButtonBar.actionBar
 
 .actionBarButtonStyle {
 	fillAlphas: 1, 1, 1, 1;
-	fillColors: #6B9046, #6B9046, #6B9046, #6B9046;
+	fillColors: #54618A, #54618A, #54618A, #54618A;
 	color: #ffffff;
 	textRollOverColor: #ffffff;
 }

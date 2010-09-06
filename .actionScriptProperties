@@ -19,5 +19,7 @@
     <application path="agentquote.mxml"/>
   </applications>
   <modules/>
-  <buildCSSFiles/>
+  <buildCSSFiles>
+    <buildCSSFileEntry destPath="public/bin" sourcePath="app/flex/assets/css/base.css"/>
+  </buildCSSFiles>
 </actionScriptProperties>

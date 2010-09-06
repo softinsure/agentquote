@@ -3,10 +3,10 @@
 		<menu id="top" direction="horizontal" stylename="topAppLinkBar">		
 			<menuitem id="1" label="Home" iconmap="home::top" container="default"/>
 			<menuitem id="2" label="My Work" iconmap="work::top" container="work"/>
-			<menuitem id="4" label="My Policies" iconmap="work::top" container="policy"/>
+			<menuitem id="4" label="My Policies" iconmap="policy::top" container="policy"/>
 			<menuitem id="3" label="My Quote" iconmap="quote::top" confirmchange="true" container="quote" enabled="false"/>
 			<menuitem id="5" label="Admin" iconmap="admin::top" container="admin"/>
-			<menuitem id="6" label="Error Log" iconmap="cross::top" container="error"/>
+			<menuitem id="6" label="Error Log" iconmap="errorlog::top" container="error"/>
 			<menuitem id="7" label="Debug Box" permissionfor="DBG" iconmap="debug::top" container="debug"/>
 		</menu>
 	</panel>

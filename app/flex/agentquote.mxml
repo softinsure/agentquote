@@ -3,12 +3,12 @@
 			   xmlns:s="library://ns.adobe.com/flex/spark"
 			   xmlns:mx="library://ns.adobe.com/flex/mx"
 			   pageTitle="Agent Quote Demo"
-			   initialize="applicationStart()"
+			   initialize="application1_initializeHandler(event)"
 			   creationComplete="init()"
 			   height="100%"
-			   width="96%"
+			   width="100%"
 			   horizontalCenter="center"
-			   skinClass="org.ludo.sparks.skins.FxApplicationSkin"
+			   skinClass="assets.skins.FxApplicationSkin"
 			   xmlns:containers="org.ludo.containers.*"
 			   xmlns:controllers="org.ludo.controllers.*"
 			   xmlns:custom="org.ludo.components.custom.*"
@@ -17,19 +17,24 @@
 			   xmlns:controllers2="org.linda.controllers.*">
 	<fx:Script>
 		<![CDATA[
-			import org.linda.connectors.ParentConnector;
+			import mx.events.FlexEvent;
 			
+			import org.common.utils.XURLLoader;
+			import assets.programmatic.Fonts;
 			import org.frest.utils.FrUtils;
-			import org.ludo.sparks.skins.FxApplicationSkin;
+			import org.linda.connectors.ParentConnector;
+			import assets.skins.FxApplicationSkin;
 			import org.ludo.utils.LudoUtils;
 			
 			public function set applicationState(state:String):void
 			{
 				this.currentState=state;
 			}
-			private function applicationStart():void
+			private function applicationStart(e:Event):void
 			{
 				FrUtils.applicationUsed=this;
+				//loadfonts
+				new assets.programmatic.Fonts();
 				ParentConnector.setConnectors();
 			}
 			private function loadApps():void
@@ -67,9 +72,22 @@
 		       	    this.appStack.visible=true;			
 				}
 			}
+
+			protected function application1_initializeHandler(event:FlexEvent):void
+			{
+				// TODO Auto-generated method stub
+				//load CSS
+				FrUtils.applicationUsed=this;
+				styleManager.loadStyleDeclarations("assets/css/base.swf")
+				ParentConnector.setConnectors();
+				new assets.programmatic.Fonts();
+			}
+
 		]]>
 	</fx:Script>
+	<!--
 	<fx:Style source="assets/css/base.css"/>
+	-->
 	<s:states>
 		<s:State name="blank"/>
 		<s:State name="start"/>
