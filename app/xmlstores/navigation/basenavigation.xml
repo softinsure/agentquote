@@ -1,9 +1,0 @@
-<collection>
-	<panel id="toplinkbar">		
-		<menu id="toplinkbar" stylename="topLinkBar" direction="horizontal" itemclick="org.linda.controllers.ExtendedActionController.topRightBarClicked">		
-			<menuitem id="1" label="Feed back" action="feedback"/>
-			<menuitem id="2" label="Register" action="register"/>
-			<menuitem id="3" label="Sign In" action="signin"/>
-		</menu>
-	</panel>
-</collection>

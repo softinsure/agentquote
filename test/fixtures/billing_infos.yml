@@ -1,0 +1,47 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  payment_plan: MyText
+  billing_type: MyText
+  billing_status: MyText
+  current_amt_due: 9.99
+  total_amt_due: 9.99
+  next_amt_due: 9.99
+  installments_remaining: 
+  installments_billed: 
+  total_billed: 9.99
+  last_amt_paid: 9.99
+  total_amt_paid: 9.99
+  last_invoice_amt: 9.99
+  prior_balance: 9.99
+  current_due_dt: 2010-09-11 08:15:06
+  next_due_dt: 2010-09-11 08:15:06
+  next_bill_dt: 2010-09-11 08:15:06
+  last_bill_dt: 2010-09-11 08:15:06
+  last_invoice_dt: 2010-09-11 08:15:06
+  last_invoice_number: MyText
+  billing_address: MyText
+  notes: MyText
+
+two:
+  payment_plan: MyText
+  billing_type: MyText
+  billing_status: MyText
+  current_amt_due: 9.99
+  total_amt_due: 9.99
+  next_amt_due: 9.99
+  installments_remaining: 
+  installments_billed: 
+  total_billed: 9.99
+  last_amt_paid: 9.99
+  total_amt_paid: 9.99
+  last_invoice_amt: 9.99
+  prior_balance: 9.99
+  current_due_dt: 2010-09-11 08:15:06
+  next_due_dt: 2010-09-11 08:15:06
+  next_bill_dt: 2010-09-11 08:15:06
+  last_bill_dt: 2010-09-11 08:15:06
+  last_invoice_dt: 2010-09-11 08:15:06
+  last_invoice_number: MyText
+  billing_address: MyText
+  notes: MyText

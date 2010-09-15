@@ -6,5 +6,6 @@
 	<!--
 	<key id="dbdateformat" value="YYYY-MM-DD"/>
 	-->
+	<key id="mailingaddresstag" value="InsuredOrPrincipal[@id='Insured']/GeneralPartyInfo/Addr[AddrTypeCd='Mailing']"/>	
 	<key id="toprightmenu" value="toprightmenu"/>
 </configuration>

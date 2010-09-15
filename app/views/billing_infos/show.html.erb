@@ -1,0 +1,108 @@
+<p>
+  <b>Payment plan:</b>
+  <%=h @billing_info.payment_plan %>
+</p>
+
+<p>
+  <b>Billing type:</b>
+  <%=h @billing_info.billing_type %>
+</p>
+
+<p>
+  <b>Billing status:</b>
+  <%=h @billing_info.billing_status %>
+</p>
+
+<p>
+  <b>Current amt due:</b>
+  <%=h @billing_info.current_amt_due %>
+</p>
+
+<p>
+  <b>Total amt due:</b>
+  <%=h @billing_info.total_amt_due %>
+</p>
+
+<p>
+  <b>Next amt due:</b>
+  <%=h @billing_info.next_amt_due %>
+</p>
+
+<p>
+  <b>Installments remaining:</b>
+  <%=h @billing_info.installments_remaining %>
+</p>
+
+<p>
+  <b>Installments billed:</b>
+  <%=h @billing_info.installments_billed %>
+</p>
+
+<p>
+  <b>Total billed:</b>
+  <%=h @billing_info.total_billed %>
+</p>
+
+<p>
+  <b>Last amt paid:</b>
+  <%=h @billing_info.last_amt_paid %>
+</p>
+
+<p>
+  <b>Total amt paid:</b>
+  <%=h @billing_info.total_amt_paid %>
+</p>
+
+<p>
+  <b>Last invoice amt:</b>
+  <%=h @billing_info.last_invoice_amt %>
+</p>
+
+<p>
+  <b>Prior balance:</b>
+  <%=h @billing_info.prior_balance %>
+</p>
+
+<p>
+  <b>Current due dt:</b>
+  <%=h @billing_info.current_due_dt %>
+</p>
+
+<p>
+  <b>Next due dt:</b>
+  <%=h @billing_info.next_due_dt %>
+</p>
+
+<p>
+  <b>Next bill dt:</b>
+  <%=h @billing_info.next_bill_dt %>
+</p>
+
+<p>
+  <b>Last bill dt:</b>
+  <%=h @billing_info.last_bill_dt %>
+</p>
+
+<p>
+  <b>Last invoice dt:</b>
+  <%=h @billing_info.last_invoice_dt %>
+</p>
+
+<p>
+  <b>Last invoice number:</b>
+  <%=h @billing_info.last_invoice_number %>
+</p>
+
+<p>
+  <b>Billing address:</b>
+  <%=h @billing_info.billing_address %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%=h @billing_info.notes %>
+</p>
+
+
+<%= link_to 'Edit', edit_billing_info_path(@billing_info) %> |
+<%= link_to 'Back', billing_infos_path %>

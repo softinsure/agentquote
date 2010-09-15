@@ -26,7 +26,7 @@
 		<fieldElement datafield="last_name" label="Last Name" />      	
 		<fieldElement datafield="first_name" label="First Name" />      	
   	</orderby>
-	<controlbuttons titleboxstyle="controlBox" buttonbarstyle="panelHeaderButton">
+	<controlbuttons buttonbarstyle="panelHeaderButton">
 		<object label="Create New User" permissionfor="ADM" action="new" width="60" modelclasspath="org.ludo.models.User"/>
 		<object label="Administration Home" action="loadcontainer" container="admin" width="60"/>
 	</controlbuttons>
@@ -59,7 +59,7 @@
 		<fieldElement datafield="contact_last_name" label="Contact Last Name" />      	
 		<fieldElement datafield="contact_first_name" label="Contact First Name" />      	
   	</orderby>
-	<controlbuttons titleboxstyle="controlBox" buttonbarstyle="panelHeaderButton">
+	<controlbuttons buttonbarstyle="panelHeaderButton">
 		<object label="Create New Agency" permissionfor="ADM" action="new" width="60" modelclasspath="org.ludo.models.Agency"/>
 		<object label="Administration Home" action="loadcontainer" container="admin" width="60"/>
 	</controlbuttons>
@@ -90,7 +90,7 @@
 		<fieldElement datafield="last_name" label="Last Name" />      	
 		<fieldElement datafield="first_name" label="First Name" />      	
   	</orderby>
-	<controlbuttons titleboxstyle="controlBox" buttonbarstyle="panelHeaderButton">
+	<controlbuttons buttonbarstyle="panelHeaderButton">
 		<object label="Create New Agent" permissionfor="ADM" action="new" width="60" modelclasspath="org.ludo.models.Agent"/>
 		<object label="Administration Home" action="loadcontainer" container="admin" width="60"/>
 	</controlbuttons>
@@ -117,7 +117,7 @@
 	<orderby>
 		<fieldElement datafield="description" label="Description" />      	
 	</orderby>
-	<controlbuttons titleboxstyle="controlBox" buttonbarstyle="panelHeaderButton">
+	<controlbuttons buttonbarstyle="panelHeaderButton">
 		<object label="Create New Group" permissionfor="ADM" action="new" width="60" modelclasspath="org.ludo.models.Group"/>
 		<object label="Administration Home" action="loadcontainer" container="admin" width="60"/>
 	</controlbuttons>
@@ -144,7 +144,7 @@
 	<orderby>
 		<fieldElement datafield="description" label="Description" />      	
 	</orderby>
-	<controlbuttons titleboxstyle="controlBox" buttonbarstyle="panelHeaderButton">
+	<controlbuttons buttonbarstyle="panelHeaderButton">
 		<object label="Create New Group Activity" permissionfor="ADM" action="new" width="60" modelclasspath="org.ludo.models.GroupActivity"/>
 		<object label="Administration Home" action="loadcontainer" container="admin" width="60"/>
 	</controlbuttons>
@@ -172,7 +172,7 @@
 	<orderby>
 		<fieldElement datafield="version" label="Version" />      	
 	</orderby>
-	<controlbuttons titleboxstyle="controlBox" buttonbarstyle="panelHeaderButton">
+	<controlbuttons buttonbarstyle="panelHeaderButton">
 		<object label="Add new XML" permissionfor="ADM" action="new" width="60" modelclasspath="org.ludo.models.ConfigXml"/>
 		<object label="Administration Home" action="loadcontainer" container="admin" width="60"/>
 	</controlbuttons>
@@ -199,7 +199,7 @@
 	<orderby>
 		<fieldElement datafield="description" label="Description" />      	
 	</orderby>
-	<controlbuttons titleboxstyle="controlBox" buttonbarstyle="panelHeaderButton">
+	<controlbuttons buttonbarstyle="panelHeaderButton">
 		<object label="Create New LOB" permissionfor="ADM" action="new" width="60" modelclasspath="org.ludo.models.LineOfBusiness"/>
 		<object label="Administration Home" action="loadcontainer" container="admin" width="60"/>
 	</controlbuttons>
@@ -230,7 +230,7 @@
 		<fieldElement datafield="lob" label="LOB" />      	
 		<fieldElement datafield="down_payment" label="Down Payment" />      	
 	</orderby>
-	<controlbuttons titleboxstyle="controlBox" buttonbarstyle="panelHeaderButton">
+	<controlbuttons buttonbarstyle="panelHeaderButton">
 		<object label="Create New Payment Plan" permissionfor="ADM" action="new" width="60" modelclasspath="org.ludo.models.PaymentPlan"/>
 		<object label="Administration Home" action="loadcontainer" container="admin" width="60"/>
 	</controlbuttons>
@@ -275,7 +275,7 @@
 	  	<where>a.status='A'</where>
 		<orderby>a.description</orderby>	
 	</query>
-	<controlbuttons titleboxstyle="controlBox" buttonbarstyle="panelHeaderButton">
+	<controlbuttons buttonbarstyle="panelHeaderButton">
 		<object label="Administration Home" action="loadcontainer" container="admin" width="60"/>
 	</controlbuttons>
  </search>

@@ -121,11 +121,41 @@ s|Panel
 	drop-shadow-visible:false;
 	padding-bottom: 1;
 }
+base|BaseInput:disabled 
+{
+	color:#666666;
+}
+mxml|CComboBox:disabled 
+{
+	color:#666666;
+}
+mxml|CTextArea:disabled 
+{
+	color:#666666;
+}
+mxml|CTextInput:disabled 
+{
+	color:#666666;
+}
+
+mxml|CDateField
+{
+	disabledColor:#666666;
+}
+mxml|CDropDownList:disabled 
+{
+	color:#666666;
+}
+mxml|CRadioList:disabled 
+{
+	color:#666666;
+}
 base|SparkPanelBox
 {
 	border-color:#6B9046;
 	headerColors:#6B9046,#6B9046;
 	titleStyleName: "sparkPanelBox";
+	controlBarColors:#6B9046,#6B9046;
 }
 .sparkPanelBox
 {
@@ -134,8 +164,6 @@ base|SparkPanelBox
 }
 views|SearchBox
 {
-	border-color:#6B9046;
-	headerColors:#6B9046,#6B9046;
 	titleStyleName: "sparkSearchBox";
 }
 .sparkSearchBox
@@ -433,13 +461,14 @@ s|Label.pageHeader
 }
 layouts|TipBox.pageTipBox
 {
+	border-color:#6B9046;
 	padding-bottom: 5;
 	padding-top: 5;
 	padding-left: 1;
 	padding-right: 1;
-	background-color: #ff6600;
-	content-background-color:#ff6600;
-	color:#ffffff;
+	background-color: #F4B525;
+	content-background-color:#F4B525;
+	color:#282E6C;
 	vertical-align:middle;
 }
 layouts|TipBox.panelTipBox
@@ -452,37 +481,29 @@ layouts|TipBox.panelTipBox
 	content-background-color:#64741E;
 	color:#ffffff;
 }
-layouts|PageMsgBox.validation
+layouts|PageMsgBox
 {
-	background-color:#ff0000;
-	content-background-color:#ff0000;
 	padding-bottom: 2;
 	padding-top: 2;
 	padding-left: 2;
 	padding-right: 2;
-	color:#ffffff;
 	vertical-align:middle;
-	font-family:regularBold;
+	font-family:italicBold;
+	border-color:#6B9046;
+}
+layouts|PageMsgBox.validation
+{
+	/*background-color:#ff0000;
+	content-background-color:#ff0000;*/
+	color:#ff0000;
 }
 layouts|PageMsgBox.nochange
 {
-	padding-bottom: 2;
-	padding-top: 2;
-	padding-left: 2;
-	padding-right: 2;
 	color:#0066ff;
-	vertical-align:middle;
-	font-family:regularBold;
 }
 layouts|PageMsgBox.success
 {
-	padding-bottom: 2;
-	padding-top: 2;
-	padding-left: 2;
-	padding-right: 2;
 	color:#006600;
-	vertical-align:middle;
-	font-family:regularBold;
 }
 s|Label.sectionHeaders
 {

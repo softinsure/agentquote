@@ -1,0 +1,95 @@
+<h1>New billing_info</h1>
+
+<% form_for(@billing_info) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :payment_plan %><br />
+    <%= f.text_area :payment_plan %>
+  </p>
+  <p>
+    <%= f.label :billing_type %><br />
+    <%= f.text_area :billing_type %>
+  </p>
+  <p>
+    <%= f.label :billing_status %><br />
+    <%= f.text_area :billing_status %>
+  </p>
+  <p>
+    <%= f.label :current_amt_due %><br />
+    <%= f.text_field :current_amt_due %>
+  </p>
+  <p>
+    <%= f.label :total_amt_due %><br />
+    <%= f.text_field :total_amt_due %>
+  </p>
+  <p>
+    <%= f.label :next_amt_due %><br />
+    <%= f.text_field :next_amt_due %>
+  </p>
+  <p>
+    <%= f.label :installments_remaining %><br />
+    <%= f.text_field :installments_remaining %>
+  </p>
+  <p>
+    <%= f.label :installments_billed %><br />
+    <%= f.text_field :installments_billed %>
+  </p>
+  <p>
+    <%= f.label :total_billed %><br />
+    <%= f.text_field :total_billed %>
+  </p>
+  <p>
+    <%= f.label :last_amt_paid %><br />
+    <%= f.text_field :last_amt_paid %>
+  </p>
+  <p>
+    <%= f.label :total_amt_paid %><br />
+    <%= f.text_field :total_amt_paid %>
+  </p>
+  <p>
+    <%= f.label :last_invoice_amt %><br />
+    <%= f.text_field :last_invoice_amt %>
+  </p>
+  <p>
+    <%= f.label :prior_balance %><br />
+    <%= f.text_field :prior_balance %>
+  </p>
+  <p>
+    <%= f.label :current_due_dt %><br />
+    <%= f.datetime_select :current_due_dt %>
+  </p>
+  <p>
+    <%= f.label :next_due_dt %><br />
+    <%= f.datetime_select :next_due_dt %>
+  </p>
+  <p>
+    <%= f.label :next_bill_dt %><br />
+    <%= f.datetime_select :next_bill_dt %>
+  </p>
+  <p>
+    <%= f.label :last_bill_dt %><br />
+    <%= f.datetime_select :last_bill_dt %>
+  </p>
+  <p>
+    <%= f.label :last_invoice_dt %><br />
+    <%= f.datetime_select :last_invoice_dt %>
+  </p>
+  <p>
+    <%= f.label :last_invoice_number %><br />
+    <%= f.text_area :last_invoice_number %>
+  </p>
+  <p>
+    <%= f.label :billing_address %><br />
+    <%= f.text_area :billing_address %>
+  </p>
+  <p>
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', billing_infos_path %>

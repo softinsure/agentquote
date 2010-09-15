@@ -1,5 +1,0 @@
-<xmlstoload>
-	<xml id="navigation" filepath="xmlstores/navigation/basenavigation.xml"/>
-	<xml id="configuration" filepath="xmlstores/config/configuration.xml"/>
-	<xml id="textlayouts" filepath="xmlstores/textlayouts/startmain.xml"/>
-</xmlstoload>

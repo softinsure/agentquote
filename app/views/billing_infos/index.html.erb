@@ -1,0 +1,60 @@
+<h1>Listing billing_infos</h1>
+
+<table>
+  <tr>
+    <th>Payment plan</th>
+    <th>Billing type</th>
+    <th>Billing status</th>
+    <th>Current amt due</th>
+    <th>Total amt due</th>
+    <th>Next amt due</th>
+    <th>Installments remaining</th>
+    <th>Installments billed</th>
+    <th>Total billed</th>
+    <th>Last amt paid</th>
+    <th>Total amt paid</th>
+    <th>Last invoice amt</th>
+    <th>Prior balance</th>
+    <th>Current due dt</th>
+    <th>Next due dt</th>
+    <th>Next bill dt</th>
+    <th>Last bill dt</th>
+    <th>Last invoice dt</th>
+    <th>Last invoice number</th>
+    <th>Billing address</th>
+    <th>Notes</th>
+  </tr>
+
+<% @billing_infos.each do |billing_info| %>
+  <tr>
+    <td><%=h billing_info.payment_plan %></td>
+    <td><%=h billing_info.billing_type %></td>
+    <td><%=h billing_info.billing_status %></td>
+    <td><%=h billing_info.current_amt_due %></td>
+    <td><%=h billing_info.total_amt_due %></td>
+    <td><%=h billing_info.next_amt_due %></td>
+    <td><%=h billing_info.installments_remaining %></td>
+    <td><%=h billing_info.installments_billed %></td>
+    <td><%=h billing_info.total_billed %></td>
+    <td><%=h billing_info.last_amt_paid %></td>
+    <td><%=h billing_info.total_amt_paid %></td>
+    <td><%=h billing_info.last_invoice_amt %></td>
+    <td><%=h billing_info.prior_balance %></td>
+    <td><%=h billing_info.current_due_dt %></td>
+    <td><%=h billing_info.next_due_dt %></td>
+    <td><%=h billing_info.next_bill_dt %></td>
+    <td><%=h billing_info.last_bill_dt %></td>
+    <td><%=h billing_info.last_invoice_dt %></td>
+    <td><%=h billing_info.last_invoice_number %></td>
+    <td><%=h billing_info.billing_address %></td>
+    <td><%=h billing_info.notes %></td>
+    <td><%= link_to 'Show', billing_info %></td>
+    <td><%= link_to 'Edit', edit_billing_info_path(billing_info) %></td>
+    <td><%= link_to 'Destroy', billing_info, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New billing_info', new_billing_info_path %>
